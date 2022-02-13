@@ -154,6 +154,10 @@ div.uk-navbar-dropdown {
     padding: 10px;
 }
 
+div .uk-light .uk-navbar-nav>li>a {
+    color: #fff;
+}
+
 /* HERO */
 
 @media screen and (min-width:768px) {
