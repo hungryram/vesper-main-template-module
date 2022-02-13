@@ -361,6 +361,12 @@ _inputs:
         - WI
         - WY
 _structures:
+  menu:
+    values:
+      - value:
+          name:
+          url:
+          menu:
   sidebar:
     values:
       - label: "Blog Category"
@@ -380,8 +386,8 @@ _structures:
     type: array
     values:
         value: 
-          link:
           name:
+          link:
   gallery:
     style: 'modal'
     type: array
