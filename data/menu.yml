@@ -1,1 +1,22 @@
 menu:
+  - name: Home
+    link: vesper-module.netlify.app
+    menu:
+  - name: Buyers
+    link:
+    menu:
+      - name: Search the MLS
+        link: https://search.idxhome.com/homesearch/133407
+        menu:
+      - name: IDX Property Organizer
+        link: https://search.idxhome.com//organizer/login/133407
+        menu:
+  - name: Sellers
+    link:
+    menu:
+      - name: Home Valuation
+        link: /home-valuation
+        menu:
+  - name: Contact
+    link: /contact
+    menu:
