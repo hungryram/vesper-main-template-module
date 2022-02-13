@@ -361,6 +361,17 @@ _inputs:
         - WI
         - WY
 _structures:
+  sidebar:
+    values:
+      - label: "Blog Category"
+        value:
+          template: side-blog-category
+      - label: "latest Posts"
+        value:
+          template: latest-posts
+      - label: "Listings"
+        value:
+          template: sidebar-listings
   additional_links:
     style: 'modal'
     type: array
