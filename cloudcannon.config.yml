@@ -362,7 +362,6 @@ _inputs:
         - WY
 _structures:
   menu:
-  comment: full URL
     values:
       - value:
           name:
