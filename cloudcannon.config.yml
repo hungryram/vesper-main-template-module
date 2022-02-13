@@ -366,6 +366,7 @@ _structures:
       - value:
           name:
           link:
+          sub_menu:
   sidebar:
     values:
       - label: "Blog Category"
