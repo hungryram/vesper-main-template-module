@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ $size := .Site.Data.developer }}
+
+<div class="uk-section">
+    <div class="uk-container uk-container-large">
+        <div class="uk-grid-small" uk-grid>
+            <div class="uk-width-{{ $size.column_size }}{{ $size := .Site.Data.developer }}
+            ">
+                {{ if .Params.featured_image }}
+                <img src="{{ .Params.featured_image }}" alt="{{ .Params.image_alt_tag }}" class="mb-6">
+                {{ else }}
+                <img src="{{ .Site.BaseURL }}assets/no-house-photo.jpg" alt="no photo">
+                {{ end }}
+                <div class="content uk-margin-medium-top">
+                    {{ .Content }}
+                </div>
+                <hr>
+                {{ if .Params.categories }}
+                <ul class="uk-list">
+                    <h3 class="uk-text-bold">Categories</h3>
+                    {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+                    <li class="uk-display-inline-block">
+                        <span class="uk-margin-small-right"><a href="/categories{{ $name | urlize | relURL }}" class="uk-text-link">{{ $name | humanize }}</a></span>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+                {{ if .Params.tags }}
+                <ul class="uk-list">
+                    <h3 class="uk-text-bold">Tags</h3>
+                    {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+                    <li class="uk-display-inline-block">
+                        <span><a href="/tags{{ $name | urlize | relURL }}" class="uk-margin-small-left uk-text-link">{{ $name | humanize }}</a></span>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+
+                <div class="uk-margin-medium-top">
+                    {{ partial "templates/share" . }}
+                </div>
+            </div>
+            
+            {{ partial "templates/sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

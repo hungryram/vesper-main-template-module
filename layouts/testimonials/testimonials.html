@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ $buttonColor := .Site.Data.appearance.colors }}
+{{ $size := .Site.Data.developer }}
+<div class="uk-section">
+    <div class="uk-container uk-container-large">
+        <div class="uk-grid-small" uk-grid>
+            <div class="uk-width-{{ $size.column_size }}">
+                {{ if .Params.testimonials}}
+                {{ range .Params.testimonials }}
+                <article class="uk-comment uk-comment-primary uk-margin">
+                    <header class="uk-comment-header">
+                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-comment-avatar" src="{{ if .photo }}{{ .photo }}{{ else }}/assets/account-circle.svg{{ end }}" width="70" height="70" alt="{{ if .photo }}{{ .name }}{{ else }}anonymous avatar{{ end }}" {{ if $buttonColor.button_background_color }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};border-radius:50%;object-fit:cover;width:70px;height:70px;"{{ end }}>
+                            </div>
+                            <div class="uk-width-expand">
+                                <h5 class="uk-margin-small-bottom"><a class="uk-link-reset" href="#">{{ .name }}</a></h5>
+                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                    {{ if .date }}<li>{{ .date }}</li>{{ end }}
+                                    {{ if .source_label }}<li><a href="{{ .source }}" target="_blank">{{ .source_label }}</a></li>{{ end }}
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="uk-comment-body md-content">
+                        <p>{{ .testimonial | markdownify }}</p>
+                    </div>
+                </article>
+                {{ end }}
+                {{ else }}
+                <div>
+                    <div class="inner-container">
+                        <h4>No testimonials added yet</h4>
+                        <p>Check back later for updated information</p>
+                    </div>
+                </div>
+                {{ end }}
+                {{ partial "templates/pagination" . }}
+
+            </div>
+            {{ partial "templates/sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

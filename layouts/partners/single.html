@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="uk-section">
+    <div class="uk-container uk-container-large">
+        <div class="uk-grid-small" uk-grid>
+            {{ partial "templates/detail-view" . }}
+            
+            {{ partial "templates/sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

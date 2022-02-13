@@ -1,0 +1,151 @@
+{{ $companyName := .Site.Data.profile.company_name }}
+{{ $footer := .Site.Data.appearance.footer }}
+{{ $footerContact := .Site.Data.profile.contact_information }}
+{{ $footerSocial := .Site.Data.profile.social_media }}
+{{ $accent := $.Site.Data.appearance.colors.accent }}
+
+<footer class="footer" style="{{ if $footer.background_image }}background:url({{ $footer.background_image }}) no-repeat center;background-size:cover;background-blend-mode:overlay;background-color:rgba(0,0,0,0.9){{ else }}background:{{ $footer.footer_background_color }}{{ end }}">
+    <div class="uk-section">
+        <div class="uk-container uk-container-large">
+            <div class="uk-grid-large uk-child-width-1-4@m uk-child-width-1-2@s" uk-grid>
+                <div>
+                    {{ if $footer.logo }}
+                    <img src="{{ $footer.logo }}" alt="{{ $companyName }}" width="150">
+                    {{ else }}
+                    <h2 class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }} uk-h5 uk-text-bold">{{ $companyName }}</h2>
+                    {{ end }}
+                    <ul class="uk-list">
+                        <li><p class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}">{{ $footerContact.name }}</p></li>
+                        <li><p class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}">{{ $footerContact.license }}</p></li>
+                    </ul>
+                    <div class="accent">
+                        {{ if $footerSocial.facebook }}<a href="{{ $footerSocial.facebook }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                        {{ if $footerSocial.instagram }}<a href="{{ $footerSocial.instagram }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: instagram; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                        {{ if $footerSocial.linkedin }}<a href="{{ $footerSocial.linkedin }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: linkedin; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                        {{ if $footerSocial.pinterest }}<a href="{{ $footerSocial.pinterest }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: pinterest; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                        {{ if $footerSocial.twitter }}<a href="{{ $footerSocial.twitter }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                        {{ if $footerSocial.youtube }}<a href="{{ $footerSocial.youtube }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: youtube; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                        {{ if $footerSocial.tiktok }}<a href="{{ $footerSocial.tiktok }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: tiktok; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                        {{ if $footerSocial.yelp }}<a href="{{ $footerSocial.yelp }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: yelp; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                    </div>
+                </div>
+                <div>
+                    <h2 class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }} uk-h5 uk-text-bold">Contact</h2>
+                    <ul class="uk-list">
+                        {{ if $footerContact.phone }}<li><a href="tel:{{ $footerContact.phone }}"class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}"><span class="uk-margin-small-right" uk-icon="receiver"></span>{{ $footerContact.phone }}</a></li>{{ end }}
+                        {{ if $footerContact.cell }}<li><a href="tel:{{ $footerContact.cell }}"class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}"><span class="uk-margin-small-right" uk-icon="phone"></span>{{ $footerContact.cell }}</a></li>{{ end }}
+                        {{ if $footerContact.email }}<li><a href="mailto:{{ $footerContact.email }}"class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}"><span class="uk-margin-small-right" uk-icon="mail"></span>{{ $footerContact.email }}</a></li>{{ end }}
+                        {{ if $footerContact.address }}<li><span class="uk-margin-small-right uk-white" uk-icon="location"></span><a href="{{ if $footerContact.google_page_link }}{{ $footerContact.google_page_link }}{{ else }}https://www.google.com/maps/place/{{ $footerContact.address }},+{{ $footerContact.city }},+{{ $footerContact.state }}{{ end }}"class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}">{{ $footerContact.address }}, {{ $footerContact.city }}, {{ $footerContact.state }} {{ $footerContact.zip_code }}</a></li>{{ end }}
+                    </ul>                
+                </div>
+                <div>
+                    <h2 class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }} uk-h5 uk-text-bold">Quick Links</h2>
+                    <ul class="uk-list">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.footer }}
+                        <li><a class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                        {{ end }}
+                    </ul>           
+                </div>
+                <div>
+                    <div class="footer-text">
+                        <h2 class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }} uk-h5 uk-text-bold">About</h2>
+                        <p class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}">{{ .Site.Data.appearance.footer.footer_bio }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-container">
+        <div class="uk-grid">
+            <div class="uk-width-1-1 uk-text-center uk-white">                
+                <ul class="uk-list">
+                    {{ range $footer.important_documents }}
+                    <li><a href="{{ .document }}" target="_blank" class="uk-text-bold">{{ .name }}</a></li>
+                    {{ end }}
+
+                    <li><small class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}">{{ $footer.disclaimer }}</small></li>
+                    <li><small class="{{ if $footer.enable_black_text }}uk-dark{{ else }}uk-white{{ end }}">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}  &middot; <a href="https://hungryram.com" target="_blank" class="uk-text-bold" rel="nofollow">Real Estate Website Powered by Hungry Ram Web Design</a></small></li>
+                    {{ if $footer.equal_housing_logo }}
+                    <li class="uk-display-inline-block uk-margin-small-right"><img src="https://res.cloudinary.com/hungryram19/image/upload/v1628532562/Resources/equal-housing-opportunity-transparent_jdomdn.png" alt="equal housing opportunity logo" width="30"></li>
+                    {{ end }}
+                    {{ if $footer.mls_logo }}
+                    <li class="uk-display-inline-block uk-margin-small-right"><img src="https://res.cloudinary.com/hungryram19/image/upload/v1628532562/Resources/mls-logo_bpy61v.png" alt="mls logo" width="80"></li>
+                    {{ end }}
+                    {{ if $footer.realtor_logo }}
+                    <li class="uk-display-inline-block uk-margin-small-right"><img src="https://res.cloudinary.com/hungryram19/image/upload/v1628532562/Resources/REALTOR-mark_qhm0id.png" alt="REALTOR® logo" width="40"></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        <div class="uk-grid uk-padding-small">
+            <div class="uk-width-1-1">
+                <ul class="hr-legals uk-padding-remove uk-text-center">
+                    {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
+                    <li class="uk-light uk-display-inline uk-margin-medium-right"><small><a href="{{ .Permalink }}">{{ .Title }}</a></small></li>
+                    {{ end }}
+                  </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<a id="scroll-top" title="Top" uk-totop href="#totop" uk-scroll></a>
+<script>
+        //Get the button
+        var mybutton = document.getElementById("scroll-top");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        //PRIMARY BUTTON TEXT
+        document.querySelectorAll(".btn-primary").forEach(function(color) {
+        color.style.color = '{{ .Site.Data.appearance.colors.button_text_color }}';
+        });
+    
+        // QUICKSEARCH BUTTON BACKGROUND
+        document.querySelectorAll(".btn-primary").forEach(function(bg) {
+        bg.style.backgroundColor = '{{ .Site.Data.appearance.colors.button_background_color }}';
+        });
+
+        // QUICKSEARCH BUTTON BACKGROUND
+        document.querySelectorAll(".md-content a").forEach(function(bg) {
+            bg.style.color = '{{ .Site.Data.appearance.colors.links }}';
+            });
+    </script>
+    <script>
+        document.addEventListener('cloudcannon:load', function (e) {
+            onLiveEditorLoad(e.detail.CloudCannon);
+
+            if (!window.CloudCannon) {
+                document.addEventListener('cloudcannon:load', function (e) {
+                  onLiveEditorLoad(e.detail.CloudCannon);
+                });
+              } else {
+                onLiveEditorLoad(window.CloudCannon);
+              }
+          });
+
+          function onLiveEditorLoad(CloudCannon) {
+            CloudCannon.enableEvents();
+          }
+
+          document.addEventListener('cloudcannon:update', async function (e) {
+            useNewPageProps(e.detail.CloudCannon);
+          });
+
+          async function useNewPageProps(CloudCannon) {
+            const latestValue = await CloudCannon.value();
+          }
+
+          CloudCannon.set('title', 'new title value');
+    </script>
+</body>
+</html>

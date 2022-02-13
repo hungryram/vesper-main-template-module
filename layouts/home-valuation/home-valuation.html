@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ $buttonColor := .Site.Data.appearance.colors }}
+{{ $size := .Site.Data.developer }}
+
+<div class="uk-section">
+    <div class="uk-container uk-container-large">
+        <p class="uk-text-center editable">
+            Fill out the form below to find the value of your current home
+        </p>
+        <div uk-grid>
+            <div class="uk-width-{{ $size.column_size }}">
+                <div class="uk-card uk-card-body">
+                    {{ partial "templates/home-value-form" . }}
+                </div>
+            </div>
+            {{ partial "templates/sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,73 @@
+{{ $buttonColor := $.Site.Data.appearance.colors }}
+<div class="uk-card uk-card-default property-card">
+    <div class="uk-card-media-top">
+        <div class="uk-cover-container">
+            <canvas height="300"></canvas>
+            {{ if .Params.photos.gallery }}
+            <img src="{{ (index .Params.photos.gallery 0).image }}" alt="{{ .Title }}" uk-cover>
+            {{ else }}
+            <img src="/assets/no-photo.jpg" alt="no house icon" uk-cover>
+            {{ end }}
+            <div class="property-card-overlay uk-position-cover"></div>
+            <div class="uk-position-absolute property-card-details">
+                <div class="uk-text-center uk-light" uk-grid>
+                    <div class="uk-width-1-2">
+                        <div class="uk-card uk-text-left">
+                            {{ if .Params.status }}<span class="status uk-badge" {{ if in .Params.status "Sold" }}style="background: #d10000"{{ else }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}"{{ end }}>{{ .Params.status }}</span>{{ end }}
+                            {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end }}
+                        </div>
+                    </div>
+                    <div class="uk-width-1-2">
+                        <div class="uk-card uk-text-right">
+                            <span class="price-badge">
+                                {{ .Params.price }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-position-absolute property-card-address uk-text-left">
+                <div class="uk-white">
+                    <h3 class="uk-white uk-h4 uk-text-normal">{{ .Params.short_title }}</h3>
+                    <span class="grid-address uk-display-block">{{ .Title }}</span>
+                    <span class="grid-address uk-display-block">{{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <footer class="card-footer">
+            {{ if .Params.details.bedrooms }}
+            <span class="card-footer-item">
+                <img src="/assets/bed_black_24dp.svg" alt="bed icon" width="20">
+                <span class="uk-margin-small-left">{{ .Params.details.bedrooms }} Beds</span>
+            </span>
+            {{ end }}
+            {{ if .Params.details.bathrooms }}
+            <span class="card-footer-item">
+              <img src="/assets/shower_black_24dp.svg" alt="bed icon" width="20">
+              <span class="uk-margin-small-left">{{ .Params.details.bathrooms }} Baths</span>
+            </span>
+            {{ end }}
+          </footer>
+          <footer class="card-footer">
+            {{ if .Params.details.square_footage }}
+            <span class="card-footer-item">
+              <img src="/assets/square_foot_black_24dp.svg" alt="bed icon" width="20">
+              <span class="uk-margin-small-left">{{ .Params.details.square_footage }} Sq. Ft.</span>
+            </span>
+            {{ end }}
+            {{ if .Params.details.garage }}
+            <span class="card-footer-item">
+              <img src="/assets/garage_black_24dp.svg" alt="bed icon" width="20">
+              <span class="uk-margin-small-left">{{ .Params.details.garage }} Garage</span>
+            </span>
+            {{ end }}
+          </footer>
+          {{ if .Params.properties }}
+          <footer class="card-footer">
+            <span class="card-footer-item">{{ .Params.properties }}</span>
+          </footer>
+          {{ end }}
+    </div>
+</div>

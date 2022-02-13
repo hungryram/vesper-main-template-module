@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ $buttonColor := .Site.Data.appearance.colors }}
+
+<div class="uk-section uk-section-large">
+    <div class="uk-container">
+        <h2 class="editable">Thank you</h2>
+        <p class="editable">We will get back to you as soon as possible!</p>
+        <a href="{{ .Site.BaseURL }}" class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Return Home</a>
+    </div>
+</div>
+{{ end }}

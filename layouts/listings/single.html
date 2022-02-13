@@ -1,0 +1,336 @@
+{{ define "main" }}
+{{ $size := .Site.Data.developer }}
+{{ $buttonColor := $.Site.Data.appearance.colors }}
+{{ $accent := $.Site.Data.appearance.colors.accent }}
+
+{{ partial "templates/listing-schema" . }}
+
+<div class="uk-section">
+    <div class="uk-container uk-container-large">
+        <div class="uk-flex-bottom uk-hidden@m uk-grid-small" style="position: relative;bottom: 40px" uk-grid>
+            <div class="uk-width-1-2@s">
+                <div class="uk-card">
+                    <ul class="uk-flex uk-list uk-flex-left uk-flex-bottom">
+                        <li>
+
+                            {{ if in .Params.status "Sold" }}
+                            <span class="uk-badge status" style="background: #d10000">{{ .Params.status }}</span>
+                            {{ else }}
+                            <span class="uk-badge status" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">{{ .Params.status }}</span>
+                            {{ end }}
+
+
+                            {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end
+                            }}
+                            <h2 class="uk-margin-small-top uk-h1 uk-text-bold">{{ .Params.short_title }}</h2>
+                            <h3 class="uk-margin-remove uk-h5">{{ .Title }}, {{ .Params.cities }}, {{ .Params.states }}
+                                {{ index .Params "zip-codes" }}</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-width-1-2@s">
+                <div class="uk-card">
+                    <div class="uk-display-block">
+                        <ul class="uk-flex uk-list uk-flex-bottom">
+                            <li>
+                                <p class="uk-margin-remove">Price</p>
+                                <h3 class="uk-margin-remove">{{ .Params.price }}</h3>
+                            </li>
+                            <li class="uk-display-block">
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-grid-medium" uk-grid>
+            <div class="uk-width-{{ $size.column_size }}">
+                <div class="uk-position-relative uk-visible-toggle uk-light"
+                    uk-slideshow="min-height: 500;animation: fade">
+                    <ul class="uk-slideshow-items" uk-lightbox>
+                        {{ if .Params.photos.gallery }}
+                        {{ range .Params.photos.gallery }}
+                        <li>
+                            <a href="{{ .image }}">
+                                <img src="{{ .image }}" alt="" uk-cover>
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ else }}
+                        <li>
+                            <img src="/assets/no-house-photo.jpg"
+                                alt="no photo placeholder" uk-cover>
+                        </li>
+                        {{ end }}
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous
+                        uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next
+                        uk-slideshow-item="next"></a>
+                    {{ if .Params.photos.gallery }}
+                    <div class="uk-position-bottom-center uk-position-small">
+                        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+                            <ul class="uk-slider-items uk-thumbnav" uk-margin uk-grid>
+                                {{ if .Params.photos.gallery }}
+                                {{ $counter := -1 }}
+                                {{ range .Params.photos.gallery }}
+                                {{ $counter = add $counter 1 }}
+                                <li uk-slideshow-item="{{ $counter }}"><a href="#"><img src="{{ . }}" width="60"
+                                            alt=""></a></li>
+                                {{ end }}
+                                {{ end }}
+                            </ul>
+                            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous
+                                uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next
+                                uk-slider-item="next"></a>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+
+
+                <div class="uk-child-width-expand@m uk-child-width-1-2 uk-text-center uk-margin" uk-grid>
+                    {{ if .Params.details.bedrooms }}
+                    <div>
+                        <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
+                            <li>
+                                <img width="30" height="30" src="/assets/bed_black_24dp.svg">
+                                <p class="uk-margin-remove-top">{{ .Params.details.bedrooms }} Bedrooms</p>
+                            </li>
+                        </ul>
+                    </div>
+                    {{ end }}
+                    {{ if .Params.details.bathrooms }}
+                    <div>
+                        <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
+                            <li>
+                                <img width="30" height="30" src="/assets/shower_black_24dp.svg">
+                                <p class="uk-margin-remove-top">{{ .Params.details.bedrooms }} Bathrooms</p>
+                            </li>
+                        </ul>
+                    </div>
+                    {{ end }}
+                    {{ if .Params.details.garage }}
+                    <div>
+                        <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
+                            <li>
+                                <img width="30" height="30" src="/assets/garage_black_24dp.svg">
+                                <p class="uk-margin-remove-top">{{ .Params.details.bedrooms }} Garage</p>
+                            </li>
+                        </ul>
+                    </div>
+                    {{ end }}
+                    {{ if .Params.details.square_footage }}
+                    <div>
+                        <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
+                            <li>
+                                <img width="30" height="30" src="/assets/square_foot_black_24dp.svg">
+                                <p class="uk-margin-remove-top">{{ .Params.details.bedrooms }} Sq. Ft.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    {{ end }}
+                </div>
+
+                {{ if .Content }}
+                <div class="uk-card uk-card-default uk-margin-small-top uk-card-body">
+                    <h2 class="uk-h4 uk-text-bold">Description</h2>
+                    <hr>
+                    <div>
+                        {{ .Content }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <div class="uk-card uk-card-default uk-margin-small-top uk-card-body">
+                    <h2 class="uk-h4 uk-text-bold">Details</h2>
+                    <div class="single-details-list">
+                        <ul class="uk-list">
+                            {{ with .Params.property }}<li><strong>Property type</strong><span>{{ . }}</span></li>{{ end
+                            }}
+                            {{ with .Params.details.mls_number }}<li><strong>Property ID</strong><span>{{ . }}</span>
+                            </li>{{ end }}
+                            {{ with .Params.status }}<li><strong>Status</strong><span>{{ . }}</span></li>{{ end }}
+                            {{ with .Params.price }}<li><strong>Price</strong><span>{{ . }}</span></li>{{ end }}
+                            {{ with .Params.details.bedrooms }}<li><strong>Bedrooms</strong><span>{{ . }}</span></li>{{
+                            end }}
+                            {{ with .Params.details.bathrooms }}<li><strong>Bathrooms</strong><span>{{ . }}</span></li>
+                            {{ end }}
+                            {{ with .Params.details.garage }}<li><strong>Garage</strong><span>{{ . }}</span></li>{{ end
+                            }}
+                            {{ with .Params.details.square_footage }}<li><strong>Size Sq Ft.</strong><span>{{ . }} Sq.
+                                    Ft</span></li>{{ end }}
+                            {{ with .Params.details.year_built }}<li><strong>Year Built</strong><span>{{ . }}</span>
+                            </li>{{ end }}
+                            {{ with .Params.details.hoa }}<li><strong>HOA</strong><span>${{ . }}/month</span></li>{{ end
+                            }}
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- INTERIOR DETAIL -->
+                {{ if .Params.utilities_and_features.interior_details.show_interior_details }}
+                <div class="uk-card uk-card-default uk-margin-small-top uk-card-body">
+                    <h2 class="uk-h4 uk-text-bold">Property Interior</h2>
+                    <div>
+                        <h6><strong>Rooms</strong></h6>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.interior_details.interior_rooms }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No rooms listed</p>
+                            </li>
+                            {{end}}
+                        </ul>
+
+                        <h6><strong>Flooring</strong></h6>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.interior_details.interior_flooring }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No flooring listed</p>
+                            </li>
+                            {{end}}
+                        </ul>
+
+                        <h6><strong>Appliances</strong></h6>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.interior_details.interior_appliances }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No appliances listed</p>
+                            </li>
+                            {{end}}
+                        </ul>
+
+                        <h6><strong>Additional Interior Details</strong></h6>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.interior_details.additional_interior_details }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No additional details</p>
+                            </li>
+                            {{end}}
+                        </ul>
+                    </div>
+                </div>
+                {{ else }}
+                {{ end }}
+
+
+
+                <!-- EXTERIOR DETAIL -->
+                {{ if .Params.utilities_and_features.interior_details.show_exterior_details }}
+                <div class="uk-card uk-card-default uk-margin-small-top uk-card-body">
+                    <h2 class="uk-h4 uk-text-bold">Property Exterior</h2>
+                    <div>
+                        <h3 class="uk-h6"><strong>Details</strong></h3>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.exterior.exterior_details }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No details listed</p>
+                            </li>
+                            {{end}}
+                        </ul>
+
+                        <h3 class="uk-h6"><strong>Roof</strong></h3>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.interior_details.interior_flooring }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No flooring listed</p>
+                            </li>
+                            {{end}}
+                        </ul>
+
+                        <h3 class="uk-h6"><strong>Additional Exterior Details</strong></h3>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.exterior.additional_exterior_details }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No additional listed</p>
+                            </li>
+                            {{end}}
+                        </ul>
+                    </div>
+                </div>
+                {{ else }}
+                {{ end }}
+
+                <!-- COMMUNITY -->
+                {{ if .Params.utilities_and_features.community_features.show_community_details }}
+                <div class="uk-card uk-card-default uk-margin-small-top uk-card-body">
+                    <h2 class="uk-h4 uk-text-bold">Community</h2>
+                    <div>
+                        <h3 class="uk-h6"><strong>Details</strong></h3>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.community_features.community_features_choice }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No details listed</p>
+                            </li>
+                            {{end}}
+                        </ul>
+
+                        <h3 class="uk-h6"><strong>Additional Community Details</strong></h3>
+                        <ul class="uk-list">
+                            {{ range .Params.utilities_and_features.community_features.additional_community_details }}
+                            <li class="uk-display-inline-block uk-margin-medium-right"><span
+                                    uk-icon="icon: check;ratio:.8"
+                                    style="margin-right: 5px;color: {{ $accent }}"></span>{{ . }}</li>
+                            {{ else }}
+                            <li>
+                                <p>No additional listed</p>
+                            </li>
+                            {{end}}
+                        </ul>
+                    </div>
+                </div>
+                {{ else }}
+                {{ end }}
+
+                {{ if .Params.tools.youtube_link }}
+                <div class="uk-card uk-body uk-card-default uk-margin-small-top">
+                    <iframe style="width:100%;height:500px"
+                        src="https://www.youtube.com/embed/{{ .Params.tools.youtube_link }}" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                {{end}}
+
+
+            </div>
+
+            {{ partial "templates/property-sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

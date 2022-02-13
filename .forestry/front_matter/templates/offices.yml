@@ -1,0 +1,193 @@
+---
+label: Offices
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Office Name
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: license_number
+    type: text
+    config:
+      required: false
+    label: License Number
+  - name: office_phone
+    type: text
+    config:
+      required: false
+    label: Office Phone
+  - name: fax_number
+    type: text
+    config:
+      required: false
+    label: Fax Number
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  - name: address
+    type: text
+    config:
+      required: false
+    label: Address
+  - name: city
+    type: text
+    config:
+      required: false
+    label: City
+  - name: state
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - AL
+      - AK
+      - AZ
+      - AR
+      - CA
+      - CO
+      - CT
+      - DE
+      - FL
+      - GA
+      - HI
+      - ID
+      - IL
+      - IN
+      - IA
+      - KS
+      - KY
+      - LA
+      - ME
+      - MD
+      - MA
+      - MI
+      - MN
+      - MS
+      - MO
+      - MT
+      - NE
+      - NV
+      - NH
+      - NJ
+      - NM
+      - NY
+      - NC
+      - ND
+      - OH
+      - OK
+      - OR
+      - PA
+      - RI
+      - SC
+      - SD
+      - TN
+      - TX
+      - UT
+      - VT
+      - VA
+      - WA
+      - WV
+      - WI
+      - WY
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: State
+  - name: zip_code
+    type: number
+    description: ''
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 99999
+      step: 
+    label: Zip Code
+  - name: website
+    type: text
+    config:
+      required: false
+    label: Website
+  label: Contact
+- name: photos
+  type: field_group
+  config: {}
+  fields:
+  - name: photo
+    type: file
+    config:
+      maxSize: 2
+    label: Photo
+  label: Photo
+- name: social_media
+  type: field_group
+  config: {}
+  fields:
+  - name: facebook
+    type: text
+    config:
+      required: false
+    label: Facebook
+  - name: instagram
+    type: text
+    config:
+      required: false
+    label: Instagram
+  - name: linkedin
+    type: text
+    config:
+      required: false
+    label: Linkedin
+  - name: pinterest
+    type: text
+    config:
+      required: false
+    label: Pinterest
+  - name: twitter
+    type: text
+    config:
+      required: false
+    label: Twitter
+  - name: youtube
+    type: text
+    config:
+      required: false
+    label: Youtube
+  - name: tiktok
+    type: text
+    config:
+      required: false
+    label: TikTok
+  - name: yelp
+    type: text
+    config:
+      required: false
+    label: Yelp
+  label: Social Media
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+- name: url
+  type: include
+  config: {}
+  template: url
+  label: URL
+pages:
+- content/offices/luxury-office.md

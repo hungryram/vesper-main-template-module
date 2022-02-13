@@ -1,0 +1,96 @@
+---
+label: Partners
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Name
+- name: details
+  type: field_group
+  config: {}
+  fields:
+  - name: agent_photo
+    type: file
+    config:
+      maxSize: 64
+    label: Photo
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Phone
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  - name: website
+    type: text
+    config:
+      required: false
+    label: Website
+  - name: address
+    type: text
+    config:
+      required: false
+    label: Address
+  - name: city
+    type: text
+    config:
+      required: false
+    label: City
+  - name: state
+    type: text
+    config:
+      required: false
+    label: State
+  - name: zip
+    type: text
+    config:
+      required: false
+    label: Zip
+  - name: category
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Accountants & CPAs
+      - Appraisal Service
+      - Construction & Builders
+      - Finance & Mortgage
+      - Financial Planners
+      - Home & Garden Services
+      - Home Service Providers
+      - Inspection Services
+      - Insurance Provider
+      - Legal Professionals
+      - Moving Services
+      - Other Resources
+      - Pest Control
+      - Protection & Relief Services
+      - Real Estate Services
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Category
+  label: Details
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+- name: url
+  type: include
+  config: {}
+  template: url
+  label: URL
