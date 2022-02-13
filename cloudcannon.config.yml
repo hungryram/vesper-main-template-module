@@ -366,6 +366,7 @@ _structures:
       - label: "Blog Category"
         value:
           template: side-blog-category
+          comment: Nothing to edit
       - label: "latest Posts"
         value:
           template: latest-posts
