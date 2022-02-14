@@ -4,7 +4,7 @@ collections_config:
       author:
         type: select
         options:
-          values: collections.our_team
+          values: collections.our-team
   listings:
     icon: house
     _inputs:
