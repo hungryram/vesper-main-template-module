@@ -10,8 +10,10 @@ properties = "Multi-Family"
 featured = "Featured"
 
 [[photos.gallery]]
+image = "/uploads/images/40903982-1jpg.jpg"
 
 [[photos.gallery]]
+image = "/uploads/images/40903982-16jpg.jpg"
 
 [details]
 bathrooms = ""
@@ -54,4 +56,5 @@ youtube_link = "FfGgnUmaK6g"
 title_tag = "This is the new listing"
 meta_description = "meta description for listing"
 +++
+
 the new body
