@@ -45,5 +45,15 @@ home_sections:
   - template: featured-listings
     heading:
     body:
+  - template: active-listings
+    heading: Active Listings
+    body:
+  - template: text-and-contact-form
+    heading: New Heading
+    body: the new body
+    background_image: /uploads/images/first-time-home-buyer-insurance.jpg
+    form:
+      heading: Send a message
+      body: like us
 ---
 
