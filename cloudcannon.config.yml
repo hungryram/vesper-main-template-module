@@ -107,6 +107,8 @@ _inputs:
     type: markdown
   mls_number:
     type: text
+  open_house_date:
+    type: text
   date:
     type: date
   featured:
