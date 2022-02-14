@@ -1,7 +1,6 @@
 +++
 photo = "https://res.cloudinary.com/hungryram19/image/upload/v1605402667/templates/realestate2/campaign-creators-qCi_MzVODoU-unsplash_ndix6u.jpg"
 title = "Luxury Office"
-url = ""
 [contact]
 address = "419 Street Address"
 city = "City"

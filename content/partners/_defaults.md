@@ -1,7 +1,6 @@
 +++
 photo = ""
 title = ""
-url = ""
 [contact]
 email = ""
 phone = ""
