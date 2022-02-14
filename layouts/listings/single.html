@@ -7,8 +7,8 @@
 
 <div class="uk-section">
     <div class="uk-container uk-container-large">
-        <div class="uk-flex-bottom uk-hidden@m uk-grid-small" style="position: relative;bottom: 40px" uk-grid>
-            <div class="uk-width-1-2@s">
+        <div class="uk-flex-bottom uk-grid-small{{ if lt .Params.photos.gallery 4 }}{{ else }} uk-hidden@m{{ end }}" style="position: relative;bottom: 40px" uk-grid>
+            <div class="uk-width-1-2@s uk-margin-medium-top" uk-grid>
                 <div class="uk-card">
                     <ul class="uk-flex uk-list uk-flex-left uk-flex-bottom">
                         <li>

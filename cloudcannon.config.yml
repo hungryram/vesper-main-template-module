@@ -30,6 +30,8 @@ collections_config:
     _inputs:
       weight:
         comment: Order team members. Weight of 1 will take first position
+      title:
+        label: Agent Name
   home-valuation:
     icon: request_quote
     _enabled_editors:
@@ -85,6 +87,10 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/images
 _inputs:
+  languages:
+    type: array
+  specialty:
+    type: array
   website:
     type: text
     comment: Include the full URL with http://
