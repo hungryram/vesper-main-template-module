@@ -1,12 +1,32 @@
 collections_config:
+  pages:
+    output: true
+    url: "/content/[slug]"
+    add_options:
+      - name: Add Page
+        href: "cloudcannon:explore/content/.md🆕/content/schemas/pages.md"
   blog:
+    output: true
+    url: "/content/blog/[slug]"
+    add_options:
+      - name: Add Team
+        icon: person_add
+        href: "cloudcannon:explore/content/blog/.md🆕/content/schemas/blog.md"
     _inputs:
       author:
         type: select
         options:
           values: collections.our-team
   listings:
+    _enabled_editors:
+      - visual
+      - content
+    output: true
+    url: "/content/listings/[slug]"
     icon: house
+    add_options:
+      - name: Add Listings
+        href: "cloudcannon:explore/content/listings/.md🆕/content/schemas/listings.md"
     _inputs:
       listing_agent:
         type: select
@@ -15,6 +35,9 @@ collections_config:
       title:
         label: Street Address
   partners:
+    add_options:
+      - name: Add Partners
+        href: "cloudcannon:explore/content/partners/.md🆕/content/schemas/partners.md"
     _inputs:
       title:
         label: Partner Name
@@ -55,6 +78,9 @@ collections_config:
       - visual
     disable_add: true
   offices:
+    add_options:
+      - name: Add Office
+        href: "cloudcannon:explore/content/offices/.md🆕/content/schemas/office.md"
     output: true
     url: "/content/offices/[slug]"
     icon: apartment
