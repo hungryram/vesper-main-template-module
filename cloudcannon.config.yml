@@ -29,7 +29,7 @@ collections_config:
         href: "cloudcannon:explore/content/our-team/.md🆕/schemas/our-team.md"
     _inputs:
       weight:
-        comment: Order team members. Weight of 1 will take first position
+        comment: Order team members. Weight of 1 will take first position.
       title:
         label: Agent Name
   home-valuation:
