@@ -8,6 +8,10 @@ collections_config:
   listings:
     icon: house
     _inputs:
+      listing_agent:
+        type: select
+        options:
+          values: collections.our-team
       title:
         label: Street Address
   partners:

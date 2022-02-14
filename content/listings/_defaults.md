@@ -8,6 +8,7 @@ short_title = ""
 price = ""
 properties = ""
 featured = ""
+listing_agent = ""
 [photos]
 gallery = []
 [details]
