@@ -2,7 +2,7 @@
 title = ""
 author = ""
 categories = ["Real Estate"]
-date = 
+date = 2020-07-15
 featured_image = ""
 image_alt_tag = ""
 tags = [""]

@@ -4,8 +4,6 @@ summaryLength = 25
 enableRobotsTXT = "true"
 [outputs]
 home = ["HTML", "RSS", "JSON"]
-[params]
-cloudinary_url = "https://res.cloudinary.com/realestate2/image/upload/"
 [taxonomies]
 category = "categories"
 cities = "cities"
