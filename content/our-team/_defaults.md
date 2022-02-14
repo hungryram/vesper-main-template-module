@@ -14,15 +14,11 @@ speciality = []
 [social_media]
 facebook = ""
 instagram = ""
-linkedin = ""
-pinterest = ""
-realtor = ""
-reddit = ""
-redfin = ""
-trulia = ""
 twitter = ""
+pinterest = ""
+linkedin = ""
+tiktok = ""
 youtube = ""
-zillow = ""
 [search_engine_optimization]
 title_tag = ""
 meta_description = ""
