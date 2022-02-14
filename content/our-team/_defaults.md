@@ -9,8 +9,8 @@ email = ""
 title = ""
 license_number = ""
 website = ""
-languages = [""]
-speciality = [""]
+languages = [" "]
+speciality = [" "]
 [social_media]
 facebook = ""
 instagram = ""
