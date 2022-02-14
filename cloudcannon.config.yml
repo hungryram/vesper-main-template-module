@@ -401,8 +401,8 @@ _structures:
     values:
       - label: Attachment
         value:
-          document:
           name:
+          document:
   important_documents:
     values:
       - label: documents
