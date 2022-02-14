@@ -1,6 +1,6 @@
 menu:
   - name: Home
-    link: vesper-module.netlify.app
+    link: https://vesper-module.netlify.app
     menu:
   - name: Buyers
     link:

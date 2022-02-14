@@ -4,14 +4,13 @@
 <div class="uk-section">
     <div class="uk-container uk-container-large">
         <div class="uk-grid-small" uk-grid>
-            <div class="uk-width-{{ $size.column_size }}{{ $size := .Site.Data.developer }}
-            ">
+            <div class="uk-width-{{ $size.column_size }}">
                 {{ if .Params.featured_image }}
-                <img src="{{ .Params.featured_image }}" alt="{{ .Params.image_alt_tag }}" class="mb-6">
-                {{ else }}
-                <img src="{{ .Site.BaseURL }}assets/no-house-photo.jpg" alt="no photo">
+                <div class="uk-margin-medium">
+                    <img src="{{ .Params.featured_image }}" alt="{{ .Params.image_alt_tag }}">
+                </div>
                 {{ end }}
-                <div class="content uk-margin-medium-top">
+                <div class="md-content">
                     {{ .Content }}
                 </div>
                 <hr>

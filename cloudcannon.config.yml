@@ -404,8 +404,8 @@ _structures:
     values:
       - label: documents
         value:
-          document:
           name:
+          document:
   home_sections:
     values:
       - label: "Blog Carousel"

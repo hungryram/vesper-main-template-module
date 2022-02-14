@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div>
-                    <h2 class="uk-h5 uk-text-bold">Contact</h2>
+                    <h2 class="uk-h5 uk-text-bold editable">Contact</h2>
                     <ul class="uk-list">
                         {{ if $footerContact.phone }}<li><a href="tel:{{ $footerContact.phone }}"><span class="uk-margin-small-right" uk-icon="receiver"></span>{{ $footerContact.phone }}</a></li>{{ end }}
                         {{ if $footerContact.cell }}<li><a href="tel:{{ $footerContact.cell }}"><span class="uk-margin-small-right" uk-icon="phone"></span>{{ $footerContact.cell }}</a></li>{{ end }}
@@ -39,7 +39,7 @@
                     </ul>                
                 </div>
                 <div>
-                    <h2 class="uk-h5 uk-text-bold">Quick Links</h2>
+                    <h2 class="uk-h5 uk-text-bold editable">Quick Links</h2>
                     <ul class="uk-list">
                         {{ range $footer.additional_links }}
                         <li><a  href="{{ .link }}">{{ .name }}</a></li>
@@ -48,8 +48,8 @@
                 </div>
                 <div>
                     <div class="footer-text">
-                        <h2 class="uk-h5 uk-text-bold">About</h2>
-                        <p >{{ $footer.footer_bio }}</p>
+                        <h2 class="uk-h5 uk-text-bold editable">About</h2>
+                        <p class="editable">The about</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     <li><a href="{{ .document }}" target="_blank" class="uk-text-bold">{{ .name }}</a></li>
                     {{ end }}
 
-                    <li><small >{{ $footer.disclaimer }}</small></li>
+                    <li><small class="editable">The data and information contained within this website are for informational purposes. We try our best to keep all information up-to-date but encourage visitors to do their own research to determine the accuracy of material available on this website. While we strive to keep the information accurate, we do not warrant the accuracy or completeness of the information, text, graphics, links, or other items contained within these materials. Please visit our full disclaimer for more information.</small></li>
                     <li><small >&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}  &middot; <a href="https://hungryram.com" target="_blank" class="uk-text-bold" rel="nofollow">Real Estate Website Powered by Hungry Ram Web Design</a></small></li>
                     {{ if $footer.equal_housing_logo }}
                     <li class="uk-display-inline-block uk-margin-small-right"><img src="https://res.cloudinary.com/hungryram19/image/upload/v1628532562/Resources/equal-housing-opportunity-transparent_jdomdn.png" alt="equal housing opportunity logo" width="30"></li>
@@ -119,32 +119,6 @@
             bg.style.color = '{{ .Site.Data.appearance.colors.links }}';
             });
     </script>
-    <script>
-        document.addEventListener('cloudcannon:load', function (e) {
-            onLiveEditorLoad(e.detail.CloudCannon);
 
-            if (!window.CloudCannon) {
-                document.addEventListener('cloudcannon:load', function (e) {
-                  onLiveEditorLoad(e.detail.CloudCannon);
-                });
-              } else {
-                onLiveEditorLoad(window.CloudCannon);
-              }
-          });
-
-          function onLiveEditorLoad(CloudCannon) {
-            CloudCannon.enableEvents();
-          }
-
-          document.addEventListener('cloudcannon:update', async function (e) {
-            useNewPageProps(e.detail.CloudCannon);
-          });
-
-          async function useNewPageProps(CloudCannon) {
-            const latestValue = await CloudCannon.value();
-          }
-
-          CloudCannon.set('title', 'new title value');
-    </script>
 </body>
 </html>
