@@ -44,7 +44,7 @@ community_features_choice = [ ]
 additional_community_details = [ " " ]
 
 [tools]
-open_house_date = 2021-11-03T00:00:00.000Z
+open_house_date = 2021-11-20T00:00:00.000Z
 open_house_details = "The door will be open!"
 youtube_link = "FfGgnUmaK6g"
 
