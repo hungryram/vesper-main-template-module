@@ -26,7 +26,7 @@ collections_config:
     add_options:
       - name: Add Team
         icon: person_add
-        href: "cloudcannon:explore/content/our-team/.md🆕"
+        href: "cloudcannon:explore/content/our-team/.md🆕/schemas/our-team.md"
     _inputs:
       weight:
         comment: Order team members. Weight of 1 will take first position
