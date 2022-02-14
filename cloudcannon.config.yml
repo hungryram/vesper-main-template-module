@@ -1,4 +1,10 @@
 collections_config:
+  blog:
+    _inputs:
+      author:
+        type: select
+        options:
+          values: collections.our_team
   listings:
     icon: house
     _inputs:
@@ -111,10 +117,6 @@ _inputs:
     type: text
   date:
     type: date
-  author:
-    type: select
-    options:
-      values: collections.our_team
   featured:
     type: select
     options:
