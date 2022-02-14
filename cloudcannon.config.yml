@@ -102,6 +102,7 @@ _inputs:
     comment: URL is generated automatically on page creation. Changing the URL can cause page link to break.
   youtube_link:
     type: text
+    comment: Grab the video code from the URL. i.e https://www.youtube.com/watch?v=xxxxxxxxxxx
   testimonial:
     type: markdown
   mls_number:
