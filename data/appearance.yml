@@ -36,3 +36,5 @@ search_field:
   search_by_cities: true
   search_by_properties: true
   filter_animation: slide
+form:
+  form_disclaimer:

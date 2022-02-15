@@ -86,14 +86,10 @@
                         <div class="uk-navbar-item">
                             {{ if $.Site.Data.idx.incomplete_subdomain }}
                             <li><a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/organizer/login/{{ $ihfID }}"
-                                    class="uk-button uk-button-primary" {{ if $buttonColor.button_background_color
-                                    }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}!important;"
-                                    {{ end }}>My Account</a></li>
+                                    class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}!important;">My Account</a></li>
                             {{ else }}
                             <li><a href="https://{{ $.Site.Data.idx.complete_subdomain }}.com/organizer/login/{{ $ihfID }}"
-                                    class="uk-button uk-button-primary" {{ if $buttonColor.button_background_color
-                                    }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}!important;"
-                                    {{ end }}>My Account</a></li>
+                                    class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}!important;">My Account</a></li>
                             {{ end }}
 
                         </div>
@@ -157,14 +153,10 @@
             <li class="uk-nav-header"></li>
             {{ if $.Site.Data.idx.incomplete_subdomain }}
             <a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/organizer/login/{{ $ihfID }}"
-                class="uk-button uk-button-primary uk-width-1-1" {{ if $buttonColor.button_background_color
-                }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};"
-                {{ end }}>My Account</a>
+                class="uk-button uk-button-primary uk-width-1-1" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">My Account</a>
             {{ else }}
             <li><a href="https://{{ $.Site.Data.idx.complete_subdomain }}.com/organizer/login/{{ $ihfID }}"
-                    class="uk-button uk-button-primary uk-width-1-1" {{ if $buttonColor.button_background_color
-                    }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};"
-                    {{ end }}>My Account</a></li>
+                    class="uk-button uk-button-primary uk-width-1-1" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">My Account</a></li>
             {{ end }}
             {{ end }}
             <li class="uk-nav-header"></li>

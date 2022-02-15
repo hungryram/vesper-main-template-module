@@ -114,6 +114,8 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/images
 _inputs:
+  form_disclaimer:
+    type: markdown
   languages:
     type: array
   specialty:

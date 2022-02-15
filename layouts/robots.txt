@@ -13,5 +13,6 @@ Disallow: /offices/_defaults/
 Disallow: /our-team/_defaults/
 Disallow: /partners/_defaults/
 Disallow: /_defaults/
+Disallow: /schemas/*
 
 Sitemap: {{ .Site.BaseURL }}sitemap.xml
