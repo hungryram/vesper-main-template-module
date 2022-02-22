@@ -117,6 +117,8 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/images
 _inputs:
+  main_photo:
+    type: image
   onefivetwo:
     type: image
     label: 152x152

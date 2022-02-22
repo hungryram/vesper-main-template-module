@@ -10,6 +10,7 @@ properties = ""
 featured = ""
 listing_agent = ""
 [photos]
+main_photo = ""
 gallery = []
 [details]
 bathrooms = ""

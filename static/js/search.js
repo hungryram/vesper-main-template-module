@@ -72,7 +72,7 @@ function populateResults(result){
     //pull template from hugo template definition
     var templateDefinition = $('#search-result-template').html();
     //replace values
-    var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,status:value.item.status,bed:value.item.bed,tags:value.item.tags,image:value.item.image[0],categories:value.item.categories,price:value.item.price,bath:value.item.bath,square:value.item.square,garage:value.item.garage,featured:value.item.featured,state:value.item.state,city:value.item.city,zip:value.item.zip,mls:value.item.mls,shorttitle:value.item.shorttitle,property:value.item.property,snippet:snippet});
+    var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,status:value.item.status,bed:value.item.bed,tags:value.item.tags,image:value.item.image,categories:value.item.categories,price:value.item.price,bath:value.item.bath,square:value.item.square,garage:value.item.garage,featured:value.item.featured,state:value.item.state,city:value.item.city,zip:value.item.zip,mls:value.item.mls,shorttitle:value.item.shorttitle,property:value.item.property,snippet:snippet});
     $('#search-results').append(output);
 
     $.each(snippetHighlights,function(snipkey,snipvalue){
