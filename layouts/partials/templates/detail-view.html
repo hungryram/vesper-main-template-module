@@ -82,8 +82,8 @@
             <div class="uk-width-1-2@s uk-text-right@s">
                 <div class="uk-margin-small-bottom uk-margin-small-top">
                     <ul class="uk-list">
-                            <li class="uk-display-inline-block"><a href="tel:{{ if .Params.contact.phone }}{{ .Params.contact.phone }}{{ else }}{{ .Params.contact.cell }}{{ end }}" class="uk-button uk-button-primary uk-text-right" {{ if $buttonColor.button_background_color }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};"{{ end }}>Call</a></li>
-                            <li class="uk-display-inline-block"><a href="mailto:{{ if .Params.contact.email }}{{ .Params.contact.email }}{{ end }}" class="uk-button uk-button-primary uk-text-right" {{ if $buttonColor.button_background_color }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};"{{ end }}>Email</a></li>
+                            <li class="uk-display-inline-block"><a href="tel:{{ if .Params.contact.phone }}{{ .Params.contact.phone }}{{ else }}{{ .Params.contact.cell }}{{ end }}" class="uk-button uk-button-primary uk-text-right" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Call</a></li>
+                            <li class="uk-display-inline-block"><a href="mailto:{{ if .Params.contact.email }}{{ .Params.contact.email }}{{ end }}" class="uk-button uk-button-primary uk-text-right" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Email</a></li>
                     </ul>
                 </div>
             </div>
