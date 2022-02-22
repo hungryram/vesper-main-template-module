@@ -17,10 +17,6 @@ collections_config:
         type: select
         options:
           values: collections.our-team
-  testimonials:
-    _inputs:
-      date:
-        type: text
   listings:
     _enabled_editors:
       - visual
@@ -66,9 +62,12 @@ collections_config:
       - visual
     disable_add: true
   testimonials:
+    _inputs:
+      date:
+        type: text
     _enabled_editors:
-      - data
       - visual
+      - data
     disable_add: true
     icon: rate_review
   thank-you:
