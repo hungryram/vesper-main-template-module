@@ -69,7 +69,6 @@ div.uk-overlay-baseof {
     }
 }
 
-
 div.single-details-list ul.uk-list>:nth-child(n+2) {
     margin-top: 0;
 }
@@ -161,6 +160,15 @@ div.uk-navbar-dropdown {
 div .uk-light .uk-navbar-nav>li>a {
     color: #fff;
 }
+
+h2.site-title {
+    font-weight: 500;
+}
+
+h2.site-title.dark-logo {
+    color: #000;
+}
+
 
 /* HERO */
 

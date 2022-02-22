@@ -16,54 +16,50 @@
 </style>
 <div class="uk-visible@m"
     uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200"
-    {{ if $navColor.transparent_background }}{{ else }}style="background: {{ $navColor.header_background_color }};" {{
-    end }}>
-    <div class="top-navbar"
-        style="background:{{ if $navColor.top_header_color }}{{ $navColor.top_header_color }}{{ else }}transparent{{ end }}">
+    {{ if $navColor.transparent_background }}{{ else }}style="background: {{ $navColor.header_background_color }};" {{ end }}>
+    <div class="top-navbar {{ if $navColor.enable_white_text_top }}uk-light{{ else }}uk-dark{{ end }}" style="background:{{ if $navColor.top_header_color }}{{ $navColor.top_header_color }}{{ else }}transparent{{ end }}">
         <nav class="uk-container uk-container-large" uk-navbar>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav top-bar">
-                    {{ if $navContact.cell }}<li><a
-                            style="{{ if $navColor.enable_white_text_top }}color: #ddd{{ else }}color: #000;{{ end }}"
-                            href="tel:{{ $navContact.cell }}"><span
-                                class="uk-text-bold uk-margin-small-right">Direct:</span> {{ $navContact.cell }}</a>
+                    {{ if $navContact.cell }}<li><a href="tel:{{ $navContact.cell }}"><span class="uk-text-bold uk-margin-small-right">Direct:</span> {{ $navContact.cell }}</a>
                     </li>{{ end }}
-                    {{ if $navContact.phone }}<li><a
-                            style="{{ if $navColor.enable_white_text_top }}color: #ddd{{ else }}color: #000;{{ end }}"
-                            href="tel:{{ $navContact.phone }}"><span
-                                class="uk-text-bold uk-margin-small-right">Office:</span> {{ $navContact.phone }}</a>
+                    {{ if $navContact.phone }}<li><a href="tel:{{ $navContact.phone }}"><span class="uk-text-bold uk-margin-small-right">Office:</span> {{ $navContact.phone }}</a>
                     </li>{{ end }}
-                    {{ if $navContact.email }}<li><a
-                            style="{{ if $navColor.enable_white_text_top }}color: #ddd{{ else }}color: #000;{{ end }}"
-                            href="mailto:{{ $navContact.email }}"><span
-                                class="uk-text-bold uk-margin-small-right">Email:</span> {{ $navContact.email }}</a>
+                    {{ if $navContact.email }}<li><a href="mailto:{{ $navContact.email }}"><span class="uk-text-bold uk-margin-small-right">Email:</span> {{ $navContact.email }}</a>
                     </li>{{ end }}
                 </ul>
             </div>
         </nav>
     </div>
-    <nav class="main-nav uk-navbar-container uk-navbar-transparent" {{ if not .IsHome }}
+    <nav class="main-nav uk-navbar-container uk-navbar-transparent{{ if $navColor.enable_white_text }} uk-light{{ else }} uk-dark{{ end }}" {{ if not .IsHome }}
         style="border-bottom: 1px solid rgb(213 213 213 / 20%);" {{ end }}>
-        <div class="uk-container uk-container-large" style="padding-top:10px;padding-bottom:10px;">
+        <div class="uk-container uk-container-large">
             <div uk-navbar>
                 <div class="uk-navbar-left">
+                    {{ if $navbar.logo }}
                     <a href="{{ .Site.BaseURL }}">
                         {{ if $navColor.transparent_background }}
-                        <img src="{{ .Site.Data.appearance.branding.logo }}"
+                        <img src="{{ $navbar.logo }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
-                            width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
-                        <img src="{{ .Site.Data.appearance.branding.dark_logo }}"
+                            width="{{ $navbar.logo_width }}" class="white-logo">
+                        <img src="{{ $navbar.dark_logo }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
-                            width="{{ .Site.Data.appearance.branding.logo_width }}" class="dark-logo">
+                            width="{{ $navbar.logo_width }}" class="dark-logo">
                         {{ else }}
-                        <img src="{{ .Site.Data.appearance.branding.logo }}"
+                        <img src="{{ $navbar.logo }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
-                            width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
+                            width="{{ $navbar.logo_width }}" class="white-logo">
                         {{ end }}
                     </a>
+                    {{ else }}
+                    <a href="{{ .Site.BaseURL }}">
+                        <h2 class="uk-h3 uk-margin-remove site-title white-logo">{{ $navbar.site_title }}</h2>
+                        <h2 class="uk-h3 uk-margin-remove site-title dark-logo">{{ $navbar.site_title }}</h2>
+                    </a>
+                    {{ end }}
 
                 </div>
-                <div class="uk-navbar-right uk-light">
+                <div class="uk-navbar-right">
                     <ul class="uk-navbar-nav">
                         {{ range $mainMenu.menu }}
                         <li>
@@ -108,24 +104,28 @@
 <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200"
     {{ if $navColor.transparent_background }}{{ else }}style="background: {{ $navColor.header_background_color }};" {{
     end }}>
-    <nav class="uk-navbar uk-navbar-container uk-hidden@m uk-padding-small uk-box-shadow-small">
+    <nav class="uk-navbar uk-navbar-container uk-hidden@m uk-padding-small uk-box-shadow-small{{ if $navColor.enable_white_text }} uk-light{{ else }} uk-dark{{ end }}">
         <div class="uk-navbar-left">
+            {{ if $navbar.logo }}
             <a href="{{ .Site.BaseURL }}">
                 {{ if $navColor.transparent_background }}
-                <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo"
-                    width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
-                <img src="{{ .Site.Data.appearance.branding.dark_logo }}"
+                <img src="{{ $navbar.logo }}" alt="{{ .Site.Data.profile.company_name }} logo"
+                    width="{{ $navbar.logo_width }}" class="white-logo">
+                <img src="{{ $navbar.dark_logo }}"
                     alt="{{ .Site.Data.profile.company_name }} logo"
-                    width="{{ .Site.Data.appearance.branding.logo_width }}" class="dark-logo">
+                    width="{{ $navbar.logo_width }}" class="dark-logo">
                 {{ else }}
-                <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo"
-                    width="{{ .Site.Data.appearance.branding.logo_width }}">
+                <img src="{{ $navbar.logo }}" alt="{{ .Site.Data.profile.company_name }} logo"
+                    width="{{ $navbar.logo_width }}">
                 {{ end }}
             </a>
+            {{ else }}
+            <h2 class="uk-h3 uk-margin-remove site-title white-logo">{{ $navbar.site_title }}</h2>
+            <h2 class="uk-h3 uk-margin-remove site-title dark-logo">{{ $navbar.site_title }}</h2>            
+            {{ end }}
         </div>
         <div class="uk-navbar-right">
-            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#mobile-menu-slide" uk-toggle
-                style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}"></a>
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#mobile-menu-slide" uk-toggle></a>
         </div>
     </nav>
 </div>
@@ -152,11 +152,9 @@
             {{ if $idx.enable_idx }}
             <li class="uk-nav-header"></li>
             {{ if $.Site.Data.idx.incomplete_subdomain }}
-            <a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/organizer/login/{{ $ihfID }}"
-                class="uk-button uk-button-primary uk-width-1-1" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">My Account</a>
+            <a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/organizer/login/{{ $ihfID }}" class="uk-button uk-button-primary uk-width-1-1" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">My Account</a>
             {{ else }}
-            <li><a href="https://{{ $.Site.Data.idx.complete_subdomain }}.com/organizer/login/{{ $ihfID }}"
-                    class="uk-button uk-button-primary uk-width-1-1" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">My Account</a></li>
+            <li><a href="https://{{ $.Site.Data.idx.complete_subdomain }}.com/organizer/login/{{ $ihfID }}" class="uk-button uk-button-primary uk-width-1-1" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">My Account</a></li>
             {{ end }}
             {{ end }}
             <li class="uk-nav-header"></li>
