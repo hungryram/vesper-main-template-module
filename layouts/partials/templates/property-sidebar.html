@@ -10,7 +10,7 @@
                     <img src="{{ .Params.photo }}" alt="{{ .Title }}" style="width:100px;height:100px;border-radius:50%;object-fit:cover">
                     {{ else }}
                     <img src="/assets/user.jpg" alt="use icon" width="100" style="border-radius:50%;">
-                {{ end }}
+                    {{ end }}
                 <h2 class="uk-margin-medium-top uk-margin-small-bottom uk-h4 uk-text-bold">{{ .Title }}</h2>
                 {{ if .Params.details.title }}<span>{{ .Params.details.title }}</span>{{ end }} {{ if .Params.details.license_number }}<span class="uk-text-bold">| {{ .Params.details.license_number }}</span>{{ end }}
                 <a href="mailto:{{ .Params.contact.email }}" class="uk-display-block">{{ .Params.contact.email }}</a>
