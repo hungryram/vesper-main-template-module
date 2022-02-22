@@ -20,6 +20,8 @@ lot_size = ""
 mls_number = ""
 square_footage = ""
 year_built = ""
+longitude = ""
+latitude = ""
 [utilities_and_features.exterior]
 show_exterior_details = false
 exterior_details = []

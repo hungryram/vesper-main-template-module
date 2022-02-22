@@ -19,24 +19,14 @@
                         <li><p>{{ $footerContact.license }}</p></li>
                     </ul>
                     <div class="accent">
-                        {{ if $footerSocial.facebook }}<a href="{{ $footerSocial.facebook }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
-                        {{ if $footerSocial.instagram }}<a href="{{ $footerSocial.instagram }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: instagram; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
-                        {{ if $footerSocial.linkedin }}<a href="{{ $footerSocial.linkedin }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: linkedin; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
-                        {{ if $footerSocial.pinterest }}<a href="{{ $footerSocial.pinterest }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: pinterest; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
-                        {{ if $footerSocial.twitter }}<a href="{{ $footerSocial.twitter }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
-                        {{ if $footerSocial.youtube }}<a href="{{ $footerSocial.youtube }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: youtube; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
-                        {{ if $footerSocial.tiktok }}<a href="{{ $footerSocial.tiktok }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: tiktok; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
-                        {{ if $footerSocial.yelp }}<a href="{{ $footerSocial.yelp }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: yelp; ratio: .8" style="color: {{ $accent }}"></a>{{ end }}
+                        {{ partial "templates/social" . }}
                     </div>
                 </div>
                 <div>
                     <h2 class="uk-h5 uk-text-bold editable">Contact</h2>
                     <ul class="uk-list">
-                        {{ if $footerContact.phone }}<li><a href="tel:{{ $footerContact.phone }}"><span class="uk-margin-small-right" uk-icon="receiver"></span>{{ $footerContact.phone }}</a></li>{{ end }}
-                        {{ if $footerContact.cell }}<li><a href="tel:{{ $footerContact.cell }}"><span class="uk-margin-small-right" uk-icon="phone"></span>{{ $footerContact.cell }}</a></li>{{ end }}
-                        {{ if $footerContact.email }}<li><a href="mailto:{{ $footerContact.email }}"><span class="uk-margin-small-right" uk-icon="mail"></span>{{ $footerContact.email }}</a></li>{{ end }}
-                        {{ if $footerContact.address }}<li><span class="uk-margin-small-right" uk-icon="location"></span><a href="{{ if $footerContact.google_page_link }}{{ $footerContact.google_page_link }}{{ else }}https://www.google.com/maps/place/{{ $footerContact.address }},+{{ $footerContact.city }},+{{ $footerContact.state }}{{ end }}">{{ $footerContact.address }}, {{ $footerContact.city }}, {{ $footerContact.state }} {{ $footerContact.zip_code }}</a></li>{{ end }}
-                    </ul>                
+                        {{ partial "templates/contact" . }}
+                    </ul>
                 </div>
                 <div>
                     <h2 class="uk-h5 uk-text-bold editable">Quick Links</h2>

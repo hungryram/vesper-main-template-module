@@ -69,6 +69,10 @@ div.uk-overlay-baseof {
     }
 }
 
+
+div.single-details-list ul.uk-list>:nth-child(n+2) {
+    margin-top: 0;
+}
 div.uk-container {
     padding-left: 1rem;
     padding-right: 1rem;

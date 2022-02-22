@@ -23,7 +23,7 @@
         </div>
 </div>
 {{ else }}
-<div class="uk-position-relative uk-visible-toggle uk-cover-container main-hero" tabindex="-1" uk-slideshow="animation: {{ $slideSettings.slide_animation }};autoplay: {{ $slideSettings.enable_autoplay }}">
+<div class="uk-position-relative uk-visible-toggle main-hero" tabindex="-1" uk-slideshow="animation: {{ $slideSettings.slide_animation }};autoplay: {{ $slideSettings.enable_autoplay }}">
 
     <ul class="uk-slideshow-items" uk-height-viewport>
         {{ range .Params.slideshow }}

@@ -8,6 +8,7 @@ short_title = "Modern Home"
 price = "$400,000"
 properties = "Duplex"
 featured = "Featured"
+listing_agent = "jimmy-man"
 
 [[photos.gallery]]
 image = "/uploads/images/40903982-1jpg.jpg"

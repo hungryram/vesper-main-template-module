@@ -1,7 +1,7 @@
 <script type = "application/ld+json"> {
     "@type": "SingleFamilyResidence",
     "@context": "http://schema.org",
-    "name": "{{ .Params.title }}, {{ .Params.cities }}, {{ .Params.states }} {{ .Params.zip }}",
+    "name": "{{ .Title }}, {{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}",
     "floorSize": {
       "@type": "QuantitativeValue",
       "@context": "http://schema.org",
@@ -10,10 +10,10 @@
     "address": {
       "@type": "PostalAddress",
       "@context": "http://schema.org",
-      "streetAddress": "{{ .Params.title }}",
+      "streetAddress": "{{ .Title }}",
       "addressLocality": "{{ .Params.cities }}",
       "addressRegion": "{{ .Params.states }}",
-      "postalCode": "{{ .Params.zip }}"
+      "postalCode": "{{ index .Params "zip-codes" }}"
     },
     "geo": {
       "@type": "GeoCoordinates",

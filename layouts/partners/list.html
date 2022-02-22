@@ -30,7 +30,7 @@
                                 <div>
                                     {{ if .Params.details.category }}<span>{{ .Params.details.category }}</span>{{ end
                                     }}
-                                    {{ if .Params.details.title }}<span>{{ .Params.details.title }}</span>{{ end }} {{
+                                    {{ if .Params.details.position }}<span>{{ .Params.details.position }}</span>{{ end }} {{
                                     if .Params.details.office }}{{ with .Site.GetPage .Params.details.office }} at <a
                                         href="{{ .Permalink }}" class="uk-text-bold">{{ .Params.title
                                         }}</a>{{end}}</span>{{ end }}
@@ -97,7 +97,7 @@
                 {{ else }}
                 <div class="uk-width-3-4@s">
                     <div class="inner-container">
-                        <h4>No team added yet</h4>
+                        <h4>No partners added yet</h4>
                         <p>Check back later for updated information</p>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ weight = 50
 cell = ""
 email = ""
 [details]
-title = ""
+position = ""
 license_number = ""
 website = ""
 languages = [" "]

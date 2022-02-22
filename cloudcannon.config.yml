@@ -17,6 +17,10 @@ collections_config:
         type: select
         options:
           values: collections.our-team
+  testimonials:
+    _inputs:
+      date:
+        type: text
   listings:
     _enabled_editors:
       - visual
@@ -313,31 +317,33 @@ _inputs:
     type: multiselect
     options:
       values:
-        - None
-        - Tile
-        - Clay
-        - Polyurethane
-        - Composition
-        - Barrel/Truss
-        - Bituthene
-        - Metal
-        - Foam
-        - Slate
-        - Bitumen
-        - Mansard
-        - Shingles
-        - Unreinforced Masonry
-        - Shake
-        - Wood Frame
-        - Elastomeic
-        - Rolled Composition
-        - Rock
-        - Concrete
-        - Fiberglass
-        - Wood Shakes
-        - Tar and Gravel
-        - Flat/Low Pitch
-        - Aluminum Over Tar
+        - Roof Deck
+        - Storage Room
+        - Golf Course
+        - On Site Exercise
+        - Community Park
+        - Community Spa
+        - Walking/Biking/Hiking Trail
+        - Community Activity Center
+        - Community Raquetball
+        - Community Tennis
+        - Gated Community
+        - Parking Garage
+        - Pets Allowed
+        - Senior Community
+        - Doorman
+        - Media Room
+        - Bike Room
+        - Community Water/Lake/River Access
+        - Recreation Facilities
+        - Community Swimming Pool
+        - Community Fitness Center
+        - Elevator
+        - Concierge
+        - Laundry Room
+        - Security Features
+        - Age Restricted Community
+        - Community Playground
   additional_exterior_details:
     type: array
   additional_interior_details:

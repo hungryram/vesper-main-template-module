@@ -243,7 +243,7 @@
     style="background: url({{ .background_image }}) no-repeat center;padding-top:100px;padding-bottom:100px;background-size:cover;background-blend-mode:overlay;background-color: rgba(0,0,0,.30);">
     <div class="uk-container uk-container-large">
       <div class="uk-flex uk-flex-middle" uk-grid>
-        <div class="uk-width-1-2@s">
+        <div class="uk-width-1-2@m">
           <div class="uk-white">
             {{ if .form.heading }}
             <h2 class="uk-white">{{ .heading }}</h2>
@@ -255,7 +255,7 @@
             {{ end }}
           </div>
         </div>
-        <div class="uk-width-1-2@s">
+        <div class="uk-width-1-2@m">
           <div class="text-form">
             {{ if .form.heading }}
             <h2 class="uk-h3">{{ .form.heading }}</h2>
@@ -305,7 +305,7 @@
   {{ $buttonColor := $.Site.Data.appearance.colors }}
   <div class="uk-section">
     <div class="uk-container uk-container-large">
-      <div class="uk-text-center">
+      <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark uk-h3">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
         <div class="md-content">
@@ -341,7 +341,7 @@
   {{ if eq "sold-listings" .template }}
   <div class="uk-section">
     <div class="uk-container uk-container-large">
-      <div class="uk-text-center">
+      <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark uk-h3">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
         <div class="md-content">
@@ -378,7 +378,7 @@
   {{ if eq "auction-listings" .template }}
   <div class="uk-section">
     <div class="uk-container uk-container-large">
-      <div class="uk-text-center">
+      <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark uk-h3">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
         <div class="md-content">
@@ -414,7 +414,7 @@
   {{ if eq "rental-listings" .template }}
   <div class="uk-section">
     <div class="uk-container uk-container-large">
-      <div class="uk-text-center">
+      <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark uk-h3">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
         <div class="md-content">
