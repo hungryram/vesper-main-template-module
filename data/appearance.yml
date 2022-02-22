@@ -7,6 +7,13 @@ branding:
   dark_logo: >-
     https://res.cloudinary.com/hungryram19/image/upload/v1628898739/templates/realestate2/re-logo_l6o3kg.png
   logo_width: 120
+icons:
+  onefivetwo:
+  onefourfour:
+  onetwotwo:
+  oneonefour:
+  oneeightzero:
+  seventwo:
 header:
   top_header_color: '#070811'
   header_background_color: '#ffffff'

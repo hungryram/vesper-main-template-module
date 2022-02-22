@@ -117,6 +117,24 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/images
 _inputs:
+  onefivetwo:
+    type: image
+    label: 152x152
+  onefourfour:
+    label: 144x144
+    type: image
+  onetwotwo:
+    label: 122x122
+    type: image
+  oneonefour:
+    label: 114x114
+    type: image
+  oneeightzero:
+    label: 180x180
+    type: image
+  seventwo:
+    label: 72x72
+    type: image
   form_disclaimer:
     type: markdown
   languages:
