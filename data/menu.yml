@@ -11,6 +11,9 @@ menu:
       - name: IDX Property Organizer
         link: https://search.idxhome.com//organizer/login/133407
         menu:
+      - name: Listings
+        link: /listings/
+        menu:
   - name: Sellers
     link:
     menu:
