@@ -7,7 +7,8 @@
 
 <div class="uk-section">
     <div class="uk-container uk-container-large">
-        <div class="uk-flex-bottom uk-grid-small{{ if lt .Params.photos.gallery 4 }}{{ else }} uk-hidden@m{{ end }}" style="position: relative;bottom: 40px" uk-grid>
+        <div class="uk-flex-bottom uk-grid-small{{ if lt .Params.photos.gallery 4 }}{{ else }} uk-hidden@m{{ end }}"
+            style="position: relative;bottom: 40px" uk-grid>
             <div class="uk-width-1-2@s uk-margin-medium-top" uk-grid>
                 <div class="uk-card">
                     <ul class="uk-flex uk-list uk-flex-left uk-flex-bottom">
@@ -16,7 +17,9 @@
                             {{ if in .Params.status "Sold" }}
                             <span class="uk-badge status" style="background: #d10000">{{ .Params.status }}</span>
                             {{ else }}
-                            <span class="uk-badge status" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">{{ .Params.status }}</span>
+                            <span class="uk-badge status"
+                                style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">{{
+                                .Params.status }}</span>
                             {{ end }}
 
 
@@ -60,8 +63,7 @@
                         {{ end }}
                         {{ else }}
                         <li>
-                            <img src="/assets/no-house-photo.jpg"
-                                alt="no photo placeholder" uk-cover>
+                            <img src="/assets/no-house-photo.jpg" alt="no photo placeholder" uk-cover>
                         </li>
                         {{ end }}
                     </ul>
@@ -92,7 +94,8 @@
                 </div>
 
 
-                <div class="uk-child-width-expand@m uk-child-width-1-2 uk-text-center uk-margin single-detail-property" uk-grid>
+                <div class="uk-child-width-expand@m uk-child-width-1-2 uk-text-center uk-margin single-detail-property"
+                    uk-grid>
                     {{ if .Params.details.bedrooms }}
                     <div>
                         <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
@@ -118,7 +121,7 @@
                         <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
                             <li>
                                 <img width="30" height="30" src="/assets/garage_black_24dp.svg">
-                                <p class="uk-margin-remove-top">{{ .Params.details.bedrooms }} Garage</p>
+                                <p class="uk-margin-remove-top">{{ .Params.details.garage }} Garage</p>
                             </li>
                         </ul>
                     </div>
@@ -128,7 +131,7 @@
                         <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
                             <li>
                                 <img width="30" height="30" src="/assets/square_foot_black_24dp.svg">
-                                <p class="uk-margin-remove-top">{{ .Params.details.bedrooms }} Sq. Ft.</p>
+                                <p class="uk-margin-remove-top">{{ .Params.details.square_footage }} Sq. Ft.</p>
                             </li>
                         </ul>
                     </div>
@@ -149,24 +152,17 @@
                     <h2 class="uk-h4 uk-text-bold">Details</h2>
                     <div class="single-details-list">
                         <ul class="uk-list">
-                            {{ with .Params.property }}<li><strong>Property type</strong><span>{{ . }}</span></li>{{ end
-                            }}
-                            {{ with .Params.details.mls_number }}<li><strong>Property ID</strong><span>{{ . }}</span>
-                            </li>{{ end }}
+                            {{ with .Params.property }}<li><strong>Property type</strong><span>{{ . }}</span></li>{{ end }}
+                            {{ with .Params.details.mls_number }}<li><strong>MLS ID</strong><span>{{ . }}</span></li>{{ end }}
                             {{ with .Params.status }}<li><strong>Status</strong><span>{{ . }}</span></li>{{ end }}
                             {{ with .Params.price }}<li><strong>Price</strong><span>{{ . }}</span></li>{{ end }}
-                            {{ with .Params.details.bedrooms }}<li><strong>Bedrooms</strong><span>{{ . }}</span></li>{{
-                            end }}
-                            {{ with .Params.details.bathrooms }}<li><strong>Bathrooms</strong><span>{{ . }}</span></li>
-                            {{ end }}
-                            {{ with .Params.details.garage }}<li><strong>Garage</strong><span>{{ . }}</span></li>{{ end
-                            }}
-                            {{ with .Params.details.square_footage }}<li><strong>Size Sq Ft.</strong><span>{{ . }} Sq.
-                                    Ft</span></li>{{ end }}
-                            {{ with .Params.details.year_built }}<li><strong>Year Built</strong><span>{{ . }}</span>
-                            </li>{{ end }}
-                            {{ with .Params.details.hoa }}<li><strong>HOA</strong><span>${{ . }}</span></li>{{ end
-                            }}
+                            {{ with .Params.details.bedrooms }}<li><strong>Bedrooms</strong><span>{{ . }}</span></li>{{ end }}
+                            {{ with .Params.details.bathrooms }}<li><strong>Bathrooms</strong><span>{{ . }}</span></li>{{ end }}
+                            {{ with .Params.details.garage }}<li><strong>Garage</strong><span>{{ . }}</span></li>{{ end }}
+                            {{ with .Params.details.lot_size }}<li><strong>Lot Size</strong><span>{{ . }}</span></li>{{ end }}
+                            {{ with .Params.details.square_footage }}<li><strong>Size Sq Ft.</strong><span>{{ . }} Sq. Ft</span></li>{{ end }}
+                            {{ with .Params.details.year_built }}<li><strong>Year Built</strong><span>{{ . }}</span></li>{{ end }}
+                            {{ with .Params.details.hoa }}<li><strong>HOA</strong><span>${{ . }}</span></li>{{ end }}
                         </ul>
                     </div>
                 </div>
