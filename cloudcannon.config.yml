@@ -145,7 +145,7 @@ _inputs:
     type: array
   website:
     type: text
-    comment: Include the full URL with http://
+    comment: Include the full URL with https://
   body:
     type: markdown
   logo:
