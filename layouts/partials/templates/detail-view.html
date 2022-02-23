@@ -82,8 +82,8 @@
             <div class="uk-width-1-2@s uk-text-right@s">
                 <div class="uk-margin-small-bottom uk-margin-small-top">
                     <ul class="uk-list">
-                            <li class="uk-display-inline-block"><a href="tel:{{ if .Params.contact.phone }}{{ .Params.contact.phone }}{{ else }}{{ .Params.contact.cell }}{{ end }}" class="uk-button uk-button-primary uk-text-right" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Call</a></li>
-                            <li class="uk-display-inline-block"><a href="mailto:{{ if .Params.contact.email }}{{ .Params.contact.email }}{{ end }}" class="uk-button uk-button-primary uk-text-right" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Email</a></li>
+                            <li class="uk-display-inline-block"><a href="tel:{{ if .Params.contact.phone }}{{ .Params.contact.phone }}{{ else }}{{ .Params.contact.cell }}{{ end }}" class="uk-button uk-button-primary uk-text-right">Call</a></li>
+                            <li class="uk-display-inline-block"><a href="mailto:{{ if .Params.contact.email }}{{ .Params.contact.email }}{{ end }}" class="uk-button uk-button-primary uk-text-right">Email</a></li>
                     </ul>
                 </div>
             </div>
@@ -108,7 +108,7 @@
             <li>Specialty:</li>
             {{ end }}
             {{ range .Params.details.specialty }}
-            <li class="uk-display-inline-block uk-margin-small-right"><span class="uk-badge" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}">{{ . }}</span></li>
+            <li class="uk-display-inline-block uk-margin-small-right"><span class="uk-badge">{{ . }}</span></li>
             {{ end }}
         </ul>
         {{ end }}
@@ -120,7 +120,7 @@
             <li>Language:</li>
             {{ end }}
             {{ range .Params.details.languages  }}
-            <li class="uk-display-inline-block uk-margin-small-right"><span class="uk-badge" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}">{{ . }}</span></li>
+            <li class="uk-display-inline-block uk-margin-small-right"><span class="uk-badge">{{ . }}</span></li>
             {{ end }}
         </ul>
         {{ end }}
