@@ -86,7 +86,6 @@ collection_groups:
   - heading: Profile and Settings
     collections:
       - data
-        label: settings
   - heading: Pages
     collections:
       - pages
