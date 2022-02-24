@@ -538,36 +538,43 @@ _structures:
           body:
       - label: "Featured IDX Listings Carousel"
         value:
+          _type: featured-idx-listings-carousel
           template: featured-idx-listings
           heading:
           body:
       - label: "Featured Listings Carousel"
         value:
+          _type: featured-listings-carousel
           template: featured-listings
           heading:
           body:
       - label: "Sold Listings Carousel"
         value:
+          _type: sold-listings-carousel
           template: sold-listings
           heading:
           body:
       - label: "Rental Listings Carousel"
         value:
+          _type: rental-listings-carousel
           template: rental-listings
           heading:
           body:
       - label: "Active Listings Carousel"
         value:
+          _type: active-listings-carousel
           template: active-listings
           heading:
           body:
       - label: "Team Carousel"
         value:
+          _type: team-carousel
           template: home-agent
           heading:
           body:
       - label: "Featured Boxes"
         value:
+          _type: featured-boxes
           template: featured-boxes
           heading:
           body:
