@@ -185,15 +185,6 @@ _inputs:
     type: text
   date:
     type: date
-  layout:
-    type: select
-      options:
-        values:
-          - pages
-          - contact
-          - testimonials
-          - home-valuation
-          - thank-you
   featured:
     type: select
     options:
@@ -221,6 +212,16 @@ _inputs:
         - slide
         - fade
         - delayed-fade
+  layout:
+    type: select
+    label: Choose template
+      options:
+        values:
+          - pages
+          - contact
+          - testimonials
+          - home-valuation
+          - thank-you
   status:
     type: select
     options:
