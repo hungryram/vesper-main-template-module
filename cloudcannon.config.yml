@@ -215,13 +215,13 @@ _inputs:
   layout:
     type: select
     label: Choose template
-      options:
-        values:
-          - pages
-          - contact
-          - testimonials
-          - home-valuation
-          - thank-you
+    options:
+      values:
+        - pages
+        - contact
+        - testimonials
+        - home-valuation
+        - thank-you
   status:
     type: select
     options:
