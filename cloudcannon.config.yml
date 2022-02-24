@@ -20,6 +20,9 @@ collections_config:
         type: select
         options:
           values: collections.our-team
+    _enabled_editors:
+      - visual
+      - content
   listings:
     _enabled_editors:
       - visual
@@ -45,8 +48,14 @@ collections_config:
       title:
         label: Partner Name
     icon: people
+    _enabled_editors:
+      - visual
+      - content
   our-team:
     output: true
+    _enabled_editors:
+      - visual
+      - content
     url: "/content/our-team/[slug]"
     icon: groups
     singular_name: Team Member
@@ -59,30 +68,6 @@ collections_config:
         comment: Order team members. Weight of 1 will take first position.
       title:
         label: Agent Name
-  home-valuation:
-    icon: request_quote
-    _enabled_editors:
-      - visual
-    disable_add: true
-  testimonials:
-    _inputs:
-      date:
-        type: text
-    _enabled_editors:
-      - visual
-      - data
-    disable_add: true
-    icon: rate_review
-  thank-you:
-    icon: mark_email_read
-    _enabled_editors:
-      - visual
-    disable_add: true
-  contact:
-    icon: contact_page
-    _enabled_editors:
-      - visual
-    disable_add: true
   offices:
     add_options:
       - name: Add Office
@@ -101,6 +86,7 @@ collection_groups:
   - heading: Profile and Settings
     collections:
       - data
+        label: settings
   - heading: Pages
     collections:
       - pages
@@ -108,10 +94,6 @@ collection_groups:
       - our-team
       - offices
       - partners
-      - testimonials
-      - thank-you
-      - contact
-      - home-valuation
       - legal
   - heading: Blog
     collections:
