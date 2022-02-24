@@ -5,6 +5,9 @@ collections_config:
     add_options:
       - name: Add Page
         href: "cloudcannon:explore/content/.md🆕/content/schemas/pages.md"
+    _enabled_editors:
+      - visual
+      - content
   blog:
     output: true
     url: "/content/blog/[slug]"
@@ -182,6 +185,15 @@ _inputs:
     type: text
   date:
     type: date
+  layout:
+    type: select
+      options:
+        values:
+          - pages
+          - contact
+          - testimonials
+          - home-valuation
+          - thank-you
   featured:
     type: select
     options:

@@ -5,6 +5,9 @@
     <div class="uk-container uk-container-large">
         <div class="uk-grid-small" uk-grid>
             <div class="uk-width-{{ $size.column_size }}">
+                <div class="editable uk-margin-large">
+                    {{ .Content }}
+                </div>
                 {{ if .Params.testimonials}}
                 {{ range .Params.testimonials }}
                 <article class="uk-comment uk-comment-primary uk-margin">

@@ -7,9 +7,9 @@
         <div uk-grid>
             <div class="uk-width-{{ $size.column_size }}">
                 <div class="uk-card uk-card-body">
-                    <p class="uk-text-center editable">
-                        Fill out the form below to find the value of your current home
-                    </p>
+                    <div class="editable">
+                        {{ .Content }}
+                    </div>
                     {{ partial "templates/home-value-form" . }}
                 </div>
             </div>
