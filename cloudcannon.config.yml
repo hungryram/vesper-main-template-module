@@ -499,11 +499,13 @@ _structures:
     values:
       - label: "Blog Carousel"
         value:
+          _type: blog-carousel
           template: home-blog
           heading:
           body:
       - label: "Text and Image Section"
         value:
+          _type: text-and-image-section
           template: text-and-image
           heading:
           body:
@@ -514,11 +516,13 @@ _structures:
           image_width: 400
       - label: "Testimonial Carousel"
         value:
+          _type: testimonial-carousel
           template: home-testimonial
           heading:
           body:
       - label: "Text and Contact Form"
         value:
+          _type: text-and-contact-form
           template: text-and-contact-form
           heading:
           body:
@@ -528,6 +532,7 @@ _structures:
             body:
       - label: "Auction Listings Carousel"
         value:
+          _type: auction-listings-carousel
           template: auction-listings
           heading:
           body:

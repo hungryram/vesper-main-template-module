@@ -6,12 +6,6 @@ Disallow: /blog/what-to-repair-before-you-list/
 Disallow: /blog/your-guide-to-home-appraisal/
 Disallow: /blog/priority-tasks-for-your-move-in/
 Disallow: /blog/hidden-fees-to-be-aware-of-when-purchasing-a-home/
-Disallow: /blog/_defaults/
-Disallow: /listings/_defaults/
-Disallow: /legal/_defaults/
-Disallow: /offices/_defaults/
-Disallow: /our-team/_defaults/
-Disallow: /partners/_defaults/
 Disallow: /_defaults/
 Disallow: /schemas/*
 
