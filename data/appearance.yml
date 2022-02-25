@@ -55,4 +55,8 @@ search_field:
   search_by_properties: true
   filter_animation: slide
 form:
-  form_disclaimer: test
+  form_disclaimer: >-
+    By submitting the form with your information above you are agreeing to
+    our&nbsp;[Terms and
+    Conditions](/legal/terms-and-conditions/)&nbsp;and&nbsp;[Privacy
+    Policy](/legal/privacy-policy/)
