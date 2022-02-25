@@ -482,8 +482,19 @@ footer.footer a:hover {
     transition: .3s ease;
 }
 
-.editor-link a {
-    background: yellow;
+.editor-link {
+    background: rgb(243, 243, 0);
     padding: 10px;
+    color: #000;
     text-transform: uppercase;
+    position: relative;
+    bottom: 20px;
 }
+
+.editor-content {
+    display: none;
+  }
+  
+  .cms-editor-active .editor-content {
+    display: block;
+  }
