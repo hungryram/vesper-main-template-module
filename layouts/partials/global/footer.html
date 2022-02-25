@@ -34,7 +34,7 @@
                     <h2 class="uk-h5 uk-text-bold editable">Quick Links</h2>
                     <ul class="uk-list">
                         {{ range $footer.additional_links }}
-                        <li><a href="{{ .link }}">{{ .name }}</a></li>
+                        <li><a href="{{ .link | absURL }}">{{ .name }}</a></li>
                         {{ end }}
                     </ul>           
                 </div>
@@ -95,11 +95,6 @@
             mybutton.style.display = "none";
           }
         }
-
-        // QUICKSEARCH BUTTON BACKGROUND
-        document.querySelectorAll(".md-content a").forEach(function(bg) {
-            bg.style.color = '{{ .Site.Data.appearance.colors.links }}';
-            });
     </script>
     <!-- CUSTOM SCRIPT -->
 {{ .Site.Data.developer.custom_closing_script }}
