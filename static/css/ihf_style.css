@@ -199,6 +199,10 @@ div div.ihf-grid-result-virtual-tour a {
     color: var(--primary-accent-color)!important;
 }
 
+#ihf-main-container .btn-link {
+    color: var(--primary-link-color)
+}
+
 .ui-grid.feature-value.ui-grid-item {
 margin-left: 0;
 }
@@ -220,7 +224,7 @@ padding: 8px 0 !important;
     color: #000;
     font-weight: 800;
     padding: 10px 16px;
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 
