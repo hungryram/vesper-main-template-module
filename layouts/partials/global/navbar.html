@@ -34,9 +34,12 @@
     </div>
     <nav class="main-nav uk-navbar-container uk-navbar-transparent{{ if $navColor.enable_white_text }} uk-light{{ else }} uk-dark{{ end }}" {{ if not .IsHome }}
         style="border-bottom: 1px solid rgb(213 213 213 / 20%);" {{ end }}>
+        
         <div class="uk-container uk-container-large">
+            
             <div uk-navbar>
                 <div class="uk-navbar-left">
+                    
                     {{ if $navbar.logo }}
                     <a href="{{ .Site.BaseURL }}">
                         {{ if $navColor.transparent_background }}
@@ -61,6 +64,8 @@
 
                 </div>
                 <div class="uk-navbar-right">
+                    <a href="cloudcannon:collections/data/menu.yml" class="editor-link editor-menu editor-content"><span uk-icon="icon: file-edit"></span> Edit Menu</a>
+
                     <ul class="uk-navbar-nav">
                         {{ range $mainMenu.menu }}
                         <li>

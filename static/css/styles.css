@@ -492,10 +492,15 @@ footer.footer a:hover {
     width: 150px;
 }
 
-.editor-content {
+/* .editor-content {
     display: none;
-  }
+  } */
   
   .cms-editor-active .editor-content {
     display: block;
+  }
+
+  .editor-menu {
+      top: 20px;
+      color: #000!important;
   }
