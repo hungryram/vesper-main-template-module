@@ -12,7 +12,9 @@
         <h2 class="uk-text-center">{{ .heading }}</h2>
         {{ end }}
         {{ if .body }}
-        <p class="uk-text-center">{{ .body | markdownify }}</p>
+        <div class="uk-text-center">
+          {{ .body | markdownify }}
+        </div>
         {{ end }}
         {{ if $.Site.Data.idx.incomplete_subdomain }}
         <script type="text/javascript"
@@ -28,8 +30,6 @@
 
 
   {{ if eq "home-testimonial" .template }}
-  {{ $buttonColor := $.Site.Data.appearance.colors }}
-  {{ $linkColor := $.Site.Data.appearance.colors.links }}
   <div class="uk-section">
     <div class="uk-container uk-container-large">
       {{ if .heading }}
@@ -47,7 +47,7 @@
               <div class="uk-card">
                 <div class="uk-card-body uk-text-center">
                   <p>{{ .testimonial | truncate 170 }} <a href="/testimonials" class="uk-text-bold uk-text-italic"
-                      style="color:{{ $linkColor }}">Read more...</a></p>
+                     >Read more...</a></p>
                   <em><strong>&#x2014; {{ .name }}</strong></em>
                 </div>
               </div>
@@ -62,9 +62,7 @@
         <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
       </div>
       <div class="uk-margin uk-text-center">
-        <a href="/testimonials" class="uk-button uk-button-primary"
-          style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">View
-          more</a>
+        <a href="/testimonials" class="uk-button uk-button-primary">View more</a>
       </div>
     </div>
   </div>
@@ -100,7 +98,7 @@
                       src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .Params.photo }}{{ else }}{{ .Params.photo }}{{ end }}"
                       alt="{{ .Title }}" uk-cover>
                     {{ else }}
-                    <img src="/assets/user.jpg" alt="" uk-cover>
+                    <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813823/Resources/realestate-assets/user.jpg" alt="" uk-cover>
                     {{ end }}
                   </div>
                   <div class="uk-card-body uk-card-default uk-text-center">
@@ -123,16 +121,13 @@
         <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
       </div>
       <div class="uk-margin uk-text-center">
-        <a href="/our-team" class="uk-button uk-button-primary"
-          style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">View
-          more</a>
+        <a href="/our-team" class="uk-button uk-button-primary">View more</a>
       </div>
     </div>
   </div>
   {{ end }}
 
   {{ if eq "home-blog" .template }}
-  {{ $linkColor := $.Site.Data.appearance.colors.links }}
   {{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
   {{ $blog := where $.Site.RegularPages "Type" "blog" }}
@@ -155,7 +150,7 @@
                 src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .Params.featured_image }}{{ else }}{{ .Params.featured_image }}{{ end }}"
                 alt="" style="width:100%;height:100%;object-fit:cover">
               {{ else }}
-              <img src="{{ .Site.BaseURL }}assets/no-house-photo.jpg" alt="no photo"
+              <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="no photo"
                 style="width:100%;height:100%;object-fit:cover">
               {{ end }}
             </div>
@@ -163,8 +158,7 @@
               <div class="uk-card-body">
                 <h3 class="uk-text-bold uk-h5">{{ .Title }}</h3>
                 <p>{{ .Summary | truncate 100 }}</p>
-                <p><a href="{{ .Permalink }}" class="uk-text-bold uk-text-italic" style="color:{{ $linkColor }}">Read
-                    more...</a></p>
+                <p><a href="{{ .Permalink }}" class="uk-text-bold uk-text-italic primary-accent">Read more...</a></p>
               </div>
             </div>
           </div>
@@ -176,7 +170,6 @@
   {{ end }}
 
   {{ if eq "text-and-image" .template }}
-  {{ $buttonColor := $.Site.Data.appearance.colors }}
   {{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
   <div class="uk-section">
@@ -197,9 +190,7 @@
                 <p>{{ .body | markdownify }}</p>
               </div>
               {{ if and .button_link .button }}
-              <a href="{{ .button_link }}" class="btn-primary uk-button uk-button-primary"
-                style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">{{
-                .button }}</a>
+              <a href="{{ .button_link }}" class="uk-button uk-button-primary">{{ .button }}</a>
               {{ end }}
             </div>
           </div>
@@ -218,8 +209,8 @@
       <h2 class="uk-text-center">{{ .heading }}</h2>
       {{ end }}
       {{ if .body }}
-      <div class="md-content">
-        <p class="uk-text-center">{{ .body | markdownify }}</p>
+      <div class="md-content uk-text-center">
+        {{ .body | markdownify }}
       </div>
       {{ end }}
       <div class="uk-grid-column-small uk-child-width-1-3@s uk-text-center" uk-grid uk-height-match="target: .uk-card">
@@ -243,8 +234,6 @@
   {{ end }}
 
   {{ if eq "text-and-contact-form" .template }}
-  {{ $buttonColor := $.Site.Data.appearance.colors }}
-  {{ $linkColor := $.Site.Data.appearance.colors.links }}
   {{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
   <div
@@ -292,9 +281,7 @@
                 <textarea class="uk-textarea" rows="5" placeholder="Your Message" name="Message"></textarea>
               </div>
               <div class="uk-width-1-1">
-                <button class="uk-button uk-button-primary"
-                  style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Send
-                  Email</button>
+                <button class="uk-button uk-button-primary">Send Email</button>
               </div>
               <div class="uk-width-1-1 md-content">
                 {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
@@ -308,14 +295,13 @@
   {{ end }}
 
   {{ if eq "active-listings" .template }}
-  {{ $buttonColor := $.Site.Data.appearance.colors }}
   <div class="uk-section">
     <div class="uk-container uk-container-large">
       <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
         <div class="md-content">
-          <p>{{ .body | markdownify }}</p>
+          {{ .body | markdownify }}
         </div>
         {{ end }}
       </div>
@@ -351,7 +337,7 @@
         {{ if .heading }}<h2 class="uk-dark">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
         <div class="md-content">
-          <p>{{ .body | markdownify }}</p>
+          {{ .body | markdownify }}
         </div>
         {{ end }}
       </div>
@@ -388,7 +374,7 @@
         {{ if .heading }}<h2 class="uk-dark">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
         <div class="md-content">
-          <p>{{ .body | markdownify }}</p>
+          {{ .body | markdownify }}
         </div>
         {{ end }}
       </div>
@@ -441,8 +427,7 @@
             {{ end }}
             {{ end }}
           </ul>
-          <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous
-            uk-slider-item="previous"></a>
+          <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
           <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
         </div>
         <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>

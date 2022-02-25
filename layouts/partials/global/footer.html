@@ -96,16 +96,6 @@
           }
         }
 
-        //PRIMARY BUTTON TEXT
-        document.querySelectorAll(".btn-primary").forEach(function(color) {
-        color.style.color = '{{ .Site.Data.appearance.colors.button_text_color }}';
-        });
-    
-        // QUICKSEARCH BUTTON BACKGROUND
-        document.querySelectorAll(".btn-primary").forEach(function(bg) {
-        bg.style.backgroundColor = '{{ .Site.Data.appearance.colors.button_background_color }}';
-        });
-
         // QUICKSEARCH BUTTON BACKGROUND
         document.querySelectorAll(".md-content a").forEach(function(bg) {
             bg.style.color = '{{ .Site.Data.appearance.colors.links }}';

@@ -18,7 +18,7 @@
                     <div class="md-content">
                         <h2 class="uk-h4" style="margin-top:40px;">{{ .Params.video_background.body | markdownify }}</h2>
                     </div>
-                    <a href="{{ .Params.video_background.button_link }}" class="uk-button uk-button-primary"style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">{{ .Params.video_background.button_label }}</a>
+                    <a href="{{ .Params.video_background.button_link }}" class="uk-button uk-button-primary">{{ .Params.video_background.button_label }}</a>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
                     </div>
                     {{ if $slideSettings.display_button }}
                     <div class="uk-margin-medium-top">
-                        <a href="{{ .link }}" class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">{{ .link_label }}</a>
+                        <a href="{{ .link }}" class="uk-button uk-button-primary">{{ .link_label }}</a>
                     </div>
                     {{ end }}
                     {{ if $slideSettings.enable_default_search }}
@@ -50,7 +50,7 @@
                         <form action="{{ "search" | absURL }}">
                             <div uk-form-custom>
                                 <input class="uk-input uk-width-medium" id="search-query" name="s" class="input" placeholder="Search by address, state, zip, city or MLS #" title="Search by address, state, zip, city or MLS #"/>
-                                <button class="uk-button uk-button-primary" type="submit" tabindex="-1" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Search</button>
+                                <button class="uk-button uk-button-primary" type="submit" tabindex="-1">Search</button>
                             </div>
                         </form>
                     </div>

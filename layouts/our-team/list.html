@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $linkColor := $.Site.Data.appearance.colors.links }}
 {{ $accent := $.Site.Data.appearance.colors.accent }}
 {{ $size := .Site.Data.developer }}
 
@@ -18,7 +17,7 @@
                             {{ if .Params.photo }}
                             <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="uk-height-max-large">
                             {{ else }}
-                            <img src="/assets/user.jpg" alt="avatar" uk-cover>
+                            <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813823/Resources/realestate-assets/user.jpg" alt="avatar" uk-cover>
                             {{ end }}
                         </div>
                         <div class="uk-width-expand@s">
@@ -89,7 +88,7 @@
                                                 <td>
                                                 </td>
                                                 <td class="uk-text-right"><a href="{{ .Permalink }}"
-                                                        class="uk-text-bold" style="color:{{ $linkColor }}">Read
+                                                        class="uk-text-bold primary-accent">Read
                                                         more</a></td>
                                             </tr>
                                         </tbody>

@@ -33,6 +33,10 @@ body {
     line-height: 27px;
 }
 
+.md-content a {
+    color: var(--primary-link-color);
+}
+
 body a:hover {
     text-decoration: none;
     color: inherit;
@@ -61,6 +65,14 @@ div.uk-overlay-baseof {
 
 
 /* OVERWRITE */
+
+.social_icons .uk-icon-button {
+    color: var(--primary-accent-color);
+}
+
+.primary-accent {
+    color: var(--primary-accent-color);
+}
 
 .uk-height-idx {
     height: 225px;
@@ -94,8 +106,15 @@ a.uk-button.listing-detail-cta {
 }
 
 a.uk-button.uk-button-primary,
-button.uk-button.uk-button-primary {
+button.uk-button.uk-button-primary,
+div.idx-button-navbar li a.uk-button-primary {
     border-radius: 4px;
+    background-color: var(--primary-button-background);
+    color: var(--primary-button-text-color)!important;
+}
+
+div#ihf-main-container .btn-primary {
+    background-color: var(--primary-button-background)!important;
 }
 
 [title~=Sold] {
@@ -407,13 +426,12 @@ span.price-badge {
 .pagination li a {
     transition: all .3s ease;
     color: #222222;
-    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 10px;
   }
   
   .pagination li:hover a {
-    background: #8593a9;
+    background: var(--primary-button-background);
     transition: all .3s ease;
   }
   
@@ -436,7 +454,7 @@ span.price-badge {
   }
   
   li.page-item.active {
-    border-bottom: 1px solid #8593a9;
+    border-bottom: var(--primary-button-background)
   }
   
   li.page-item.disabled {

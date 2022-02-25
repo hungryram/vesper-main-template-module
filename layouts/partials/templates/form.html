@@ -1,5 +1,4 @@
 {{ $buttonColor := $.Site.Data.appearance.colors }}
-{{ $linkColor := $.Site.Data.appearance.colors.links }}
 <form name="Contact Form" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="uk-grid-small" uk-grid action="/thank-you">
     <input name="bot-field" type="hidden" />
     <input type="hidden" name="Subject" value="Website Contact Form">
@@ -18,7 +17,7 @@
         <textarea class="uk-textarea" rows="5" placeholder="Your Message" name="Message"></textarea>
     </div>
     <div class="uk-width-1-1">
-        <button class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Submit</button>
+        <button class="uk-button uk-button-primary">Submit</button>
     </div>
     <div class="uk-width-1-1 md-content">
         <div>
