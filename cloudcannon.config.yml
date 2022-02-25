@@ -104,6 +104,8 @@ paths:
 _inputs:
   is_post:
     hidden: true
+  idx_title_background_color:
+    type: color
   background_color:
     type: color
   custom_css:
