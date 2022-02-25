@@ -28,8 +28,6 @@ pages:
 sidebar:
   sidebar:
     - template: side-blog-category
-      blog_categories:
-  single_property_sidebar: true
 colors:
   button_background_color: '#3fb9be'
   button_text_color: '#FFFFFF'
