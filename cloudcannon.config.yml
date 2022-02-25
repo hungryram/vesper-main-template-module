@@ -83,6 +83,8 @@ collections_config:
     _enabled_editors:
       - visual
       - content
+    add_options:
+      - name: Add Legal Policies
 collection_groups:
   - heading: Profile and Settings
     collections:
