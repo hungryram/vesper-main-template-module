@@ -6,10 +6,10 @@ menu:
     link:
     menu:
       - name: Search the MLS
-        link: https://search.idxhome.com/homesearch/133407
+        link: https://search.idxhome.com/homesearch/132970
         menu:
       - name: IDX Property Organizer
-        link: https://search.idxhome.com//organizer/login/133407
+        link: https://search.idxhome.com//organizer/login/132970
         menu:
       - name: Listings
         link: /listings/
