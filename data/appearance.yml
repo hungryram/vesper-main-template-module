@@ -1,7 +1,6 @@
 branding:
   site_title: Real Estate
-  logo: >-
-    
+  logo:
   favicon: >-
     https://res.cloudinary.com/hungryram19/image/upload/v1630445963/templates/realestate2/favicon_zlmzct.png
   dark_logo: >-
@@ -21,7 +20,7 @@ header:
   enable_white_text_top: true
   transparent_background: true
   mobile_menu:
-    background_color:
+    background_color: '#000000'
     enable_white_text: true
 pages:
   image: >-
