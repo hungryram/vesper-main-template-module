@@ -42,12 +42,12 @@ body a {
     color: inherit;
 }
 
-body a:empty {
-    display: none;
-}
-
 body em {
     color: inherit;
+}
+
+.hr-wordbreak {
+    word-break: break-all;
 }
 
 

@@ -12,11 +12,11 @@
                     {{ if $footer.logo }}
                     <img src="{{ $footer.logo }}" alt="{{ $companyName }}" width="150" />
                     {{ else }}
-                    <h2 class="uk-h5 uk-text-bold">{{ $companyName }}</h2>
+                    <h2 class="uk-h5 uk-text-bold editable">Heading</h2>
                     {{ end }}
                     <ul class="uk-list">
-                        <li><p>{{ $footerContact.name }}</p></li>
-                        <li><p>{{ $footerContact.license }}</p></li>
+                        {{ if $footerContact.name }}<li><p>{{ $footerContact.name }}</p></li>{{ end }}
+                        {{ if $footerContact.license }}<li><p>{{ $footerContact.license }}</p></li>{{ end }}
                     </ul>
                     <div class="accent">
                         {{ partial "templates/social" . }}
@@ -109,3 +109,7 @@
             bg.style.color = '{{ .Site.Data.appearance.colors.links }}';
             });
     </script>
+    <!-- CUSTOM SCRIPT -->
+{{ .Site.Data.developer.custom_closing_script }}
+</body>
+</html>
