@@ -1,6 +1,10 @@
----
 column_size: 2-3@m
 enable_absolute_path: false
-custom_css:
+custom_css: |-
+  <style>
+  h1.uk-margin-remove {
+  display: none;
+  }
+  </style>
 custom_script:
 custom_closing_script:
