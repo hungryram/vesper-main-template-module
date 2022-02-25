@@ -161,6 +161,7 @@ _inputs:
     type: textarea
   video_link:
     comment: It is recommended to host videos elsewhere and paste the link here.
+    type: text
   price:
     comment: Include the dollar sign.
   photo:
@@ -190,6 +191,11 @@ _inputs:
     type: text
   cities:
     label: City
+  column_size:
+    type: select
+    options:
+      values:
+        - 2-3@m
   slide_animation:
     type: select
     options:

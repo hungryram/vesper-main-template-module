@@ -130,8 +130,8 @@
     </nav>
 </div>
 <div id="mobile-menu-slide" uk-offcanvas>
-    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-        <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical" uk-nav>
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column" style="background-color: {{ $navColor.mobile_menu.background_color }}">
+        <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical {{ if $navColor.mobile_menu.enable_white_text }}uk-light{{ else }}uk-dark{{ end }}" uk-nav>
 
             {{ range $mainMenu.menu }}
             {{ if .menu }}

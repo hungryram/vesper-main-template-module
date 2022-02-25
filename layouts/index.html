@@ -262,7 +262,7 @@
             {{ end }}
             {{ if .form.body }}
             <div class="md-content">
-              <p>{{ .form.body }}</p>
+              <p>{{ .form.body | markdownify }}</p>
             </div>
             {{ end }}
             <form name="Website Contact Form" method="POST" netlify-honeypot="bot-field" data-netlify="true"
@@ -288,10 +288,8 @@
                   style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Send
                   Email</button>
               </div>
-              <div class="uk-width-1-1">
-                <p>By submitting the form with your information above you are agreeing to our <a
-                    style="color:{{ $linkColor }}" href="/legal/terms-and-conditions">Terms and Conditions</a> and <a
-                    style="color:{{ $linkColor }}" href="/legal/privacy-policy">Privacy Policy</a></p>
+              <div class="uk-width-1-1 md-content">
+                {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
               </div>
             </form>
           </div>

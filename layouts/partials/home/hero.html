@@ -8,7 +8,7 @@
 {{ $buttonColor := .Site.Data.appearance.colors }}
 <div class="uk-cover-container uk-flex uk-flex-middle uk-flex-center" uk-height-viewport>
 
-    <video src="https://res.cloudinary.com/hungryram19/video/upload/v1636132823/rajon-arrae/rajon-arrae-estates/pexels-arsel-8403602.mp4" defaultMuted autoplay loop muted playsinline uk-cover></video>
+    <video src="{{ .Params.video_background.video_link }}" defaultMuted autoplay loop muted playsinline uk-cover></video>
     <div class="black-overlay"></div>
         <div class="uk-position-center">
             <div class="uk-section-small">
@@ -36,10 +36,15 @@
                 <div class="uk-width-2xlarge uk-{{ if $slideSettings.enable_black_text }}dark{{ else }}light{{ end }}">
                     {{ if .subtitle }}<h4>{{ .subtitle }}</h4>{{ end }}
                     {{ if .heading }}<h1 class="uk-margin-remove">{{ .heading }}</h1>{{ end }}
-                    <div class="md-content">
-                        {{ if .body }}<p class="uk-margin-remove uk-text-default">{{ .body | markdownify }}</p>{{ end }}
+                    <div class="md-content uk-white uk-text-default">
+                        {{ if .body }}{{ .body | markdownify }}{{ end }}
                     </div>
-                    {{ if eq $.Site.Data.idx.enable_idx false }}
+                    {{ if $slideSettings.display_button }}
+                    <div class="uk-margin-medium-top">
+                        <a href="{{ .link }}" class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">{{ .link_label }}</a>
+                    </div>
+                    {{ end }}
+                    {{ if $slideSettings.enable_default_search }}
                     <div class="uk-margin-medium-top">
                         <form action="{{ "search" | absURL }}">
                             <div uk-form-custom>
@@ -50,11 +55,11 @@
                     </div>
                     {{ end }}
                     {{ if $.Site.Data.idx.enable_idx }}
-                    <div class="uk-margin-medium-top mobile-quicksearch">
-                        {{ if $.Site.Data.idx.incomplete_subdomain }}
-                        <a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/homesearch/{{ $ihfID }}" class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Search Homes</a>
-                        {{ end }}
-                    </div>
+                        <div class="uk-margin-medium-top mobile-quicksearch">
+                            {{ if $.Site.Data.idx.incomplete_subdomain }}
+                            <a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/homesearch/{{ $ihfID }}" class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Search Homes</a>
+                            {{ end }}
+                        </div>   
                     {{ end }}
                 </div>
             </div>
@@ -62,7 +67,7 @@
         {{ end }}
     </ul>
 
-    {{ if $.Site.Data.idx.enable_idx }}
+    {{ if and $.Site.Data.idx.enable_idx $slideSettings.enable_idx_search }}
     <div class="uk-light hero-foot">
         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>

@@ -20,7 +20,7 @@ header:
   enable_white_text_top: true
   transparent_background: true
   mobile_menu:
-    background_color: '#000000'
+    background_color: '#222'
     enable_white_text: true
 pages:
   image: >-
@@ -42,4 +42,4 @@ search_field:
   search_by_properties: true
   filter_animation: slide
 form:
-  form_disclaimer:
+  form_disclaimer: test

@@ -4,8 +4,11 @@ slideshow_settings:
   enable_autoplay: true
   enable_ken_burns_effect: false
   enable_black_text: false
-video_background:
-  video_link:
+  enable_idx_search: false
+  enable_default_search: false
+  display_button: true
+video_background: 
+  video_link: 
   heading: Highly Customizable Real Estate Theme
   body: Optionally integrate with IDX or use built in tools
   button_label: Search Homes
