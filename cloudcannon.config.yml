@@ -468,6 +468,11 @@ _structures:
           _type: custom-text
           template: custom-text
           body:
+      - label: "Custom Code"
+        value:
+          _type: custom-code
+          template: custom-text
+          textarea:
       - label: "latest Posts"
         value:
           _type: latest-posts
