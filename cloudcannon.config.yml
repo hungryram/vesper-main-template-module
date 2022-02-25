@@ -101,7 +101,7 @@ collection_groups:
       - blog
 paths:
   # The default location for newly uploaded files, relative to source
-  uploads: static/uploads/images
+  uploads: static/uploads/
 _inputs:
   custom_css:
     type: textarea
