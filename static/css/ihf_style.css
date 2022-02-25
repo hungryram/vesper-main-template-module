@@ -157,6 +157,7 @@ font-weight: 500;
 border-radius: 0px!important;
 background: var(--idx-title-color);
 padding: 20px 8px;
+color: var(--idx-title-text-color);
 }
 
 #ihf-main-container .btn-primary, .ihf-main-container .btn-primary {
