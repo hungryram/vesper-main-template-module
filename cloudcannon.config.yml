@@ -98,6 +98,7 @@ collection_groups:
   - heading: Blog
     collections:
       - blog
+      - drafts
 paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
