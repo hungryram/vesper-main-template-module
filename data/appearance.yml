@@ -22,7 +22,7 @@ header:
   transparent_background: true
   mobile_menu:
     background_color:
-    enable_white_text:
+    enable_white_text: true
 pages:
   image: >-
     https://res.cloudinary.com/hungryram19/image/upload/v1628905290/templates/realestate2/kichen_weesqh.jpg
