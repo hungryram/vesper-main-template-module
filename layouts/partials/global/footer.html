@@ -8,7 +8,7 @@
 <footer class="footer" style="{{ if $footer.background_image }}background:url({{ if $absURL }}{{ .Site.BaseURL }}{{ $footer.background_image }}{{ else }}{{ $footer.background_image }}{{ end }}) no-repeat center;background-size:cover;background-blend-mode:overlay;background-color:rgba(0,0,0,0.9){{ else }}background:{{ $footer.footer_background_color }}{{ end }}">
     <div class="uk-section">
         <div class="uk-container uk-container-large">
-            <a href="" class="editor-link editor-content"><span uk-icon="icon: file-edit"></span> Edit Footer</a>
+            <a href="cloudcannon:collections/data/footer.yml" class="editor-link editor-content"><span uk-icon="icon: file-edit"></span> Edit Footer</a>
             <div class="uk-grid-large uk-child-width-1-4@m uk-child-width-1-2@s{{ if $footer.enable_black_text }} uk-dark{{ else }} uk-light{{ end }}" uk-grid>
                 <div>
                     {{ if $footer.logo }}
