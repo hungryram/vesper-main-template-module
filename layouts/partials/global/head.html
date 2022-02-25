@@ -37,7 +37,7 @@
 
 <!-- STYLESHEETS AND RESOURCES-->
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
-{{ if and $.IsHome $.Site.Data.idx.enable_idx }}
+{{ if $.Site.Data.idx.enable_idx }}
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/ihf_style.css">
 {{ end }}
 

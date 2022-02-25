@@ -1,8 +1,9 @@
 {{ $profile := .Site.Data.profile }}
 {{ $appearance := .Site.Data.appearance }}
-<script type = "application/ld+json"> {
+<script type="application/ld+json"> {
 	"@context": "https:\/\/schema.org",
-	"@graph": [{
+	"@graph": [
+		{
 		"@type": "WebSite",
 		"url": "{{ .Site.BaseURL }}",
 		"name": "{{ $profile.company_name }}",
@@ -16,7 +17,20 @@
 		"@type": "RealEstateAgent",
 		"name": "{{ $profile.company_name }}",
 		"url": "{{ .Site.BaseURL }}",
-		"email": "{{ $profile.contact_information.email }}",
+		"contactPoint":
+		[
+		  {
+			"@type":"ContactPoint",
+			"name":"work",
+			"email":"{{ $profile.contact_information.email }}",
+			"telephone":"{{ $profile.contact_information.cell }}"
+		  },
+		  {
+			"@type":"ContactPoint",
+			"name":"office",
+			"telephone":"{{ $profile.contact_information.phone }}"
+		  }
+		]
 		"address": {
 			"@type": "PostalAddress",
 			"streetAddress": "{{ $profile.contact_information.address }}",
@@ -25,7 +39,8 @@
 			"postalCode": "{{ $profile.contact_information.zip_code }}",
 			"addressCountry": "United States"
 		},
-		"image": "{{ $appearance.branding.logo }}"
-	}]
+		"image": "{{ $appearance.branding.logo | absURL }}"
+	}
+]
 } 
 </script>

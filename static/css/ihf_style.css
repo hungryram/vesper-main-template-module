@@ -97,3 +97,182 @@ div#ihf-main-container select.form-control {
         top:100px;
       }
 }
+
+<style type="text/css">
+/*
+
+IHOMEFINDER
+
+*/
+
+
+form#ihf-main-search-form {
+    margin-bottom: 50px;
+}
+
+#ihf-main-container .form-control,
+#ihf-main-container .input-text,#ihf-main-container input[type=input], #ihf-main-container input[type=text],
+#ihf-main-container .chosen-container-single .chosen-single {
+	border-radius: 0px!important;
+}
+
+/*quick search*/
+.ihf-quick-search-form .field-label,
+.front-page-1 #ihf-main-container label {
+color: #fff;
+}
+
+.front-page-2 #ihf-main-container label {
+	color: #000;
+}
+
+/* adds margin to result page on mobile */
+
+.ihf-grid-result.col-xs-12 {
+    margin-bottom: 30px;
+}
+
+/* removes padding on details page */
+#ihf-main-container .ihf-listing-information-alt {
+padding: 0px!important;
+}
+
+#ihf-main-container .modal-dialog {
+padding-top: 13%!important;
+}
+
+.ihf-grid-result-price {
+font-size: 16px;
+}
+
+.ihf-grid-result-address {
+color: #222222!important;
+font-family: "Playfair Display", sans-serif;
+text-transform: Capitalize;
+font-size: 17px;
+}
+
+#ihf-main-container .title-bar-1 {
+font-size: 14px;
+font-weight: 500;
+border-radius: 0px!important;
+background: #313131;
+}
+
+#ihf-main-container .btn-primary, .ihf-main-container .btn-primary {
+background: #313131;
+}
+
+#ihf-main-container .btn-primary.active, #ihf-main-container .btn-primary:active, #ihf-main-container .btn-primary:focus, #ihf-main-container .btn-primary:hover {
+background: #212121!important;
+color: #fff!important;
+}
+
+
+/*removes powered by*/
+.ihf-powered-by {
+display: none;
+}
+
+
+#ihf-main-container .carousel-control {
+   height: auto;
+   background: none;
+   border: none;
+}
+
+#ihf-main-container .carousel-caption {
+    background: none;
+}
+
+#ihf-main-container a:hover {
+text-decoration: none;
+}
+
+i.glyphicon.glyphicon-camera,
+i.glyphicon.glyphicon-play-circle
+ {
+    color: red;
+}
+
+div div.ihf-grid-result-virtual-tour a {
+    color: red!important;
+}
+
+.ui-button-contained-primary {
+background-color: red!important;
+color: #fff;
+}
+
+.ui-grid.feature-value.ui-grid-item {
+margin-left: 0;
+}
+
+/*Custom*/
+#ihf-main-container .btn {
+border-radius: 0!important;
+}
+
+#ihf-main-container .listing-info-item {
+padding: 8px 0 !important;
+}
+
+
+#ihf-main-container .tab-content .title-bar-1 {
+    margin-top: 30px;
+    background-color: #f5f5f5;
+    border-top: 3px solid #000;
+    color: #000;
+    font-weight: 800;
+    padding: 10px 16px;
+margin-bottom: 30px;
+}
+
+
+.ihf-tab-pane, #ihf-agent-sellers-rep, #ihf-board-detail-disclaimer, #ihf-board-detail-updatetext {
+font-size: 14px;
+}
+
+span.listing-info-item-title {
+    color: #000;
+}
+
+h1.entry-title {
+font-size: 1.5em;
+}
+
+/*Results Page*/
+#ihf-main-container .title-bar-1 {
+padding: 8px 8px!important;
+}
+
+/*Height of grid photo*/
+.ihf-results-grid-photo {
+    height: 300px;
+}
+
+div.address a.ihf-txt-uc {
+    color: black!important;
+    font-size: 14px;
+}
+
+/*sidebar label color*/
+.sidebar #ihf-main-container label {
+	color: #000;
+}
+
+.sidebar li:before {
+	content: none;
+}
+
+div.gallery-prop-info {
+    margin-top: 51px;
+}
+
+#ihf-main-container .dropdown-menu>.active>a,
+#ihf-main-container .dropdown-menu>li>a:hover {
+background: red;
+}
+
+</style>
+
