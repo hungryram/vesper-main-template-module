@@ -471,7 +471,7 @@ _structures:
       - label: "Custom Code"
         value:
           _type: custom-code
-          template: custom-text
+          template: custom-code
           textarea:
       - label: "latest Posts"
         value:
