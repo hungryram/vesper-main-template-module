@@ -492,9 +492,9 @@ footer.footer a:hover {
     width: 150px;
 }
 
-/* .editor-content {
+.editor-content {
     display: none;
-  } */
+  }
   
   .cms-editor-active .editor-content {
     display: block;
