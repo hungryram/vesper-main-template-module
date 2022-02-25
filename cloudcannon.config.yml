@@ -14,8 +14,7 @@ collections_config:
     output: true
     url: "/content/blog/[slug]"
     add_options:
-      - name: Add Team
-        icon: person_add
+      - name: Add Post
         href: "cloudcannon:explore/content/blog/.md🆕/content/schemas/blog.md"
     _inputs:
       author:
@@ -103,6 +102,8 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
 _inputs:
+  is_post:
+    hidden: true
   background_color:
     type: color
   custom_css:
