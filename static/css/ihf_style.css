@@ -192,16 +192,11 @@ text-decoration: none;
 i.glyphicon.glyphicon-camera,
 i.glyphicon.glyphicon-play-circle
  {
-    color: red;
+    color: var(--primary-accent-color);
 }
 
 div div.ihf-grid-result-virtual-tour a {
-    color: red!important;
-}
-
-.ui-button-contained-primary {
-background-color: red!important;
-color: #fff;
+    color: var(--primary-accent-color)!important;
 }
 
 .ui-grid.feature-value.ui-grid-item {
