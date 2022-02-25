@@ -5,7 +5,7 @@
 <div class="uk-section">
     <div class="uk-container uk-container-large">
         <div class="uk-grid-small" uk-grid>
-            <div class="uk-width-{{ $size.column_size }}">
+            <div class="md-content uk-width-{{ $size.column_size }}">
                 {{ if .Params.featured_image }}
                 <div class="uk-margin-medium">
                     <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .Params.featured_image }}{{ else }}{{ .Params.featured_image }}{{ end }}" alt="{{ .Params.image_alt_tag }}">
@@ -19,8 +19,8 @@
                 <ul class="uk-list">
                     <h3 class="uk-text-bold">Categories</h3>
                     {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
-                    <li class="uk-display-inline-block">
-                        <span class="uk-margin-small-right"><a href="/categories{{ $name | urlize | relURL }}" class="uk-text-link">{{ $name | humanize }}</a></span>
+                    <li>
+                        <a href="/categories{{ $name | urlize | relURL }}" class="uk-text-link">{{ $name | humanize }}</a>
                     </li>
                     {{ end }}
                 </ul>
@@ -29,8 +29,8 @@
                 <ul class="uk-list">
                     <h3 class="uk-text-bold">Tags</h3>
                     {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-                    <li class="uk-display-inline-block">
-                        <span><a href="/tags{{ $name | urlize | relURL }}" class="uk-margin-small-left uk-text-link">{{ $name | humanize }}</a></span>
+                    <li>
+                        <a href="/tags{{ $name | urlize | relURL }}" class="uk-text-link">{{ $name | humanize }}</a>
                     </li>
                     {{ end }}
                 </ul>
