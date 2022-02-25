@@ -103,6 +103,8 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
 _inputs:
+  background_color:
+    type: color
   custom_css:
     type: textarea
     comment: Custom CSS code. Include the style tag
