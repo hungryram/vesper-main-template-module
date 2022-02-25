@@ -463,6 +463,11 @@ _structures:
           _type: blog-category
           template: side-blog-category
           comment: Nothing to configure, categories will display.
+      - label: "Custom Text"
+        value:
+          _type: custom-text
+          template: custom-text
+          body:
       - label: "latest Posts"
         value:
           _type: latest-posts
