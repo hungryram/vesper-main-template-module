@@ -103,6 +103,15 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/images
 _inputs:
+  custom_css:
+    type: textarea
+    comment: Custom CSS code. Include the style tag
+  custom_script:
+    type: textarea
+    comment: Custom script tag in the header
+  custom_closing_script:
+    type: textarea
+    comment: Custom script tag before the closing body tag
   main_photo:
     type: image
   onefivetwo:

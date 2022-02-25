@@ -1,5 +1,6 @@
 ---
 column_size: 2-3@m
-top_search:
-  show_state_filter: false
 enable_absolute_path: false
+custom_css:
+custom_script:
+custom_closing_script:
