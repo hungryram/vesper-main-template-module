@@ -4,7 +4,7 @@
 <div class="uk-section">
     <div class="uk-container uk-container-large">
         <div class="uk-grid-small" uk-grid>
-            <div class="uk-width-{{ $size.column_size }}">
+            <div class="{{ if .Site.Data.appearance.sidebar.remove_sidebar }}uk-width-1-1@m{{ else }}uk-width-{{ $size.column_size }}{{ end }}">
                 <div class="content uk-margin-medium-top md__content">
                     {{ .Content }}
                 </div>

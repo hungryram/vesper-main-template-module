@@ -54,13 +54,6 @@
                         </form>
                     </div>
                     {{ end }}
-                    {{ if $.Site.Data.idx.enable_idx }}
-                        <div class="uk-margin-medium-top mobile-quicksearch">
-                            {{ if $.Site.Data.idx.incomplete_subdomain }}
-                            <a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/homesearch/{{ $ihfID }}" class="uk-button uk-button-primary" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};">Search Homes</a>
-                            {{ end }}
-                        </div>   
-                    {{ end }}
                 </div>
             </div>
         </li>
@@ -69,10 +62,8 @@
 
     {{ if and $.Site.Data.idx.enable_idx $slideSettings.enable_idx_search }}
     <div class="uk-light hero-foot">
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
         <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
-            <div class="uk-container quicksearch">
+            <div class="uk-container desktop-quicksearch">
                 {{ if $.Site.Data.idx.incomplete_subdomain }}
                 <script type="text/javascript" src="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
                 {{ else }}
@@ -82,5 +73,19 @@
         </div>
     </div>
     {{ end }}
+</div>
+{{ end }}
+
+{{ if and $.Site.Data.idx.enable_idx $slideSettings.enable_idx_search }}
+<div class="uk-light uk-section mobile-quicksearch">
+    <div>
+        <div class="uk-container">
+            {{ if $.Site.Data.idx.incomplete_subdomain }}
+            <script type="text/javascript" src="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
+            {{ else }}
+            <script type="text/javascript" src="https://{{ $.Site.Data.idx.complete_subdomain }}.idxhome.com/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
+            {{ end }}
+        </div>
+    </div>
 </div>
 {{ end }}

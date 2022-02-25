@@ -1,3 +1,4 @@
+{{ if .Site.Data.appearance.sidebar.remove_sidebar }}
 <div class="uk-width-expand">
     <div class="uk-card uk-card-body">
         {{ range .Site.Data.appearance.sidebar.sidebar }}
@@ -99,3 +100,4 @@
         {{ end }}
     </div>
 </div>
+{{ end }}

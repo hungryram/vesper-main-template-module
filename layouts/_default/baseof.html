@@ -10,10 +10,10 @@
     <div class="uk-position-top full-nav-wrapper">
         {{ partial "global/navbar" . }}
     </div>
-        <div class="uk-padding uk-margin-large-top uk-text-center uk-container uk-container-small md-content">
-            <h1 class="uk-text-uppercase uk-white uk-text-center uk-position-relative uk-h2">{{ .Title }}</h1>
+        <div class="uk-padding uk-margin-large-top uk-text-center uk-container uk-container-small md-content uk-position-relative uk-white">
+            <h1 class="uk-white uk-text-center uk-position-relative uk-h2">{{ .Title }}</h1>
             {{ if .Params.body }}
-            <p class="uk-white uk-position-relative">{{ .Params.body | markdownify }}</p>
+            {{ .Params.body | markdownify }}
             {{ end }}
         </div>
 </div>

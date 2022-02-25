@@ -460,14 +460,17 @@ _structures:
     values:
       - label: "Blog Category"
         value:
+          _type: blog-category
           template: side-blog-category
           comment: Nothing to configure, categories will display.
       - label: "latest Posts"
         value:
+          _type: latest-posts
           template: latest-posts
           comment: Nothing to configure, posts will display.
       - label: "Listings"
         value:
+          _type: listings
           template: sidebar-listings
           comment: Nothing to configure, listings will display.
   additional_links:

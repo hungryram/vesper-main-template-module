@@ -1,17 +1,10 @@
   
 {{ partial "global/head" . }}
-<div class="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url({{ .Site.Data.appearance.pages.image }})no-repeat center;background-size:cover">
+<div class="uk-background-cover uk-height-idx uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url({{ .Site.Data.appearance.pages.image }})no-repeat center;background-size:cover">
     <div class="hero-overlay uk-position-cover"></div>
-
     <div class="uk-position-top full-nav-wrapper">
         {{ partial "global/navbar" . }}
     </div>
-        <div class="uk-padding uk-margin-large-top uk-text-center uk-container uk-container-small md-content">
-            <h1 class="uk-text-uppercase uk-white uk-text-center uk-position-relative uk-h2">{{ .Title }}</h1>
-            {{ if .Params.body }}
-            <p class="uk-white uk-position-relative uk-text-default">{{ .Params.body | markdownify }}</p>
-            {{ end }}
-        </div>
 </div><div class="uk-section">
     <div class="uk-container uk-container-large">
         {idx_body}

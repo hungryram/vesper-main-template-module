@@ -4,7 +4,7 @@ slideshow_settings:
   enable_autoplay: true
   enable_ken_burns_effect: false
   enable_black_text: false
-  enable_idx_search: false
+  enable_idx_search: true
   enable_default_search: false
   display_button: true
 video_background: 

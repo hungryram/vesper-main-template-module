@@ -62,6 +62,10 @@ div.uk-overlay-baseof {
 
 /* OVERWRITE */
 
+.uk-height-idx {
+    height: 225px;
+}
+
 @media screen and (max-width: 768px) {
     .max-button {
         width: 100%;
@@ -181,6 +185,21 @@ ul.uk-nav-default.uk-dark li.uk-parent .uk-nav-sub li a {
 }
 
 /* HERO */
+
+.uk-container.desktop-quicksearch {
+    background: rgb(0 0 0 / 54%);
+    padding: 20px;
+}
+
+.uk-container.desktop-quicksearch label {
+    color: rgb(204, 204, 204)
+}
+
+@media screen and (max-width:768px) {
+    div.desktop-quicksearch {
+        display: none;
+    }
+}
 
 @media screen and (min-width:768px) {
     div.mobile-quicksearch {
