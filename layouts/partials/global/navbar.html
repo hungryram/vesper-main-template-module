@@ -146,7 +146,7 @@
                 <a href="#">{{ .name }}</a>
                 <ul class="uk-nav-sub">
                     {{ range .menu }}
-                    <li class="uk-active"><a href="{{ .link }}">{{ .name }}</a></li>
+                    <li class="uk-active"><a href="{{ .link | absURL }}">{{ .name }}</a></li>
                     {{ end }}
                 </ul>
             </li>
