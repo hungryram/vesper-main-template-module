@@ -1,10 +1,12 @@
 {{ $buttonColor := $.Site.Data.appearance.colors }}
+{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
+
 <div class="uk-card uk-card-default property-card">
     <div class="uk-card-media-top">
         <div class="uk-cover-container">
             <canvas height="300"></canvas>
             {{ if .Params.photos.gallery }}
-            <img src="{{ (index .Params.photos.gallery 0).image }}" alt="{{ .Title }}" uk-cover>
+            <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ (index .Params.photos.gallery 0).image }}{{ else }}{{ (index .Params.photos.gallery 0).image }}{{ end }}" alt="{{ .Title }}" uk-cover>
             {{ else }}
             <img src="/assets/no-photo.jpg" alt="no house icon" uk-cover>
             {{ end }}

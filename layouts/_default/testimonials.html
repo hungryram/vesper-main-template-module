@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ $buttonColor := .Site.Data.appearance.colors }}
 {{ $size := .Site.Data.developer }}
+{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
+
 <div class="uk-section">
     <div class="uk-container uk-container-large">
         <div class="uk-grid-small" uk-grid>
@@ -14,7 +16,7 @@
                     <header class="uk-comment-header">
                         <div class="uk-grid-medium uk-flex-middle" uk-grid>
                             <div class="uk-width-auto">
-                                <img class="uk-comment-avatar" src="{{ if .photo }}{{ .photo }}{{ else }}/assets/account-circle.svg{{ end }}" width="70" height="70" alt="{{ if .photo }}{{ .name }}{{ else }}anonymous avatar{{ end }}" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};border-radius:50%;object-fit:cover;width:70px;height:70px;">
+                                <img class="uk-comment-avatar" src="{{ if .photo }}{{ if $absURL }}{{ .Site.BaseURL }}{{ .photo }}{{ else }}{{ .photo }}{{ end }}{{ else }}/assets/account-circle.svg{{ end }}" width="70" height="70" alt="{{ if .photo }}{{ .name }}{{ else }}anonymous avatar{{ end }}" style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }};border-radius:50%;object-fit:cover;width:70px;height:70px;">
                             </div>
                             <div class="uk-width-expand">
                                 <h5 class="uk-margin-small-bottom"><a class="uk-link-reset" href="#">{{ .name }}</a></h5>

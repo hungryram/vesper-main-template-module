@@ -7,6 +7,7 @@
 {{ $buttonColor := .Site.Data.appearance.colors }}
 {{ $ihfID := .Site.Data.idx.ihf_client_id }}
 {{ $mainMenu := .Site.Data.menu }}
+{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
 <style>
     nav.uk-navbar-sticky ul li a,
@@ -39,16 +40,16 @@
                     {{ if $navbar.logo }}
                     <a href="{{ .Site.BaseURL }}">
                         {{ if $navColor.transparent_background }}
-                        <img src="{{ $navbar.logo }}"
+                        <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.logo }}{{ else }}{{ $navbar.logo }}{{ end }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
                             width="{{ $navbar.logo_width }}" class="white-logo">
-                        <img src="{{ $navbar.dark_logo }}"
+                        <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.dark_logo }}{{ else }}{{ $navbar.dark_logo }}{{ end }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
                             width="{{ $navbar.logo_width }}" class="dark-logo">
                         {{ else }}
-                        <img src="{{ $navbar.logo }}"
+                        <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.logo }}{{ else }}{{ $navbar.logo }}{{ end }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
-                            width="{{ $navbar.logo_width }}" class="white-logo">
+                            width="{{ $navbar.logo_width }}">
                         {{ end }}
                     </a>
                     {{ else }}
@@ -109,9 +110,9 @@
             {{ if $navbar.logo }}
             <a href="{{ .Site.BaseURL }}">
                 {{ if $navColor.transparent_background }}
-                <img src="{{ $navbar.logo }}" alt="{{ .Site.Data.profile.company_name }} logo"
+                <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.logo }}{{ else }}{{ $navbar.logo }}{{ end }}" alt="{{ .Site.Data.profile.company_name }} logo"
                     width="{{ $navbar.logo_width }}" class="white-logo">
-                <img src="{{ $navbar.dark_logo }}"
+                <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.dark_logo }}{{ else }}{{ $navbar.dark_logo }}{{ end }}"
                     alt="{{ .Site.Data.profile.company_name }} logo"
                     width="{{ $navbar.logo_width }}" class="dark-logo">
                 {{ else }}

@@ -5,6 +5,8 @@
 {{- $fallBackDesc := .Params.body | truncate 170 -}}
 {{- $summary := .Summary | truncate 170 -}}
 {{- $icons := .Site.Data.appearance.icons -}}
+{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
+
 <link rel="alternate" href="{{ .Permalink }}" hreflang="en-us" />
 <meta property="og:type" content="{{ if .Params.is_post }}article{{ else }}website{{ end }}"/>
 <meta property="og:locale" content="en_US" />
@@ -46,25 +48,25 @@
 <meta property="article:published_time" content={{ .Date.Format "2006-01-02" | safeHTML }} />
 {{- end }} <!-- End Home Statement -->
 
-<link rel="apple-touch-icon" sizes="152x152" href="{{ $icons.onefivetwo }}" />
-<link rel="apple-touch-icon" sizes="144x144" href="{{ $icons.onefourfour }}" />
-<link rel="apple-touch-icon" sizes="120x120" href="{{ $icons.onetwotwo }}" />
-<link rel="apple-touch-icon" sizes="114x114" href="{{ $icons.oneonefour }}" />
-<link rel="apple-touch-icon" sizes="180x180" href="{{ $icons.oneeightzero }}" />
-<link rel="apple-touch-icon" sizes="72x72" href="{{ $icons.seventwo }}" />
+<link rel="apple-touch-icon" sizes="152x152" href="{{ if $absURL }}{{ .Site.BaseURL }}{{ $icons.onefivetwo }}{{ else }}{{ $icons.onefivetwo }}{{ end }}" />
+<link rel="apple-touch-icon" sizes="144x144" href="{{ if $absURL }}{{ .Site.BaseURL }}{{ $icons.onefourfour }}{{ else }}{{ $icons.onefourfour }}{{ end }}" />
+<link rel="apple-touch-icon" sizes="120x120" href="{{ if $absURL }}{{ .Site.BaseURL }}{{ $icons.onetwotwo }}{{ else }}{{ $icons.onetwotwo }}{{ end }}" />
+<link rel="apple-touch-icon" sizes="114x114" href="{{ if $absURL }}{{ .Site.BaseURL }}{{ $icons.oneonefour }}{{ else }}{{ $icons.oneonefour }}{{ end }}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ if $absURL }}{{ .Site.BaseURL }}{{ $icons.oneeightzero }}{{ else }}{{ $icons.oneeightzero }}{{ end }}" />
+<link rel="apple-touch-icon" sizes="72x72" href="{{ if $absURL }}{{ .Site.BaseURL }}{{ $icons.seventwo }}{{ else }}{{ $icons.seventwo }}{{ end }}" />
 <link rel="apple-touch-icon" href="{{ $favicon }}" />
-<link rel="shortcut icon" href="{{ $favicon }}" />
+<link rel="shortcut icon" href="{{ if $absURL }}{{ .Site.BaseURL }}{{ $favicon }}{{ else }}{{ $favicon }}{{ end }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
 <meta name="twitter:site" content="@{{ .Site.Data.profile.search_engine_optimization.twitter_card.twitter_username }}">
 
 {{ if .Params.featured_image }}
-<meta property="og:image" content="{{ .Params.featured_image }}" />
-<meta name="twitter:image" content="{{ .Params.featured_image }}" />
+<meta property="og:image" content="{{ if $absURL }}{{ .Site.BaseURL }}{{ .Params.featured_image }}{{ else }}{{ .Params.featured_image }}{{ end }}" />
+<meta name="twitter:image" content="{{ if $absURL }}{{ .Site.BaseURL }}{{ .Params.featured_image }}{{ else }}{{ .Params.featured_image }}{{ end }}" />
 <meta name="twitter:card" content="summary_large_image">
 {{ end }}
 
 {{ if .Params.photos.gallery }}
-<meta property="og:image" content="{{ index .Params.photos.gallery 0 }}" />
-<meta name="twitter:image" content="{{ index .Params.photos.gallery 0 }}" />
+<meta property="og:image" content="{{ if $absURL }}{{ .Site.BaseURL }}{{ index .Params.photos.gallery 0 }}{{ else }}{{ index .Params.photos.gallery 0 }}{{ end }}" />
+<meta name="twitter:image" content="{{ if $absURL }}{{ .Site.BaseURL }}{{ index .Params.photos.gallery 0 }}{{ else }}{{ index .Params.photos.gallery 0 }}{{ end }}" />
 <meta name="twitter:card" content="summary_large_image">
 {{ end }}

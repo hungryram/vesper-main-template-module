@@ -1,6 +1,8 @@
   
 {{ partial "global/head" . }}
-<div class="uk-background-cover uk-height-idx uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url({{ .Site.Data.appearance.pages.image }})no-repeat center;background-size:cover">
+{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
+
+<div class="uk-background-cover uk-height-idx uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url({{ if $absURL }}{{ .Site.BaseURL }}{{ .Site.Data.appearance.pages.image }}{{ else }}{{ .Site.Data.appearance.pages.image }}{{ end }})no-repeat center;background-size:cover">
     <div class="hero-overlay uk-position-cover"></div>
     <div class="uk-position-top full-nav-wrapper">
         {{ partial "global/navbar" . }}

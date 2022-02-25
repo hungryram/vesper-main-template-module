@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $size := .Site.Data.developer }}
+{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
 <div class="uk-section">
     <div class="uk-container uk-container-large">
@@ -7,7 +8,7 @@
             <div class="uk-width-{{ $size.column_size }}">
                 {{ if .Params.featured_image }}
                 <div class="uk-margin-medium">
-                    <img src="{{ .Params.featured_image }}" alt="{{ .Params.image_alt_tag }}">
+                    <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .Params.featured_image }}{{ else }}{{ .Params.featured_image }}{{ end }}" alt="{{ .Params.image_alt_tag }}">
                 </div>
                 {{ end }}
                 <div class="md-content">
