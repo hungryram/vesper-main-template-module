@@ -156,6 +156,7 @@ font-size: 14px;
 font-weight: 500;
 border-radius: 0px!important;
 background: #313131;
+padding: 20px 8px;
 }
 
 #ihf-main-container .btn-primary, .ihf-main-container .btn-primary {
@@ -241,9 +242,6 @@ font-size: 1.5em;
 }
 
 /*Results Page*/
-#ihf-main-container .title-bar-1 {
-padding: 8px 8px!important;
-}
 
 /*Height of grid photo*/
 .ihf-results-grid-photo {
