@@ -22,33 +22,33 @@
                         {{ if .Params.contact.cell }}
                         <tr>
                             <td>Cell</td>
-                            <td class="uk-text-right"><a href="tel:{{ .Params.contact.cell }}">{{ .Params.contact.cell }}</a></td>
+                            <td class="uk-text-right hr-wordbreak"><a href="tel:{{ .Params.contact.cell }}">{{ .Params.contact.cell }}</a></td>
                         </tr>
                         {{ end }}
 
                         {{ if .Params.contact.fax_number }}
                         <tr>
                             <td>Fax</td>
-                            <td class="uk-text-right"><a href="tel:{{ .Params.contact.fax_number }}">{{ .Params.contact.fax_number }}</a></td>
+                            <td class="uk-text-right hr-wordbreak"><a href="tel:{{ .Params.contact.fax_number }}">{{ .Params.contact.fax_number }}</a></td>
                         </tr>
                         {{ end }}
                         {{ if .Params.contact.phone }}
                         <tr>
                             <td>Phone</td>
-                            <td class="uk-text-right"><a href="tel:{{ .Params.contact.phone }}">{{ .Params.contact.phone }}</a></td>
+                            <td class="uk-text-right hr-wordbreak"><a href="tel:{{ .Params.contact.phone }}">{{ .Params.contact.phone }}</a></td>
                         </tr>
                         {{ end }}
     
                         {{ if .Params.contact.email }}
                         <tr>
                             <td>Email</td>
-                            <td class="uk-text-right"><a href="tel:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></td>
+                            <td class="uk-text-right hr-wordbreak"><a href="tel:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></td>
                         </tr>
                         {{ end }}
                         {{ if .Params.contact.website }}
                         <tr>
                             <td>Website</td>
-                            <td class="uk-text-right"><a href="{{ .Params.contact.website }}" target="_blank">{{ .Params.contact.website }}</a></td>
+                            <td class="uk-text-right hr-wordbreak"><a href="{{ .Params.contact.website }}" target="_blank">{{ .Params.contact.website }}</a></td>
                         </tr>
                         {{ end }}
 
