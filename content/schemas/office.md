@@ -9,7 +9,7 @@ zip_code = ""
 email = ""
 fax_number = ""
 license_number = ""
-office_phone = ""
+phone = ""
 website = ""
 [social_media]
 facebook = ""

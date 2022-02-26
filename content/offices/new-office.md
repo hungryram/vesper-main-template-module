@@ -10,7 +10,7 @@ zip_code = "92887"
 email = "ram@hungryram.com"
 fax_number = "32-34234-34"
 license_number = "2343"
-office_phone = "6575495082"
+phone = "6575495082"
 website = "https://hungryram.com"
 
 [social_media]

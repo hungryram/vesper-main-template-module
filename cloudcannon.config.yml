@@ -65,6 +65,10 @@ collections_config:
         icon: person_add
         href: "cloudcannon:explore/content/our-team/.md🆕/content/schemas/our-team.md"
     _inputs:
+      office_location:
+        type: select
+        options:
+          values: collections.office
       weight:
         comment: Order team members. Weight of 1 will take first position.
       title:
