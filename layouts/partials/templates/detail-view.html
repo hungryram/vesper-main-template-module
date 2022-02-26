@@ -11,7 +11,7 @@
         </div>
         <div class="uk-width-expand@s">
             <div class="uk-card-body">
-                <h2 class="uk-card-title uk-margin-remove">{{ .Title }} {{ if .Params.details.license_number }}<span class="uk-text-small">| {{ .Params.details.license_number }}</span>{{ end }}</h2>
+                <h2 class="uk-h4 hr-text-medium-bold">{{ .Title }} {{ if .Params.details.license_number }}<span class="uk-text-small">| {{ .Params.details.license_number }}</span>{{ end }}</h2>
                 <div>
                     {{ if .Params.details.category }}<span>{{ .Params.details.category }}</span>{{ end }} 
                     {{ if .Params.details.position }}<span>{{ .Params.details.position }}</span>{{ end }} {{ if .Params.details.office_location }}{{ with .Site.GetPage .Params.details.office_location }} at <a href="{{ .Permalink }}" class="uk-text-bold primary-accent">{{ .Params.title }}</a>{{end}}{{ end }}
@@ -42,13 +42,13 @@
                         {{ if .Params.contact.email }}
                         <tr>
                             <td>Email</td>
-                            <td class="uk-text-right hr-wordbreak"><a href="tel:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></td>
+                            <td class="uk-text-right hr-wordbreak"><a href="mailto:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></td>
                         </tr>
                         {{ end }}
                         {{ if .Params.contact.website }}
                         <tr>
                             <td>Website</td>
-                            <td class="uk-text-right hr-wordbreak"><a href="{{ .Params.contact.website }}" target="_blank">{{ .Params.contact.website }}</a></td>
+                            <td class="uk-text-right hr-wordbreak"><a href="{{ .Params.contact.website }}" target="_blank" rel="noopener">{{ .Params.contact.website }}</a></td>
                         </tr>
                         {{ end }}
 
@@ -58,7 +58,7 @@
         </div>
     </div>
     <div class="uk-margin uk-card uk-card-default uk-card-body">
-        <div class="uk-grid">
+        <div uk-grid>
             <div class="uk-width-1-2@s uk-text-left@s">
                 <div class="uk-margin-small-bottom uk-margin-small-top social_icons">
                     {{ if .Params.social_media.facebook }}<a href="{{ .Params.social_media.facebook }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook; ratio: .8" target="_blank"></a>{{ end }}
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="uk-width-1-2@s uk-text-right@s">
-                <div class="uk-margin-small-bottom uk-margin-small-top">
+                <div>
                     <ul class="uk-list">
                             <li class="uk-display-inline-block"><a href="tel:{{ if .Params.contact.phone }}{{ .Params.contact.phone }}{{ else }}{{ .Params.contact.cell }}{{ end }}" class="uk-button uk-button-primary uk-text-right">Call</a></li>
                             <li class="uk-display-inline-block"><a href="mailto:{{ if .Params.contact.email }}{{ .Params.contact.email }}{{ end }}" class="uk-button uk-button-primary uk-text-right">Email</a></li>

@@ -66,6 +66,10 @@ div.uk-overlay-baseof {
 
 /* OVERWRITE */
 
+.hr-text-medium-bold {
+    font-weight: 600;
+}
+
 .social_icons .uk-icon-button {
     color: var(--primary-accent-color);
 }
@@ -477,7 +481,11 @@ img.uk-comment-avatar {
   }
   
   li.page-item.active {
-    border-bottom: var(--primary-button-background)
+    border-bottom: 2px solid var(--primary-button-background);
+  }
+
+  li.page-item.active a {
+      color: var(--primary-link-color);
   }
   
   li.page-item.disabled {
