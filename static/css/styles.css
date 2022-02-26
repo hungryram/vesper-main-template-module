@@ -113,6 +113,13 @@ div.idx-button-navbar li a.uk-button-primary {
     color: var(--primary-button-text-color)!important;
 }
 
+div.idx-button-navbar li a.uk-button-primary:hover,
+a.uk-button.uk-button-primary:hover
+button.uk-button.uk-button-primary:hover {
+    background-color: var(--primary-button-background)!important;
+    color: var(--primary-button-text-color)!important;
+}
+
 div#ihf-main-container .btn-primary {
     background-color: var(--primary-button-background)!important;
 }
@@ -158,6 +165,15 @@ div#home-section div.uk-section:nth-child(odd) {
 }
 
 /* NAVBAR */
+
+.mobile-navbar {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.uk-light a.uk-navbar-toggle {
+    color: #fff;
+}
 
 nav.main-nav.uk-navbar-container.uk-navbar-sticky.uk-dark {
     box-shadow: 0px 0px 30px 0px rgb(38 38 38 / 50%);

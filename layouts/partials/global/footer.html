@@ -50,7 +50,7 @@
             <div class="uk-width-1-1 uk-text-center">                
                 <ul class="uk-list">
                     {{ range $footer.important_documents }}
-                    <li><a href="{{ .document }}" target="_blank" class="uk-text-bold">{{ .name }}</a></li>
+                    <li><a href="{{ .document | absURL }}" target="_blank" class="uk-text-bold">{{ .name }}</a></li>
                     {{ end }}
 
                     <li><small data-cms-options='{"image": false}' class="editable">The data and information contained within this website are for informational purposes. We try our best to keep all information up-to-date but encourage visitors to do their own research to determine the accuracy of material available on this website. While we strive to keep the information accurate, we do not warrant the accuracy or completeness of the information, text, graphics, links, or other items contained within these materials. Please visit our full disclaimer for more information.</small></li>

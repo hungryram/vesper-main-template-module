@@ -16,7 +16,7 @@
                     <div class="md-content">
                         <h2 class="uk-h4" style="margin-top:40px;">{{ .Params.video_background.body | markdownify }}</h2>
                     </div>
-                    <a href="{{ .Params.video_background.button_link }}" class="uk-button uk-button-primary">{{ .Params.video_background.button_label }}</a>
+                    <a href="{{ .Params.video_background.button_link | absURL }}" class="uk-button uk-button-primary">{{ .Params.video_background.button_label }}</a>
                 </div>
             </div>
         </div>
@@ -32,15 +32,17 @@
                 <div class="hero-overlay uk-position-cover"></div>
             </div>
             <div class="uk-position-center uk-position-small uk-text-center">
-                <div class="uk-width-2xlarge uk-{{ if $slideSettings.enable_black_text }}dark{{ else }}light{{ end }}">
-                    {{ if .subtitle }}<h4>{{ .subtitle }}</h4>{{ end }}
-                    {{ if .heading }}<h1 class="uk-margin-remove">{{ .heading }}</h1>{{ end }}
-                    <div class="md-content uk-white uk-text-default">
-                        {{ if .body }}{{ .body | markdownify }}{{ end }}
+                <div class="uk-width-2xlarge">
+                    <div class="{{ if $slideSettings.enable_black_text }}uk-dark{{ else }}uk-light{{ end }}">
+                        {{ if .subtitle }}<h4>{{ .subtitle }}</h4>{{ end }}
+                        {{ if .heading }}<h1 class="uk-margin-remove">{{ .heading }}</h1>{{ end }}
+                        <div class="md-content uk-white uk-text-default">
+                            {{ if .body }}{{ .body | markdownify }}{{ end }}
+                        </div>
                     </div>
                     {{ if $slideSettings.display_button }}
                     <div class="uk-margin-medium-top">
-                        <a href="{{ .link }}" class="uk-button uk-button-primary">{{ .link_label }}</a>
+                        <a href="{{ .link | absURL }}" class="uk-button uk-button-primary">{{ .link_label }}</a>
                     </div>
                     {{ end }}
                     {{ if $slideSettings.enable_default_search }}
@@ -60,8 +62,8 @@
     </ul>
 
     {{ if and $.Site.Data.idx.enable_idx $slideSettings.enable_idx_search }}
-    <div class="uk-light hero-foot">
-        <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+    <div class="hero-foot">
+        <div class="uk-position-bottom uk-position-medium uk-text-center">
             <div class="uk-container desktop-quicksearch">
                 {{ if $.Site.Data.idx.incomplete_subdomain }}
                 <script type="text/javascript" src="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>

@@ -106,7 +106,7 @@
 <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200"
     {{ if $navColor.transparent_background }}{{ else }}style="background: {{ $navColor.header_background_color }};" {{
     end }}>
-    <nav class="uk-navbar uk-navbar-container uk-hidden@m uk-padding-small uk-box-shadow-small{{ if $navColor.enable_white_text }} uk-light{{ else }} uk-dark{{ end }}">
+    <nav class="uk-navbar uk-navbar-container uk-hidden@m mobile-navbar uk-box-shadow-small{{ if $navColor.enable_white_text }} uk-light{{ else }} uk-dark{{ end }}">
         <div class="uk-navbar-left">
             {{ if $navbar.logo }}
             <a href="{{ .Site.BaseURL }}">
