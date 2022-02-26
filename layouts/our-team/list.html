@@ -8,7 +8,7 @@
             <div class="uk-width-{{ $size.column_size }}">
                 {{ $teamCount := len (where .Site.RegularPages "Section" "==" "our-team") }}
                 {{ if gt $teamCount 0 }}
-                {{ $paginator := .Paginate (where .Pages "Type" "our-team") 3 }}
+                {{ $paginator := .Paginate (where .Pages "Type" "our-team") 6 }}
                 {{ range $paginator.Pages.ByWeight }}
                 {{ if ne .Title "" }}
                 <div class="uk-child-width-3-4@m">
