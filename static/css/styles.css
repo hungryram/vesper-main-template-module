@@ -420,6 +420,13 @@ span.price-badge {
     }
 }
 
+/* TESTIMONIAL */
+
+img.uk-comment-avatar {
+    background: var(--primary-button-background);
+    color: var(--primary-button-text-color);
+    border-radius: 50px;
+}
 
 /* PAGINATION */
 

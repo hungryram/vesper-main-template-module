@@ -1,7 +1,5 @@
 {{ $ihfID := .Site.Data.idx.ihf_client_id }}
-{{ $buttonColor := .Site.Data.appearance.colors }}
 {{ $slideSettings := .Params.slideshow_settings }}
-{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 <div class="uk-position-top full-nav-wrapper" style="z-index: 100">
     {{ partial "global/navbar" . }}
 </div>
@@ -30,7 +28,7 @@
         {{ range .Params.slideshow }}
         <li>
             <div class="uk-position-cover uk-transform-origin-center-left{{ if $slideSettings.enable_ken_burns_effect }} uk-animation-kenburns{{ end }}">
-                <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .image }}{{ else }}{{ .image }}{{ end }}" alt="" uk-cover>
+                <img src="{{ .image | absURL }}" alt="" uk-cover>
                 <div class="hero-overlay uk-position-cover"></div>
             </div>
             <div class="uk-position-center uk-position-small uk-text-center">

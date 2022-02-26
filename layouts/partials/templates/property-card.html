@@ -1,12 +1,11 @@
 {{ $buttonColor := $.Site.Data.appearance.colors }}
-{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
 <div class="uk-card uk-card-default property-card">
     <div class="uk-card-media-top">
         <div class="uk-cover-container">
             <canvas height="300"></canvas>
             {{ if .Params.photos.gallery }}
-            <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ (index .Params.photos.gallery 0).image }}{{ else }}{{ (index .Params.photos.gallery 0).image }}{{ end }}" alt="{{ .Title }}" uk-cover>
+            <img src="{{ (index .Params.photos.gallery 0).image | absURL }}" alt="{{ .Title }}" uk-cover>
             {{ else }}
             <img src="/assets/no-photo.jpg" alt="no house icon" uk-cover>
             {{ end }}
@@ -47,7 +46,7 @@
             {{ end }}
             {{ if .Params.details.bathrooms }}
             <span class="card-footer-item">
-              <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/shower_black_24dp.svg" alt="bed icon" width="20">
+              <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/shower_black_24dp.svg" alt="shower icon" width="20">
               <span class="uk-margin-small-left">{{ .Params.details.bathrooms }} Baths</span>
             </span>
             {{ end }}
@@ -55,13 +54,13 @@
           <footer class="card-footer">
             {{ if .Params.details.square_footage }}
             <span class="card-footer-item">
-              <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/square_foot_black_24dp.svg" alt="bed icon" width="20">
+              <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/square_foot_black_24dp.svg" alt="square footage" width="20">
               <span class="uk-margin-small-left">{{ .Params.details.square_footage }} Sq. Ft.</span>
             </span>
             {{ end }}
             {{ if .Params.details.garage }}
             <span class="card-footer-item">
-              <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/garage_black_24dp.svg" alt="bed icon" width="20">
+              <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/garage_black_24dp.svg" alt="garage icon" width="20">
               <span class="uk-margin-small-left">{{ .Params.details.garage }} Garage</span>
             </span>
             {{ end }}

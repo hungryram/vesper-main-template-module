@@ -1,11 +1,10 @@
 {{ partial "global/head" . }}
 {{ $buttonColor := $.Site.Data.appearance.colors }}
-{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
 <a href="#" id="totop"> </a>
 
 {{ if lt .Params.photos.gallery 4 }}
-<div class="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url({{ if $absURL }}{{ .Site.BaseURL }}{{ .Site.Data.appearance.pages.image }}{{ else }}{{ .Site.Data.appearance.pages.image }}{{ end }})no-repeat center;background-size:cover">
+<div class="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle page-banner" style="background: url({{ .Site.Data.appearance.pages.image | absURL }})no-repeat center;background-size:cover">
     <div class="hero-overlay uk-position-cover"></div>
 
     <div class="uk-position-top full-nav-wrapper">
@@ -30,7 +29,7 @@
                 {{ range .Params.photos.gallery }}
                 <li>
                     <div class="uk-cover-container">
-                    <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .image }}{{ else }}{{ .image }}{{ end }}" alt="" uk-cover>
+                    <img src="{{ .image | absURL }}" alt="" uk-cover>
                     <div class="listing-detail-overlay uk-position-cover"></div>
                     </div>
                 </li>

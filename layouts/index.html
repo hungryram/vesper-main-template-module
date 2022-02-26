@@ -71,7 +71,6 @@
   {{ if eq "home-agent" .template }}
   {{ $buttonColor := $.Site.Data.appearance.colors }}
   {{ $agents := where $.Site.RegularPages "Type" "our-team" }}
-  {{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
   <div class="uk-section">
     <div class="uk-container uk-container-large">
@@ -95,7 +94,7 @@
                     <canvas height="350"></canvas>
                     {{ if .Params.photo }}
                     <img
-                      src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .Params.photo }}{{ else }}{{ .Params.photo }}{{ end }}"
+                      src="{{ .Params.photo | absURL }}"
                       alt="{{ .Title }}" uk-cover>
                     {{ else }}
                     <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813823/Resources/realestate-assets/user.jpg" alt="" uk-cover>
@@ -128,7 +127,6 @@
   {{ end }}
 
   {{ if eq "home-blog" .template }}
-  {{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
   {{ $blog := where $.Site.RegularPages "Type" "blog" }}
 
@@ -147,7 +145,7 @@
             <div class="uk-card-media-left uk-cover-container">
               {{ if .Params.featured_image }}
               <img
-                src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .Params.featured_image }}{{ else }}{{ .Params.featured_image }}{{ end }}"
+                src="{{ .Params.featured_image | absURL }}"
                 alt="" style="width:100%;height:100%;object-fit:cover">
               {{ else }}
               <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="no photo"
@@ -170,7 +168,6 @@
   {{ end }}
 
   {{ if eq "text-and-image" .template }}
-  {{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
   <div class="uk-section">
     <div class="uk-container uk-container-large">
@@ -178,7 +175,7 @@
         {{ if .image }}
         <div class="uk-width-1-2@s">
           <div class="uk-card uk-text-center">
-            <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .image }}{{ else }}{{ .image }}{{ end }}" alt="{{ .image_alt_tag }}" width="{{ .image_width }}">
+            <img src="{{ .image | absURL }}" alt="{{ .image_alt_tag }}" width="{{ .image_width }}">
           </div>
         </div>
         {{ end }}
@@ -201,7 +198,6 @@
   {{ end }}
 
   {{ if eq "featured-boxes" .template }}
-  {{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
   <div class="uk-section">
     <div class="uk-container uk-container-large">
@@ -218,7 +214,7 @@
         <div>
           <a href="{{ .link }}">
             <div class="uk-inline uk-cover-container" style="border-radius:4px;">
-              <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ .image }}{{ else }}{{ .image }}{{ end }}" alt="{{ .heading }}" uk-cover>
+              <img src="{{ .image | absURL }}" alt="{{ .heading }}" uk-cover>
               <canvas height="400" width="800"></canvas>
               <div class="feature-box-overlay uk-position-cover"></div>
               <div class="uk-overlay uk-position-center uk-light">
@@ -234,10 +230,9 @@
   {{ end }}
 
   {{ if eq "text-and-contact-form" .template }}
-  {{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
   <div
-    style="background: url({{ if $absURL }}{{ .Site.BaseURL }}{{ .background_image }}{{ else }}{{ .background_image }}{{ end }}) no-repeat center;padding-top:100px;padding-bottom:100px;background-size:cover;background-blend-mode:overlay;background-color: rgba(0,0,0,.30);">
+    style="background: url({{ .background_image | absURL }}) no-repeat center;padding-top:100px;padding-bottom:100px;background-size:cover;background-blend-mode:overlay;background-color: rgba(0,0,0,.30);">
     <div class="uk-container uk-container-large">
       <div class="uk-flex uk-flex-middle" uk-grid>
         <div class="uk-width-1-2@m">

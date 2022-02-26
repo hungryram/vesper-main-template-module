@@ -2,17 +2,15 @@
 {{ $footer := .Site.Data.footer }}
 {{ $footerContact := .Site.Data.profile.contact_information }}
 {{ $footerSocial := .Site.Data.profile.social_media }}
-{{ $accent := $.Site.Data.appearance.colors.accent }}
-{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
-<footer class="footer" style="{{ if $footer.background_image }}background:url({{ if $absURL }}{{ .Site.BaseURL }}{{ $footer.background_image }}{{ else }}{{ $footer.background_image }}{{ end }}) no-repeat center;background-size:cover;background-blend-mode:overlay;background-color:rgba(0,0,0,0.9){{ else }}background:{{ $footer.footer_background_color }}{{ end }}">
+<footer class="footer" style="{{ if $footer.background_image }}background:url({{ $footer.background_image | absURL }}) no-repeat center;background-size:cover;background-blend-mode:overlay;background-color:rgba(0,0,0,0.9){{ else }}background:{{ $footer.footer_background_color }}{{ end }}">
     <div class="uk-section">
         <div class="uk-container uk-container-large">
             <a href="cloudcannon:collections/data/footer.yml" class="editor-link editor-content"><span uk-icon="icon: file-edit"></span> Edit Footer</a>
             <div class="uk-grid-large uk-child-width-1-4@m uk-child-width-1-2@s{{ if $footer.enable_black_text }} uk-dark{{ else }} uk-light{{ end }}" uk-grid>
                 <div>
                     {{ if $footer.logo }}
-                    <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $footer.logo }}{{ else }}{{ $footer.logo }}{{ end }}" alt="{{ $companyName }}" width="150" />
+                    <img src="{{ $footer.logo | absURL }}" alt="{{ $companyName }}" width="150" />
                     {{ else }}
                     <h2 class="uk-h5 uk-text-bold editable">Heading</h2>
                     {{ end }}

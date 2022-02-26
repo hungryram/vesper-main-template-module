@@ -2,12 +2,9 @@
 {{ $navColor := .Site.Data.appearance.header }}
 {{ $navContact := .Site.Data.profile.contact_information }}
 {{ $headerSocial := .Site.Data.profile.social_media }}
-{{ $accent := $.Site.Data.appearance.colors.accent }}
 {{ $idx := $.Site.Data.idx }}
-{{ $buttonColor := .Site.Data.appearance.colors }}
 {{ $ihfID := .Site.Data.idx.ihf_client_id }}
 {{ $mainMenu := .Site.Data.menu }}
-{{ $absURL := $.Site.Data.developer.enable_absolute_path }}
 
 <style>
     nav.uk-navbar-sticky ul li a,
@@ -42,14 +39,14 @@
                     {{ if $navbar.logo }}
                     <a href="{{ .Site.BaseURL }}">
                         {{ if $navColor.transparent_background }}
-                        <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.logo }}{{ else }}{{ $navbar.logo }}{{ end }}"
+                        <img src="{{ $navbar.logo | absURL }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
                             width="{{ $navbar.logo_width }}" class="white-logo">
-                        <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.dark_logo }}{{ else }}{{ $navbar.dark_logo }}{{ end }}"
+                        <img src="{{ $navbar.dark_logo | absURL }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
                             width="{{ $navbar.logo_width }}" class="dark-logo">
                         {{ else }}
-                        <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.logo }}{{ else }}{{ $navbar.logo }}{{ end }}"
+                        <img src="{{ $navbar.logo | absURL }}"
                             alt="{{ .Site.Data.profile.company_name }} logo"
                             width="{{ $navbar.logo_width }}">
                         {{ end }}
@@ -114,9 +111,9 @@
             {{ if $navbar.logo }}
             <a href="{{ .Site.BaseURL }}">
                 {{ if $navColor.transparent_background }}
-                <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.logo }}{{ else }}{{ $navbar.logo }}{{ end }}" alt="{{ .Site.Data.profile.company_name }} logo"
+                <img src="{{ $navbar.logo | absURL }}" alt="{{ .Site.Data.profile.company_name }} logo"
                     width="{{ $navbar.logo_width }}" class="white-logo">
-                <img src="{{ if $absURL }}{{ .Site.BaseURL }}{{ $navbar.dark_logo }}{{ else }}{{ $navbar.dark_logo }}{{ end }}"
+                <img src="{{ $navbar.dark_logo | absURL }}"
                     alt="{{ .Site.Data.profile.company_name }} logo"
                     width="{{ $navbar.logo_width }}" class="dark-logo">
                 {{ else }}
@@ -125,8 +122,10 @@
                 {{ end }}
             </a>
             {{ else }}
-            <h2 class="uk-h3 uk-margin-remove site-title white-logo">{{ $navbar.site_title }}</h2>
-            <h2 class="uk-h3 uk-margin-remove site-title dark-logo">{{ $navbar.site_title }}</h2>            
+            <a href="{{ .Site.BaseURL }}">
+                <h2 class="uk-h3 uk-margin-remove site-title white-logo">{{ $navbar.site_title }}</h2>
+                <h2 class="uk-h3 uk-margin-remove site-title dark-logo">{{ $navbar.site_title }}</h2>
+            </a>         
             {{ end }}
         </div>
         <div class="uk-navbar-right">
