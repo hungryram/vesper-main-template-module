@@ -11,10 +11,12 @@
     <div class="black-overlay"></div>
         <div class="uk-position-center">
             <div class="uk-section-small">
-                <div class="uk-container uk-container-small uk-text-center uk-{{ if .Params.video_background.enable_black_text }}dark{{ else }}light{{ end }}">
-                    <h1 class="uk-h1">{{ .Params.video_background.heading }}</h1>
-                    <div class="md-content">
-                        <h2 class="uk-h4" style="margin-top:40px;">{{ .Params.video_background.body | markdownify }}</h2>
+                <div class="uk-container uk-container-small uk-text-center uk-transition-slide-bottom-small">
+                    <div class="{{ if .Params.video_background.enable_black_text }}uk-dark{{ else }}uk-light{{ end }}">
+                        <h1 class="uk-h1">{{ .Params.video_background.heading }}</h1>
+                        <div class="md-content">
+                            {{ .Params.video_background.body | markdownify }}
+                        </div>
                     </div>
                     <a href="{{ .Params.video_background.button_link | absURL }}" class="uk-button uk-button-primary">{{ .Params.video_background.button_label }}</a>
                 </div>
@@ -32,7 +34,7 @@
                 <div class="hero-overlay uk-position-cover"></div>
             </div>
             <div class="uk-position-center uk-position-small uk-text-center">
-                <div class="uk-width-2xlarge">
+                <div class="uk-width-2xlarge uk-transition-slide-bottom-small">
                     <div class="{{ if $slideSettings.enable_black_text }}uk-dark{{ else }}uk-light{{ end }}">
                         {{ if .subtitle }}<h4>{{ .subtitle }}</h4>{{ end }}
                         {{ if .heading }}<h1 class="uk-margin-remove">{{ .heading }}</h1>{{ end }}

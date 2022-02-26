@@ -176,6 +176,8 @@ _inputs:
     comment: Include the dollar sign.
   photo:
     type: image
+  hoa:
+    comment: Include the dollar sign and any additional information.
   url:
     type: text
     comment: URL is generated automatically on page creation. Changing the URL can cause page link to break.

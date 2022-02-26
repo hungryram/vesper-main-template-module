@@ -415,6 +415,11 @@ span.price-badge {
 
 /* PROPERTY DETAIL PAGE */
 
+.image-thumbnail {
+    background: rgb(0 0 0 / 65%);
+    padding: 10px;
+}
+
 .single-details-list ul {
     columns: 2;
     -webkit-columns: 2;
@@ -432,11 +437,15 @@ span.price-badge {
     float: right;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
     .single-details-list ul {
         columns: 1!important;
         -webkit-columns: 1!important;
         -moz-columns: 1!important;
+    }
+
+    ul.baseof-listing {
+        height: 200px;
     }
 }
 
@@ -529,6 +538,72 @@ footer.footer a:hover {
   #scroll-top:hover {
     background-color: rgb(34, 34, 34);
     transition: .3s ease;
+}
+
+
+/* SOCIAL SHARING */
+
+div#social-share div a {
+    margin: 5px;
+    float: left;
+}
+
+.share-button {
+    padding: 5px;
+    transition: .2s;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.share-button.facebook { 
+    background-color: #4A66B7;
+
+}
+
+.share-button.facebook:hover {              
+    background-color: #243c85;
+    color: #fff;
+    transition: .2s;
+}
+
+.share-button.twitter { 
+    background-color: #1B95E0;
+}
+
+.share-button.twitter:hover { 
+    transition: .2s;
+    color: #fff;
+    background-color: #157ab9; 
+}
+
+.share-button.linkedin { 
+    background-color: #0077B5;
+}
+
+.share-button.linkedin:hover { 
+    transition: .2s;
+    color: #fff;
+    background-color: #155b81; 
+}
+
+.share-button.pinterest { 
+    background-color: #c92228; 
+}
+
+.share-button.pinterest:hover { 
+    transition: .2s;
+    color: #fff;
+    background-color: #a82125; 
+}
+
+.share-button.email { 
+    background-color: #222222; 
+}
+
+.share-button.email:hover { 
+    color: #fff;
+    background-color: #000000; 
 }
 
 .editor-link {

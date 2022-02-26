@@ -1,4 +1,3 @@
-{{ $buttonColor := $.Site.Data.appearance.colors }}
 
 <form class="uk-form-horizontal uk-margin-large" name="Home Valuation Request" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
     <input name="bot-field" type="hidden" />
@@ -127,7 +126,7 @@
 
     <div class="uk-margin">
         <div class="uk-form-controls">
-            <button class="uk-button uk-button-primary modal-button">Submit</button>    
+            <button class="uk-button uk-button-primary">Submit</button>    
             <div class="md-content">
                 {{ .Site.Data.appearance.form.form_disclaimer | markdownify }}
             </div> 

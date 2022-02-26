@@ -1,12 +1,19 @@
-<div id="share-buttons"> 
-    <h3 class="uk-text-bold">Share this blog</h3>
+<div id="social-share">
+    <h2 class="uk-h5 hr-text-medium-bold">Share This</h2>
+    <div>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="share-button facebook" target="_blank"><span uk-icon="icon: facebook"></span> Share on Facebook</a>
+    </div>
+    <div>
+        <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" class="share-button twitter" target="_blank"><span uk-icon="icon: twitter"></span> Tweet this</a>
+    </div>
+    <div>
+        <a href="https://www.linkedin.com/shareArticle?url={{ .Permalink }}title={{ .Title }}&mini=true" class="share-button linkedin" target="_blank"><span uk-icon="icon: linkedin"></span> Share on Linkedin</a>
+    </div>
+    <div>
+        <a href="https://pinterest.com/pin/create/button/?url={{ .Permalink }}description={{ .Summary | truncate 200 }}&media={{ .Params.featured_image }}" class="share-button pinterest" target="_blank"><span uk-icon="icon: pinterest"></span> Pin on Pinterest</a>
+    </div>
+    <div>
+        <a class="share-button email" href="mailto:?subject={{ .Title }}" target="_blank"><span uk-icon="icon: envelope"></span> Share via Email</a>
+    </div>
 
-    <!-- Email -->
-    <a href="mailto:?Subject=Check%20Out%20This%20Blog&amp;Body=Check%20out%20this%20blog%20from%20{{ .Permalink | absURL }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: mail"></a>    
-    <!-- Facebook -->
-    <a href="http://www.facebook.com/sharer.php?u={{ .Permalink | absURL }}" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook"></a>     
-    <!-- LinkedIn -->
-    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ .Permalink | absURL }}" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="icon: linkedin"></a>       
-    <!-- Twitter -->
-    <a href="https://twitter.com/share?url={{ .Permalink | absURL }}&amp;text=Check%20out%20this%20blog%20from%20{{ .Site.Data.profile.logo_and_title.website_title }}" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter"></a>
-</div> <!-- end share buttons -->
+</div>

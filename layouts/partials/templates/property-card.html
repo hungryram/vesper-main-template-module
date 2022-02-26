@@ -7,7 +7,7 @@
             {{ if .Params.photos.gallery }}
             <img src="{{ (index .Params.photos.gallery 0).image | absURL }}" alt="{{ .Title }}" uk-cover>
             {{ else }}
-            <img src="/assets/no-photo.jpg" alt="no house icon" uk-cover>
+            <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="no house icon" uk-cover>
             {{ end }}
             <div class="property-card-overlay uk-position-cover"></div>
             <div class="uk-position-absolute property-card-details">

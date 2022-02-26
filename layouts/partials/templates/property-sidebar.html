@@ -1,11 +1,10 @@
-{{ $buttonColor := $.Site.Data.appearance.colors }}
 {{ $accent := $.Site.Data.appearance.colors.accent }}
 
 <div class="uk-width-expand@s">
     <div class="uk-card uk-card-default uk-card-body">
         {{ if .Params.listing_agent }}
         {{ with .Site.GetPage .Params.listing_agent }}
-        <div class="agent-container uk-text-center">
+        <div class="uk-text-center">
             {{ if .Params.photo }}
             <img src="{{ .Params.photo }}" alt="{{ .Title }}"
                 style="width:100px;height:100px;border-radius:50%;object-fit:cover">
@@ -19,29 +18,17 @@
             <a href="mailto:{{ .Params.contact.email }}" class="uk-display-block">{{ .Params.contact.email }}</a>
             <a href="tel:{{ .Params.contact.cell  }}" class="uk-display-block">{{ .Params.contact.cell }}</a>
             <hr>
-            <a href="{{ .Permalink }}" class="uk-icon-button uk-margin-small-right" uk-icon="user" title="View profile"
-                style="color: {{ $accent }}"></a>
-            {{ if .Params.social_media.facebook }}<a href="{{ .Params.social_media.facebook }}"
-                class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook; ratio: .8"
-                style="color: {{ $accent }}"></a>{{ end }}
-            {{ if .Params.social_media.instagram }}<a href="{{ .Params.social_media.instagram }}"
-                class="uk-icon-button uk-margin-small-right" uk-icon="icon: instagram; ratio: .8"
-                style="color: {{ $accent }}"></a>{{ end }}
-            {{ if .Params.social_media.linkedin }}<a href="{{ .Params.social_media.linkedin }}"
-                class="uk-icon-button uk-margin-small-right" uk-icon="icon: linkedin; ratio: .8"
-                style="color: {{ $accent }}"></a>{{ end }}
-            {{ if .Params.social_media.pinterest }}<a href="{{ .Params.social_media.pinterest }}"
-                class="uk-icon-button uk-margin-small-right" uk-icon="icon: pinterest; ratio: .8"
-                style="color: {{ $accent }}"></a>{{ end }}
-            {{ if .Params.social_media.twitter }}<a href="{{ .Params.social_media.twitter }}"
-                class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter; ratio: .8"
-                style="color: {{ $accent }}"></a>{{ end }}
-            {{ if .Params.social_media.youtube }}<a href="{{ .Params.social_media.youtube }}"
-                class="uk-icon-button uk-margin-small-right" uk-icon="icon: youtube; ratio: .8"
-                style="color: {{ $accent }}"></a>{{ end }}
-            {{ if .Params.social_media.tiktok }}<a href="{{ .Params.social_media.tiktok }}"
-                class="uk-icon-button uk-margin-small-right" uk-icon="icon: tiktok; ratio: .8"
-                style="color: {{ $accent }}"></a>{{ end }}
+            <a href="{{ .Permalink }}" class="uk-icon-button uk-margin-small-right primary-accent" uk-icon="user" title="View profile" ></a>
+            <div class="uk-margin-small-bottom uk-margin-small-top social_icons">
+                {{ if .Params.social_media.facebook }}<a href="{{ .Params.social_media.facebook }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook; ratio: .8" target="_blank"></a>{{ end }}
+                {{ if .Params.social_media.instagram }}<a href="{{ .Params.social_media.instagram }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: instagram; ratio: .8" target="_blank"></a>{{ end }}
+                {{ if .Params.social_media.linkedin }}<a href="{{ .Params.social_media.linkedin }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: linkedin; ratio: .8" target="_blank"></a>{{ end }}
+                {{ if .Params.social_media.pinterest }}<a href="{{ .Params.social_media.pinterest }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: pinterest; ratio: .8" target="_blank"></a>{{ end }}
+                {{ if .Params.social_media.twitter }}<a href="{{ .Params.social_media.twitter }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter; ratio: .8" target="_blank"></a>{{ end }}
+                {{ if .Params.social_media.youtube }}<a href="{{ .Params.social_media.youtube }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: youtube; ratio: .8" target="_blank"></a>{{ end }}
+                {{ if .Params.social_media.tiktok }}<a href="{{ .Params.social_media.tiktok }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: tiktok; ratio: .8" target="_blank"></a>{{ end }}
+                {{ if .Params.social_media.yelp }}<a href="{{ .Params.social_media.yelp }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: yelp; ratio: .8" target="_blank"></a>{{ end }}
+            </div>
         </div>
         {{ end }}
 
@@ -53,16 +40,16 @@
     </div>
     {{ if .Params.tools.open_house_date }}
     <div class="uk-card uk-card-default uk-card-body uk-margin-small-top">
-        <h2 class="uk-h5">Open House</h2>
+        <h2 class="uk-h5 hr-text-medium-bold">Open House</h2>
         <p>{{ .Params.tools.open_house_date }}</p>
         <p>{{ .Params.tools.open_house_details }}</p>
     </div>
     {{ end }}
     {{ if .Params.tools.open_house_date }}
     <div class="uk-card uk-card-default uk-card-body uk-margin-small-top">
-        <h2 class="uk-h5">File attachments</h2>
+        <h2 class="uk-h5 hr-text-medium-bold">File attachments</h2>
         {{ range .Params.tools.file_attachments }}
-        <p><a href="{{ .document }}" target="_blank"><span uk-icon="icon: download"></span> {{ .name }}</a></p>
+        <p><a href="{{ .document }}" target="_blank" class="primary-accent"><span uk-icon="icon: download"></span> {{ .name }}</a></p>
         {{else}}
         <p>no files</p>
         {{end}}
@@ -89,5 +76,9 @@
                 uk-slideshow-item="next"></a>
 
         </div>
+    </div>
+
+    <div class="uk-card uk-card-default uk-card-body uk-margin-small-top">
+        {{ partial "templates/share" . }}
     </div>
 </div>

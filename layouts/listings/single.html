@@ -13,21 +13,15 @@
                 <div class="uk-card">
                     <ul class="uk-flex uk-list uk-flex-left uk-flex-bottom">
                         <li>
-
-                            {{ if in .Params.status "Sold" }}
-                            <span class="uk-badge status" style="background: #d10000">{{ .Params.status }}</span>
+                            {{ if .Params.status }}<span class="status uk-badge" {{ if in .Params.status "Sold" }}style="background: #d10000"{{ else }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}"{{ end }}>{{ .Params.status }}</span>
                             {{ else }}
-                            <span class="uk-badge status"
-                               >{{
-                                .Params.status }}</span>
+                            <span class="uk-badge status">{{ .Params.status }}</span>
                             {{ end }}
 
 
-                            {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end
-                            }}
+                            {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end }}
                             <h2 class="uk-margin-small-top uk-h2 uk-text-bold">{{ .Params.short_title }}</h2>
-                            <h3 class="uk-margin-remove uk-h5">{{ .Title }}, {{ .Params.cities }}, {{ .Params.states }}
-                                {{ index .Params "zip-codes" }}</h3>
+                            <h3 class="uk-margin-remove uk-h5">{{ .Title }}, {{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</h3>
                         </li>
                     </ul>
                 </div>
@@ -39,9 +33,6 @@
                             <li>
                                 <p class="uk-margin-remove">Price</p>
                                 <h3 class="uk-margin-remove">{{ .Params.price }}</h3>
-                            </li>
-                            <li class="uk-display-block">
-
                             </li>
                         </ul>
                     </div>
@@ -56,46 +47,40 @@
                         {{ if .Params.photos.gallery }}
                         {{ range .Params.photos.gallery }}
                         <li>
-                            <a href="{{ .image }}">
-                                <img src="{{ .image }}" alt="" uk-cover>
+                            <a href="{{ .image | absURL }}">
+                                <img src="{{ .image | absURL }}" alt="" uk-cover>
                             </a>
                         </li>
                         {{ end }}
                         {{ else }}
                         <li>
-                            <img src="/assets/no-house-photo.jpg" alt="no photo placeholder" uk-cover>
+                            <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="no photo placeholder" uk-cover>
                         </li>
                         {{ end }}
                     </ul>
-                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous
-                        uk-slideshow-item="previous"></a>
-                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next
-                        uk-slideshow-item="next"></a>
+                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
                     {{ if .Params.photos.gallery }}
-                    <div class="uk-position-bottom-center uk-position-small">
+                    <div class="uk-position-bottom-center uk-position-small image-thumbnail">
                         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
                             <ul class="uk-slider-items uk-thumbnav" uk-margin uk-grid>
                                 {{ if .Params.photos.gallery }}
                                 {{ $counter := -1 }}
                                 {{ range .Params.photos.gallery }}
                                 {{ $counter = add $counter 1 }}
-                                <li uk-slideshow-item="{{ $counter }}"><a href="#"><img src="{{ . }}" width="60"
-                                            alt=""></a></li>
+                                <li uk-slideshow-item="{{ $counter }}"><a href="#"><img src="{{ .image | absURL }}" width="70" alt=""></a></li>
                                 {{ end }}
                                 {{ end }}
                             </ul>
-                            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous
-                                uk-slider-item="previous"></a>
-                            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next
-                                uk-slider-item="next"></a>
+                            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
                         </div>
                     </div>
                     {{ end }}
                 </div>
 
 
-                <div class="uk-child-width-expand@m uk-child-width-1-2 uk-text-center uk-margin single-detail-property"
-                    uk-grid>
+                <div class="uk-child-width-expand@m uk-child-width-1-2 uk-text-center uk-margin single-detail-property" uk-grid>
                     {{ if .Params.details.bedrooms }}
                     <div>
                         <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
@@ -111,7 +96,7 @@
                         <ul class="uk-flex uk-list uk-flex-center uk-flex-bottom">
                             <li>
                                 <img width="30" height="30" src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/shower_black_24dp.svg">
-                                <p class="uk-margin-remove-top">{{ .Params.details.bedrooms }} Bathrooms</p>
+                                <p class="uk-margin-remove-top">{{ .Params.details.bathrooms }} Bathrooms</p>
                             </li>
                         </ul>
                     </div>
@@ -142,7 +127,7 @@
                 <div class="uk-card uk-card-default uk-margin-small-top uk-card-body">
                     <h2 class="uk-h4 uk-text-bold">Description</h2>
                     <hr>
-                    <div>
+                    <div class="md-content">
                         {{ .Content }}
                     </div>
                 </div>

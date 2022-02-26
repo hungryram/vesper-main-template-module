@@ -69,7 +69,6 @@
   {{ end }}
 
   {{ if eq "home-agent" .template }}
-  {{ $buttonColor := $.Site.Data.appearance.colors }}
   {{ $agents := where $.Site.RegularPages "Type" "our-team" }}
 
   <div class="uk-section">
