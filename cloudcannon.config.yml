@@ -68,7 +68,7 @@ collections_config:
       office_location:
         type: select
         options:
-          values: collections.office
+          values: collections.offices
       weight:
         comment: Order team members. Weight of 1 will take first position.
       title:
