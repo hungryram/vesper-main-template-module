@@ -14,10 +14,10 @@ website = ""
 [social_media]
 facebook = ""
 instagram = ""
-linkedin = ""
-pinterest = ""
-tiktok = ""
 twitter = ""
+pinterest = ""
+linkedin = ""
+tiktok = ""
 yelp = ""
 youtube = ""
 [search_engine_optimization]

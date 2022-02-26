@@ -18,6 +18,7 @@ twitter = ""
 pinterest = ""
 linkedin = ""
 tiktok = ""
+yelp = ""
 youtube = ""
 [search_engine_optimization]
 title_tag = ""
