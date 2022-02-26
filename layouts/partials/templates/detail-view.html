@@ -14,7 +14,7 @@
                 <h2 class="uk-card-title uk-margin-remove">{{ .Title }} {{ if .Params.details.license_number }}<span class="uk-text-small">| {{ .Params.details.license_number }}</span>{{ end }}</h2>
                 <div>
                     {{ if .Params.details.category }}<span>{{ .Params.details.category }}</span>{{ end }} 
-                    {{ if .Params.details.position }}<span>{{ .Params.details.position }}</span>{{ end }} {{ if .Params.details.office_location }}{{ with .Site.GetPage .Params.details.office_location }} at <a href="{{ .Permalink }}" class="uk-text-bold">{{ .Params.title }}</a>{{end}}{{ end }}
+                    {{ if .Params.details.position }}<span>{{ .Params.details.position }}</span>{{ end }} {{ if .Params.details.office_location }}{{ with .Site.GetPage .Params.details.office_location }} at <a href="{{ .Permalink }}" class="uk-text-bold primary-accent">{{ .Params.title }}</a>{{end}}{{ end }}
                 </div>
                 <table class="uk-table uk-table-small uk-table-divider uk-margin-medium-top">
                     <tbody>
@@ -95,9 +95,9 @@
         {{ if .Params.details.specialty }}
         <ul class="uk-list">
             {{ if gt .Params.details.specialty 1 }}
-            <li>Specialties:</li>
+            <li><strong>Specialties:</strong></li>
             {{ else }}
-            <li>Specialty:</li>
+            <li><strong>Specialty:</strong></li>
             {{ end }}
             {{ range .Params.details.specialty }}
             <li class="uk-display-inline-block uk-margin-small-right">{{ . }}</li>
@@ -107,9 +107,9 @@
         {{ if .Params.details.languages  }}
         <ul class="uk-list">
             {{ if gt .Params.details.languages 1 }}
-            <li>Languages:</li>
+            <li><strong>Languages:</strong></li>
             {{ else }}
-            <li>Language:</li>
+            <li><strong>Language:</strong></li>
             {{ end }}
             {{ range .Params.details.languages  }}
             <li class="uk-display-inline-block uk-margin-small-right">{{ . }}</li>

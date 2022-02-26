@@ -39,14 +39,6 @@
                                     <table
                                         class="uk-table uk-table-small uk-table-divider uk-margin-medium-top uk-table-responsive">
                                         <tbody>
-                                            {{ if .Params.contact.fax_number }}
-                                            <tr>
-                                                <td>Fax</td>
-                                                <td class="uk-text-right@s"><a
-                                                        href="tel:{{ .Params.contact.fax_number }}">{{
-                                                        .Params.contact.fax_number }}</a></td>
-                                            </tr>
-                                            {{ end }}
                                             {{ if .Params.contact.phone }}
                                             <tr>
                                                 <td>Phone</td>
@@ -68,19 +60,10 @@
                                                         .Params.contact.email }}</a></td>
                                             </tr>
                                             {{ end }}
-                                            {{ if .Params.contact.website }}
-                                            <tr>
-                                                <td>Website</td>
-                                                <td class="uk-text-right@s"><a href="{{ .Params.contact.website }}"
-                                                        target="_blank">{{ .Params.contact.website }}</a></td>
-                                            </tr>
-                                            {{ end }}
                                             <tr>
                                                 <td>
                                                 </td>
-                                                <td class="uk-text-right"><a href="{{ .Permalink }}"
-                                                        class="uk-text-bold primary-accent">Read
-                                                        more</a></td>
+                                                <td class="uk-text-right"><a href="{{ .Permalink }}" class="uk-text-bold primary-accent">Read more</a></td>
                                             </tr>
                                         </tbody>
                                     </table>

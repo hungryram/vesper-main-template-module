@@ -10,8 +10,8 @@ position = ""
 office_location = ""
 license_number = ""
 website = ""
-languages = [" "]
-speciality = [" "]
+languages = [""]
+specialty = [""]
 [social_media]
 facebook = ""
 instagram = ""

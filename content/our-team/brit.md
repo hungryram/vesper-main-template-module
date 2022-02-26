@@ -13,7 +13,7 @@ office_location = "content/offices/another-office.md"
 license_number = ""
 website = ""
 languages = [ "english" ]
-speciality = [ " buyers" ]
+specialty = [ " buyers" ]
 
 [social_media]
 facebook = ""
