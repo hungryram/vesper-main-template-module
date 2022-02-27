@@ -120,6 +120,10 @@ paths:
 _inputs:
   blocks:
     type: array
+    values:
+        value: 
+          heading:
+          image:
   is_post:
     hidden: true
   idx_title_background_color:
@@ -615,7 +619,6 @@ _structures:
           template: featured-boxes
           heading:
           body:
-        values:
-            value:
-              heading:
-              image:
+          blocks:
+            heading:
+            image:
