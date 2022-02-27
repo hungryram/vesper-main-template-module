@@ -13,7 +13,9 @@
         <div class="uk-padding uk-margin-large-top uk-text-center uk-container uk-container-small md-content uk-position-relative uk-white">
             <h1 class="uk-white uk-text-center uk-position-relative uk-h2">{{ .Title }}</h1>
             {{ if .Params.body }}
-            {{ .Params.body | markdownify }}
+            <div class="md-content">
+                {{ .Params.body | markdownify }}
+            </div>
             {{ end }}
         </div>
 </div>
@@ -78,7 +80,6 @@
                 </div>
             </div>
         </div>
-
         <div class="uk-hidden@s uk-light">
             <a class="uk-position-center-left uk-position-small uk-visible@s" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
             <a class="uk-position-center-right uk-position-small uk-visible@s" href="#" uk-slidenav-next uk-slider-item="next"></a>

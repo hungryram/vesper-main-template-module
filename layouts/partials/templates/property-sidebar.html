@@ -6,7 +6,7 @@
         {{ with .Site.GetPage .Params.listing_agent }}
         <div class="uk-text-center">
             {{ if .Params.photo }}
-            <img src="{{ .Params.photo }}" alt="{{ .Title }}"
+            <img src="{{ .Params.photo | absURL }}" alt="{{ .Title }}"
                 style="width:100px;height:100px;border-radius:50%;object-fit:cover">
             {{ else }}
             <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813823/Resources/realestate-assets/user.jpg" alt="use icon" width="100" style="border-radius:50%;">
@@ -58,7 +58,7 @@
     <div class="uk-card uk-card-default uk-card-body uk-margin-small-top">
         <h2 class="uk-h5 hr-text-medium-bold">File attachments</h2>
         {{ range .Params.tools.file_attachments }}
-        <p><a href="{{ .document }}" target="_blank" class="primary-accent"><span uk-icon="icon: download"></span> {{ .name }}</a></p>
+        <p><a href="{{ .document | absURL }}" target="_blank" class="primary-accent"><span uk-icon="icon: download"></span> {{ .name }}</a></p>
         {{else}}
         <p>no files</p>
         {{end}}
@@ -84,14 +84,8 @@
                 {{ end }}
                 {{ end }}
             </ul>
-
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-                uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-                uk-slideshow-item="next"></a>
-
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
         </div>
     </div>
-
-
 </div>
