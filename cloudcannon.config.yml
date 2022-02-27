@@ -612,6 +612,7 @@ _structures:
           template: featured-boxes
           heading:
           body:
-          - heading:
+          - label:
+            heading:
             image:
             link:
