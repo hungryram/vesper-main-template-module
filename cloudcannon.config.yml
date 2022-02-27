@@ -614,6 +614,7 @@ _structures:
           heading:
           body:
           blocks:
+            type: array
             heading:
             image:
             link:
