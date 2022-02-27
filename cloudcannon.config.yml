@@ -609,6 +609,7 @@ _structures:
           body:
       - label: "Featured Boxes"
         value:
+          _type: featured-boxes
           template: featured-boxes
           heading:
           body:
