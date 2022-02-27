@@ -15,16 +15,14 @@ video_background:
   button_link: /listings
   enable_black_text: false
 slideshow:
-  - heading: THEME UNDER CONSTRUCTION
+  - heading: Vesper Main Template
     subtitle:
     link_label: Read More
     link: https://www.hungryram.com
     image: >-
       https://res.cloudinary.com/hungryram19/image/upload/v1630458883/templates/realestate2/shutterstock_12168997453_dgp9fa.jpg
     body: >-
-      This theme is currently being updated by our team. Please contact
-      [ram@hungryram.com](mailto:ram@hungryram.com) or check back again later.
-      Thank you\!
+      
     enable_white_text: false
 home_sections:
 ---
