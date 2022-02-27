@@ -613,7 +613,6 @@ _structures:
           template: featured-boxes
           heading:
           body:
-          values:
             blocks:
               heading:
               image:
