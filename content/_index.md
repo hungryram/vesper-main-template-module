@@ -21,9 +21,17 @@ slideshow:
     link: https://www.hungryram.com
     image: >-
       https://res.cloudinary.com/hungryram19/image/upload/v1630458883/templates/realestate2/shutterstock_12168997453_dgp9fa.jpg
-    body: >-
-      
+    body:
     enable_white_text: false
 home_sections:
+  - _type: text-and-image-section
+    template: text-and-image
+    heading: test
+    body: test
+    button:
+    button_link:
+    image:
+    image_alt_tag:
+    image_width: 400
 ---
 
