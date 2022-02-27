@@ -4,7 +4,7 @@
 <div class="uk-section">
     <div class="uk-container uk-container-large">
         <div class="uk-grid-small" uk-grid>
-            <div class="md-content uk-width-{{ $size.column_size }}">
+            <div class="uk-width-{{ $size.column_size }}">
                 {{ if .Params.featured_image }}
                 <div class="uk-margin-medium">
                     <img src="{{ .Params.featured_image | absURL }}" alt="{{ .Params.image_alt_tag }}">
@@ -15,7 +15,7 @@
                 </div>
                 <hr>
                 {{ if .Params.categories }}
-                <ul class="uk-list">
+                <ul class="uk-list md-content">
                     <h3 class="uk-text-bold">Categories</h3>
                     {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
                     <li>
@@ -25,7 +25,7 @@
                 </ul>
                 {{ end }}
                 {{ if .Params.tags }}
-                <ul class="uk-list">
+                <ul class="uk-list md-content">
                     <h3 class="uk-text-bold">Tags</h3>
                     {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
                     <li>

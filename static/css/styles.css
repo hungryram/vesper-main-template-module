@@ -170,7 +170,7 @@ div#home-section div.uk-section:nth-child(odd) {
 
 /* NAVBAR */
 
-.mobile-navbar {
+.navbar-padding {
     padding-left: 8px;
     padding-right: 8px;
 }
@@ -345,9 +345,9 @@ span.search-filter:empty {
     color: white;
 }
 
-#top-search .uk-inline button.uk-button:not(.reset-filter.uk-active) {
+/* #top-search .uk-inline button.uk-button:not(.reset-filter.uk-active) {
     background: #fff;
-}
+} */
 
 /* PROPERTY CARD */
 

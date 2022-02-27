@@ -1,9 +1,15 @@
 <div class="uk-section">
     <div class="uk-container uk-container-small uk-text-center">
-        {{ range .Pages }}
-        {{ if ne .Title "" }}
-        <a href="{{ .Permalink }}" class="uk-link-text uk-display-block uk-h3">{{ .Title }}</a>
-        {{ end }}
-        {{ end }}
+        <h2 class="uk-h3 hr-text-medium-bold">Search by {{ .Title }}</h2>
+        <hr>
+        <ul class="uk-list">
+            {{ range .Pages }}
+            {{ if ne .Title "" }}
+            <li>
+                <a href="{{ .Permalink }}" class="uk-h3">{{ .Title }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+        </ul>
     </div>
 </div>

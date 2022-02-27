@@ -78,15 +78,6 @@
             </div>
         </div>
         {{ end }}
-        <div class="uk-inline">
-            <button class="uk-button uk-button-default" type="button">Price</button>
-            <div uk-dropdown="mode: click">
-                <ul class="uk-list">
-                    <li uk-filter-control="sort: data-price; order: desc">$$</li>
-                    <li uk-filter-control="sort: data-price">$</li>
-                </ul>
-            </div>    
-        </div>
     </div>
 </div>
 
@@ -163,18 +154,6 @@
     </div>
 </div>
 {{ end }}
-
-<div class="uk-width-1-2@s">
-    <div class="uk-inline uk-width-1-1">
-        <button class="uk-button uk-button-default max-button" type="button">Price</button>
-        <div uk-drop="mode: click">
-            <div class="uk-card uk-card-body uk-card-default">
-                <div uk-filter-control="sort: data-price; order: desc"><a href="#">Low to high</a></div>
-                <div uk-filter-control="sort: data-price"><a href="#">High to low</a></div>
-            </div>
-        </div>    
-    </div>
-</div>
 
 <div class="uk-inline uk-margin-small-top">
         <a class="reset-filter uk-dark" uk-filter-control onClick="reset()">Reset</a>

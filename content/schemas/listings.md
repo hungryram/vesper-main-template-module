@@ -27,7 +27,7 @@ latitude = ""
 show_exterior_details = false
 exterior_details = []
 exterior_roof = []
-additional_exterior_details = [" "]
+additional_exterior_details = [""]
 [utilities_and_features.interior_details]
 show_interior_details = false
 interior_appliances = []
@@ -37,7 +37,7 @@ additional_interior_details = [" "]
 [utilities_and_features.community_features]
 show_community_details = false
 community_features_choice = []
-additional_community_details = [" "]
+additional_community_details = [""]
 [tools]
 file_attachments = []
 open_house_date = "Nov 3, 2021"
