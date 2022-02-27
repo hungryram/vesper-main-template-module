@@ -1,10 +1,8 @@
 branding:
-  site_title: Real Estate
+  site_title:
   logo:
-  dark_logo: >-
-    https://res.cloudinary.com/hungryram19/image/upload/v1628898739/templates/realestate2/re-logo_l6o3kg.png
-  favicon: >-
-    https://res.cloudinary.com/hungryram19/image/upload/v1630445963/templates/realestate2/favicon_zlmzct.png
+  dark_logo:
+  favicon:
   logo_width: 120
 icons:
   onefivetwo:
@@ -23,32 +21,18 @@ header:
     background_color: '#222'
     enable_white_text: true
 pages:
-  image: >-
-    https://res.cloudinary.com/hungryram19/image/upload/v1628905290/templates/realestate2/kichen_weesqh.jpg
+  image:
 page_sidebar:
   sidebar:
-    - template: side-blog-category
     - _type: custom-text
       template: custom-text
-      body: >-
-        ### my heading
-
-
-        **Lorem Ipsum**&nbsp;is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's standard dummy
-        text ever since the 1500s, when an unknown printer took a galley of type
-        and scrambled it to make a type specimen book. It has survived not only
-        five centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+      body:
 colors:
   button_background_color: '#3fb9be'
-  button_text_color: '#FFFFFF'
+  button_text_color: '#ffffff'
   links: '#3fb9be'
   accent: '#3fb9be'
-  idx_title_background_color: ''
+  idx_title_background_color:
   idx_title_text_color: '#ffffff'
 search_field:
   disable_search: false
