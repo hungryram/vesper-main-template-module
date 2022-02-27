@@ -4,21 +4,25 @@
             <div class="editable md-content uk-margin-large-bottom">
             </div>
             {{ range .Params.press }}
-            <div class="uk-card uk-card-default uk-grid-collapse uk-margin-medium-bottom uk-flex uk-flex-middle" uk-grid>
-                <div class="uk-width-1-2@s">
-                    <div class="uk-card-media-left uk-cover-container">
-                        <img src="{{ .image | absURL }}" alt="{{ .heading }}" uk-cover>
-                        <canvas width="300" height="280"></canvas>
+                {{ if ne .heading "" }}
+                <div class="uk-card uk-card-default uk-grid-collapse uk-margin-medium-bottom uk-flex uk-flex-middle" uk-grid>
+                    <div class="uk-width-1-2@s">
+                        <div class="uk-card-media-left uk-cover-container">
+                            <img src="{{ .image | absURL }}" alt="{{ .heading }}" uk-cover>
+                            <canvas width="300" height="280"></canvas>
+                        </div>
+                    </div>
+                    <div class="uk-width-expand@s">
+                        <div class="uk-card-body">
+                            <h3 class="uk-h4">{{ .heading }}</h3>
+                            <p>{{ .description }}</p>
+                            <a href="{{ .link | absURL }}" target="_blank" class="uk-text-default primary-link">Read article</a>
+                        </div>
                     </div>
                 </div>
-                <div class="uk-width-expand@s">
-                    <div class="uk-card-body">
-                        <h3 class="uk-h4">{{ .heading }}</h3>
-                        <p>{{ .description }}</p>
-                        <a href="{{ .link | absURL }}" target="_blank" class="uk-text-default primary-link">Read article</a>
-                    </div>
-                </div>
-            </div>
+                {{ else }}
+                <h2 class="uk-h3">No Press just yet, check back later!</h2>
+                {{ end }}
             {{ end }}
         </div>
     </div>
