@@ -613,5 +613,7 @@ _structures:
           heading:
           body:
           blocks:
+          - label:
             heading:
             image:
+            link:
