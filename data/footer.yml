@@ -1,14 +1,12 @@
 additional_links:
-  - link: /testimonials
-    name: Testimonials
-  - link: /listings
-    name: Listings
+  - link: /
+    name: Home
 footer_background_color: '#232733'
 background_image: >-
   https://res.cloudinary.com/hungryram19/image/upload/v1605403006/templates/realestate2/clean-living-room_b3bubn.jpg
 logo:
-equal_housing_logo: true
-mls_logo: true
-realtor_logo: true
+equal_housing_logo: false
+mls_logo: false
+realtor_logo: false
 enable_black_text: false
 important_documents:
