@@ -118,12 +118,6 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
 _inputs:
-  blocks:
-    type: array
-    values:
-        value: 
-          heading:
-          image:
   is_post:
     hidden: true
   idx_title_background_color:
@@ -615,7 +609,6 @@ _structures:
           body:
       - label: "Featured Boxes"
         value:
-          _type: featured-boxes
           template: featured-boxes
           heading:
           body:
