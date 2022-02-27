@@ -37,6 +37,10 @@ body {
     color: var(--primary-link-color);
 }
 
+.primary-link {
+    color: var(--primary-link-color);
+}
+
 body a:hover {
     text-decoration: none;
     color: inherit;

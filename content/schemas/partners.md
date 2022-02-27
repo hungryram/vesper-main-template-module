@@ -1,6 +1,8 @@
 +++
 photo = ""
 title = ""
+weight = 50
+draft = false
 [contact]
 email = ""
 phone = ""

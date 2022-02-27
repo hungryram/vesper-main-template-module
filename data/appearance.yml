@@ -25,7 +25,7 @@ header:
 pages:
   image: >-
     https://res.cloudinary.com/hungryram19/image/upload/v1628905290/templates/realestate2/kichen_weesqh.jpg
-sidebar:
+page_sidebar:
   sidebar:
     - template: side-blog-category
     - _type: custom-text

@@ -1,13 +1,13 @@
 <div class="uk-width-expand">
     <div class="uk-card uk-card-body">
-        {{ range .Site.Data.appearance.sidebar.sidebar }}
+        {{ range .Site.Data.appearance.page_sidebar.sidebar }}
         {{ if eq "side-blog-category" .template }}
         <div>
             <h2 class="uk-h4 uk-text-bold">Blog Categories</h2>
             <ul class="uk-list">
                 {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
                 <li class="align-center">
-                    <span uk-icon="triangle-right"></span><a href="/categories{{ $name | urlize | relURL }}" class="uk-margin-small-left">{{ $name | humanize }}</a>
+                    <span uk-icon="triangle-right"></span><a href="/categories{{ $name | urlize | relURL }}" class="uk-margin-small-left primary-link">{{ $name | humanize }}</a>
                 </li>
                 {{else}}
                 <p>No blog categories just yet</p>
@@ -25,7 +25,7 @@
                 <div class="uk-card uk-margin-small-bottom">
                     <h3 class="uk-h5" style="margin: 0;">{{ .Params.title }}</h3>
                     <time><small>{{.Date.Format "Jan 2, 2006" }}</small></time>
-                    <a href="{{ .Permalink }}" class="uk-display-block">Read more</a>
+                    <a href="{{ .Permalink }}" class="uk-display-block primary-link">Read more</a>
               </div>
             </a>
             <hr>

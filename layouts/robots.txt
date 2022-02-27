@@ -8,5 +8,6 @@ Disallow: /blog/priority-tasks-for-your-move-in/
 Disallow: /blog/hidden-fees-to-be-aware-of-when-purchasing-a-home/
 Disallow: /_defaults/
 Disallow: /schemas/*
+Disallow: /schemas/
 
 Sitemap: {{ .Site.BaseURL }}sitemap.xml

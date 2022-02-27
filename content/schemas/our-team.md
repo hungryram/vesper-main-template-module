@@ -2,6 +2,7 @@
 photo = ""
 title = ""
 weight = 50
+draft = false
 [contact]
 cell = ""
 email = ""

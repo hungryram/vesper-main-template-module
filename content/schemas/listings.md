@@ -9,6 +9,7 @@ price = ""
 properties = ""
 featured = ""
 listing_agent = ""
+draft = false
 [photos]
 main_photo = ""
 gallery = []

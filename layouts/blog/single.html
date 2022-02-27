@@ -16,7 +16,7 @@
                 <hr>
                 {{ if .Params.categories }}
                 <ul class="uk-list md-content">
-                    <h3 class="uk-text-bold">Categories</h3>
+                    <h2 class="uk-h5 hr-text-medium-bold">Categories</h2>
                     {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
                     <li>
                         <a href="/categories{{ $name | urlize | relURL }}" class="uk-text-link">{{ $name | humanize }}</a>
@@ -26,7 +26,7 @@
                 {{ end }}
                 {{ if .Params.tags }}
                 <ul class="uk-list md-content">
-                    <h3 class="uk-text-bold">Tags</h3>
+                    <h2 class="uk-h5 hr-text-medium-bold">Tags</h2>
                     {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
                     <li>
                         <a href="/tags{{ $name | urlize | relURL }}" class="uk-text-link">{{ $name | humanize }}</a>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             
-            {{ partial "templates/sidebar" . }}
+            {{ partial "templates/page-sidebar" . }}
         </div>
     </div>
 </div>
