@@ -1,26 +1,25 @@
----
-company_name: Real Estate Company
+company_name:
 social_media:
-  instagram: er
-  twitter: er
-  facebook: er
-  pinterest: ''
-  yelp: ''
-  linkedin: ''
-  tiktok: ''
+  instagram:
+  twitter:
+  facebook:
+  pinterest:
+  yelp:
+  linkedin:
+  tiktok:
 contact_information:
-  phone: 
-  name: John Doe
-  cell: 232-453-3467
-  email: john@realestatecompany.com
-  license: 'BRE #5411555'
-  address: 419 Street Address
-  city: Yorba Linda
-  state: California
-  zip_code: "92882"
+  phone:
+  name:
+  cell:
+  email:
+  license:
+  address:
+  city:
+  state:
+  zip_code:
   google_page_link:
 search_engine_optimization:
-  title_tag: Real Estate Theme
-  meta_description: The only real estate theme you need
+  title_tag:
+  meta_description:
   twitter_card:
-    twitter_username: ''
+    twitter_username:
