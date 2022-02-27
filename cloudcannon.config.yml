@@ -84,6 +84,7 @@ collections_config:
       - visual
       - content
   press:
+    icon: feed
     disable_add: true
     _enabled_editors:
       - visual
