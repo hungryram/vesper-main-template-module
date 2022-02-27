@@ -73,6 +73,11 @@
                     {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
                     <li class="uk-display-inline uk-margin-medium-right"><small><a href="{{ .Permalink }}">{{ .Title }}</a></small></li>
                     {{ end }}
+                    <li class="uk-display-inline uk-margin-medium-right">
+                        <small>
+                            <a href="{{ .Site.BaseURL }}sitemap">Sitemap</a>
+                        </small>
+                    </li>
                   </ul>
             </div>
         </div>
