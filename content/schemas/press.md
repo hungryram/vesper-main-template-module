@@ -1,6 +1,5 @@
 +++
 title = ""
-layout = "press"
 [[press]]
 heading = ""
 description = ""
