@@ -613,8 +613,8 @@ _structures:
           template: featured-boxes
           heading:
           body:
-          blocks:
-            type: array
-            heading:
-            image:
-            link:
+          values:
+            blocks:
+              heading:
+              image:
+              link:
