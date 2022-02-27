@@ -7,7 +7,7 @@
 {{ $buttonColor := .Site.Data.appearance.colors }}
 <div class="uk-cover-container uk-flex uk-flex-middle uk-flex-center" uk-height-viewport>
 
-    <video src="{{ .Params.video_background.video_link }}" defaultMuted autoplay loop muted playsinline uk-cover></video>
+    <video src="{{ .Params.video_background.video_link }}" defaultmuted autoplay loop muted playsinline uk-cover></video>
     <div class="black-overlay"></div>
         <div class="uk-position-center">
             <div class="uk-section-small">
@@ -30,7 +30,7 @@
         {{ range .Params.slideshow }}
         <li>
             <div class="uk-position-cover uk-transform-origin-center-left{{ if $slideSettings.enable_ken_burns_effect }} uk-animation-kenburns{{ end }}">
-                <img src="{{ .image | absURL }}" alt="" uk-cover>
+                <img src="{{ .image | absURL }}" alt="" uk-cover />
                 <div class="hero-overlay uk-position-cover"></div>
             </div>
             <div class="uk-position-center uk-position-small uk-text-center">
@@ -51,7 +51,7 @@
                     <div class="uk-margin-medium-top">
                         <form action="{{ "search" | absURL }}">
                             <div uk-form-custom>
-                                <input class="uk-input uk-width-medium" id="search-query" name="s" class="input" placeholder="Search by address, state, zip, city or MLS #" title="Search by address, state, zip, city or MLS #"/>
+                                <input class="uk-input uk-width-medium" id="search-query" name="s" placeholder="Search by address, state, zip, city or MLS #" title="Search by address, state, zip, city or MLS #" />
                                 <button class="uk-button uk-button-primary" type="submit" tabindex="-1">Search</button>
                             </div>
                         </form>

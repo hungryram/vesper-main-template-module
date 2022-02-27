@@ -7,8 +7,8 @@ slideshow_settings:
   enable_idx_search: true
   enable_default_search: false
   display_button: true
-video_background: 
-  video_link: 
+video_background:
+  video_link:
   heading: Highly Customizable Real Estate Theme
   body: Optionally integrate with IDX or use built in tools
   button_label: Search Homes
@@ -26,37 +26,6 @@ slideshow:
       [ram@hungryram.com](mailto:ram@hungryram.com) or check back again later.
       Thank you\!
     enable_white_text: false
-  - heading: Super Versatile for Custom Features
-    subtitle:
-    link_label: Contact
-    link: /contact
-    body: >-
-      Need features specific for your business? Get in touch and we'll be happy
-      to help
-    enable_white_text: false
-    image: >-
-      https://res.cloudinary.com/hungryram19/image/upload/v1628902200/templates/realestate2/bathroom-bg3_onhi8u.jpg
 home_sections:
-  - template: text-and-image
-    heading: Welcome to our Real Estate Website
-    body:
-    button:
-    button_link:
-    image:
-    image_alt_tag:
-    image_width: 400
-  - template: featured-listings
-    heading:
-    body:
-  - template: active-listings
-    heading: Active Listings
-    body:
-  - template: text-and-contact-form
-    heading: New Heading
-    body: the new body
-    background_image: /uploads/images/first-time-home-buyer-insurance.jpg
-    form:
-      heading: Send a message
-      body: like us
 ---
 
