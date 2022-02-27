@@ -15,7 +15,7 @@ category = "web designer"
   zip_code = "92887"
 
 [social_media]
-facebook = ""
+facebook = "fb"
 instagram = ""
 twitter = ""
 pinterest = ""
@@ -28,4 +28,5 @@ youtube = ""
 title_tag = ""
 meta_description = ""
 +++
+
 this is a professional designer
