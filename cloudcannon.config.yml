@@ -231,6 +231,7 @@ _inputs:
       values:
         - pages
         - contact
+        - press
         - testimonials
         - home-valuation
         - thank-you
