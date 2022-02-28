@@ -119,7 +119,7 @@ paths:
   uploads: static/uploads/
 _inputs:
   call_to_action_link:
-    type: link
+    type: url
   call_to_action_label:
     type: text
   remove_call_to_action:
