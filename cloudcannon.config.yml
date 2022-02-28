@@ -173,6 +173,7 @@ _inputs:
     type: array
   specialty:
     type: array
+    label: Specialties
   website:
     type: text
     comment: Include the full URL with https://
@@ -201,6 +202,7 @@ _inputs:
     type: image
   hoa:
     comment: Include the dollar sign and any additional information.
+    label: HOA
   url:
     type: text
     comment: URL is generated automatically on page creation. Changing the URL can cause page link to break.
@@ -211,12 +213,13 @@ _inputs:
     type: markdown
   mls_number:
     type: text
+    label: MLS Number
   open_house_date:
     type: text
   date:
     type: date
   featured:
-    type: switch
+    type: select
     options:
       values:
         - Featured
