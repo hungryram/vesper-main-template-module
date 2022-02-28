@@ -70,12 +70,12 @@
                             <div class="uk-navbar-dropdown">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     {{ range .menu }}
-                                    <li class="uk-active"><a href="{{ .link }}">{{ .name }}</a></li>
+                                    <li class="uk-active"><a href="{{ .link | absURL }}">{{ .name }}</a></li>
                                     {{ end }}
                                 </ul>
                             </div>
                             {{ else }}
-                            <a href="{{ .link }}">{{ .name }}</a>
+                            <a href="{{ .link | absURL }}">{{ .name }}</a>
                             {{ end }}
                         </li>
                         {{ end }}
@@ -151,7 +151,7 @@
             </li>
             {{ else }}
             <li>
-                <a href="{{ .link }}">{{ .name }}</a>
+                <a href="{{  | absURL }}">{{ .name }}</a>
             </li>
             {{ end }}
             {{ end }}
