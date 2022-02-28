@@ -151,7 +151,7 @@
             </li>
             {{ else }}
             <li>
-                <a href="{{  | absURL }}">{{ .name }}</a>
+                <a href="{{ .link | absURL }}">{{ .name }}</a>
             </li>
             {{ end }}
             {{ end }}
