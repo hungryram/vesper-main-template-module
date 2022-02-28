@@ -117,6 +117,7 @@ collection_groups:
 paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
+featured: featured
 _inputs:
   call_to_action_link:
     type: url
@@ -210,10 +211,7 @@ _inputs:
   date:
     type: date
   featured:
-    type: select
-    options:
-      values:
-        - Featured
+    type: switch
   license_number:
     type: text
   fax_number:
