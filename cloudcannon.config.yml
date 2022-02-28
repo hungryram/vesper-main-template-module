@@ -101,7 +101,7 @@ collections_config:
 collection_groups:
   - heading: Profile and Settings
     collections:
-      - data/profile
+      - data/profile.yml
   - heading: Pages
     collections:
       - pages
