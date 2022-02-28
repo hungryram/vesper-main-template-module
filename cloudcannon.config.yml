@@ -118,6 +118,12 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
 _inputs:
+  equal_housing_logo:
+    type: switch
+  mls_logo:
+    type: switch
+  realtor_logo:
+    type: switch
   call_to_action_link:
     type: url
   call_to_action_label:
