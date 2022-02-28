@@ -5,7 +5,8 @@
         <div>
             <h2 class="uk-h4 uk-text-bold">Blog Categories</h2>
             <ul class="uk-list">
-                {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+                {{ $items := first 5 $.Site.Taxonomies.categories }}
+                {{ range $name, $taxonomy := $items }}
                 <li class="align-center">
                     <span uk-icon="triangle-right"></span><a href="/categories{{ $name | urlize | relURL }}" class="uk-margin-small-left primary-link">{{ $name | humanize }}</a>
                 </li>

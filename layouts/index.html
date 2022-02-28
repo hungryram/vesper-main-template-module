@@ -78,7 +78,7 @@
       <h2 class="uk-text-center">{{ .heading }}</h2>
       {{ end }}
       {{ if .body }}
-      <div class="md-content">
+      <div class="md-content uk-text-center">
         {{ .body | markdownify }}
       </div>
       {{ end }}
@@ -137,7 +137,9 @@
       <h2 class="uk-text-center">{{ .heading }}</h2>
       {{ end }}
       {{ if .body }}
-      <p class="uk-text-center">{{ .body | markdownify }}</p>
+      <div class="md-content uk-text-center">
+        {{ .body | markdownify }}
+      </div>
       {{ end }}
       <div uk-grid uk-height-match="target: .uk-card">
         {{ range first 4 (where $.Site.RegularPages "Type" "blog") }}
@@ -293,7 +295,7 @@
       <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
-        <div class="md-content">
+        <div class="md-content uk-text-center">
           {{ .body | markdownify }}
         </div>
         {{ end }}
@@ -329,7 +331,7 @@
       <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
-        <div class="md-content">
+        <div class="md-content uk-text-center">
           {{ .body | markdownify }}
         </div>
         {{ end }}
@@ -366,7 +368,7 @@
       <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
-        <div class="md-content">
+        <div class="md-content uk-text-center">
           {{ .body | markdownify }}
         </div>
         {{ end }}
@@ -401,7 +403,7 @@
       <div class="uk-text-center uk-margin-large">
         {{ if .heading }}<h2 class="uk-dark">{{ .heading }}</h2>{{ end }}
         {{ if .body }}
-        <div class="md-content">
+        <div class="md-content uk-text-center">
           {{ .body | markdownify }}
         </div>
         {{ end }}

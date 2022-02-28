@@ -10,7 +10,7 @@
             <div class="uk-grid-large uk-child-width-1-4@m uk-child-width-1-2@s{{ if $footer.enable_black_text }} uk-dark{{ else }} uk-light{{ end }}" uk-grid>
                 <div>
                     {{ if $footer.logo }}
-                    <img src="{{ $footer.logo | absURL }}" alt="{{ $companyName }}" width="150" />
+                    <img src="{{ $footer.logo | absURL }}" alt="{{ $companyName }}" width="{{ $footer.logo_width }}" />
                     {{ else }}
                     <h2 class="uk-h5 uk-text-bold editable">Heading</h2>
                     {{ end }}
@@ -38,8 +38,8 @@
                 </div>
                 <div>
                     <div class="footer-text">
-                        <h2 data-cms-options='{"image": false}' class="uk-h5 uk-text-bold editable">About</h2>
-                        <p data-cms-options='{"image": false}' class="editable">The about</p>
+                        <h2 class="uk-h5 uk-text-bold editable">About</h2>
+                        <p class="editable">The about</p>
                     </div>
                 </div>
             </div>
@@ -101,3 +101,5 @@
 </script>
     <!-- CUSTOM SCRIPT -->
 {{ .Site.Data.developer.custom_closing_script | safeHTML }}
+</body>
+</html>

@@ -4,11 +4,11 @@
         <hr>
         <ul class="uk-list">
             {{ range .Pages }}
-            {{ if ne .Title "" }}
-            <li>
-                <a href="{{ .Permalink }}" class="uk-h3">{{ .Title }}</a>
-            </li>
-            {{ end }}
+                {{ if ne .Title "" }}
+                <li>
+                    <a href="{{ .Permalink }}" class="uk-h3">{{ .Title }}</a>
+                </li>
+                {{ end }}
             {{ end }}
         </ul>
     </div>
