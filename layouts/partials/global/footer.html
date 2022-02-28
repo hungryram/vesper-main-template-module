@@ -12,7 +12,9 @@
                     {{ if $footer.logo }}
                     <img src="{{ $footer.logo | absURL }}" alt="{{ $companyName }}" width="{{ $footer.logo_width }}" />
                     {{ else }}
-                    <h2 class="uk-h5 uk-text-bold editable">Heading</h2>
+                    <h2 class="uk-h5 uk-text-bold editable">
+                    	Heading
+                    </h2>
                     {{ end }}
                     <ul class="uk-list">
                         {{ if $footerContact.name }}<li><p>{{ $footerContact.name }}</p></li>{{ end }}
@@ -23,13 +25,17 @@
                     </div>
                 </div>
                 <div>
-                    <h2 class="uk-h5 uk-text-bold editable">Contact</h2>
+                    <h2 class="uk-h5 uk-text-bold editable">
+                    	Contact
+                    </h2>
                     <ul class="uk-list">
                         {{ partial "templates/contact" . }}
                     </ul>
                 </div>
                 <div>
-                    <h2 class="uk-h5 uk-text-bold editable">Quick Links</h2>
+                    <h2 class="uk-h5 uk-text-bold editable">
+                    	Quick Links
+                    </h2>
                     <ul class="uk-list">
                         {{ range $footer.additional_links }}
                         <li><a href="{{ .link | absURL }}">{{ .name }}</a></li>
@@ -38,8 +44,12 @@
                 </div>
                 <div>
                     <div class="footer-text">
-                        <h2 class="uk-h5 uk-text-bold editable">About</h2>
-                        <p class="editable">The about</p>
+                        <h2 class="uk-h5 uk-text-bold editable">
+                        	About
+                        </h2>
+                        <p class="editable">
+                        	test
+                        </p>
                     </div>
                 </div>
             </div>
@@ -101,5 +111,3 @@
 </script>
     <!-- CUSTOM SCRIPT -->
 {{ .Site.Data.developer.custom_closing_script | safeHTML }}
-</body>
-</html>
