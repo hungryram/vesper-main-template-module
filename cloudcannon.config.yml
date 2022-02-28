@@ -101,7 +101,7 @@ collections_config:
 collection_groups:
   - heading: Profile and Settings
     collections:
-      - data/profile.yml
+      - data
   - heading: Pages
     collections:
       - pages
@@ -118,6 +118,12 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
 _inputs:
+  call_to_action_link:
+    type: link
+  call_to_action_label:
+    type: text
+  remove_call_to_action:
+    type: switch
   is_post:
     hidden: true
   idx_title_background_color:
