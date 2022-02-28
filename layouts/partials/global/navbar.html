@@ -80,16 +80,9 @@
                         </li>
                         {{ end }}
 
-                        {{ if $idx.enable_idx }}
+                        {{ if not $navColor.remove_call_to_action }}
                         <div class="uk-navbar-item idx-button-navbar">
-                            {{ if $.Site.Data.idx.incomplete_subdomain }}
-                            <li><a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/organizer/login/{{ $ihfID }}"
-                                    class="uk-button uk-button-primary">My Account</a></li>
-                            {{ else }}
-                            <li><a href="https://{{ $.Site.Data.idx.complete_subdomain }}.com/organizer/login/{{ $ihfID }}"
-                                    class="uk-button uk-button-primary">My Account</a></li>
-                            {{ end }}
-
+                            <li><a href="{{ $navColor.call_to_action_link | absURL }}" class="uk-button uk-button-primary">{{ $navColor.call_to_action_label }}</a></li>
                         </div>
                         {{ end }}
 
@@ -155,13 +148,10 @@
             </li>
             {{ end }}
             {{ end }}
-            {{ if $idx.enable_idx }}
-            <li class="uk-nav-header"></li>
-            {{ if $.Site.Data.idx.incomplete_subdomain }}
-            <a href="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/organizer/login/{{ $ihfID }}" class="uk-button uk-button-primary uk-width-1-1">My Account</a>
-            {{ else }}
-            <li><a href="https://{{ $.Site.Data.idx.complete_subdomain }}.com/organizer/login/{{ $ihfID }}" class="uk-button uk-button-primary uk-width-1-1">My Account</a></li>
-            {{ end }}
+            {{ if not $navColor.remove_call_to_action }}
+            <div class="uk-navbar-item cta-button">
+                <li><a href="{{ $navColor.call_to_action_link | absURL }}" class="uk-button uk-button-primary uk-width-1-1">{{ $navColor.call_to_action_label }}</a></li>
+            </div>
             {{ end }}
             <li class="uk-nav-header"></li>
             <li class="uk-nav-divider"></li>

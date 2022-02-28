@@ -121,7 +121,7 @@ div.idx-button-navbar li a.uk-button-primary {
     color: var(--primary-button-text-color)!important;
 }
 
-div.idx-button-navbar li a.uk-button-primary:hover,
+div.cta-button li a.uk-button-primary:hover,
 a.uk-button.uk-button-primary:hover
 button.uk-button.uk-button-primary:hover {
     background-color: var(--primary-button-background)!important;

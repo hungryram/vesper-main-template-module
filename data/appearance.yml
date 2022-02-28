@@ -17,6 +17,9 @@ header:
   enable_white_text: true
   enable_white_text_top: true
   transparent_background: true
+  call_to_action_link: /contact
+  call_to_action_label: contact
+  remove_call_to_action: false
   mobile_menu:
     background_color: '#222'
     enable_white_text: true
