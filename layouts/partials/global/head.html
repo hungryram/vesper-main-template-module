@@ -49,6 +49,6 @@
 {{ end }}
 
 <!-- CUSTOM SCRIPT -->
-{{ .Site.Data.developer.custom_script }}
+{{ .Site.Data.developer.custom_script | safeHTML }}
 </head>
 <body>
