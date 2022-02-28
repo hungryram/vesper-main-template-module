@@ -123,7 +123,7 @@ _inputs:
   call_to_action_label:
     type: text
   remove_call_to_action:
-    type: switch
+    type: checkbox
   is_post:
     hidden: true
   idx_title_background_color:
