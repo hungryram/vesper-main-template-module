@@ -71,7 +71,7 @@
 
   {{ if eq "home-agent" .template }}
   {{ $agents := where $.Site.RegularPages "Type" "our-team" }}
-
+f
   <div class="uk-section">
     <div class="uk-container uk-container-large">
       {{ if .heading }}
@@ -209,7 +209,7 @@
         {{ .body | markdownify }}
       </div>
       {{ end }}
-      <div class="uk-grid-column-small uk-child-width-1-3@s uk-text-center" uk-grid uk-height-match="target: .uk-card">
+      <div class="uk-grid-column-small uk-child-width-1-3@s uk-text-center uk-margin-medium-top" uk-grid uk-height-match="target: .uk-card">
         {{ range .blocks }}
         <div>
           <a href="{{ .link | absURL }}">
