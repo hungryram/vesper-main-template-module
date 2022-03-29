@@ -30,6 +30,9 @@ page_sidebar:
     - _type: custom-text
       template: custom-text
       body:
+    - _type: blog-category
+      template: side-blog-category
+      comment: Nothing to configure, categories will display.
 colors:
   button_background_color: '#3fb9be'
   button_text_color: '#ffffff'
