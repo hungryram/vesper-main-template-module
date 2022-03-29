@@ -118,7 +118,7 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
 _inputs:
-  zip_codes:
+  zip-codes:
     label: Zip Code
   equal_housing_logo:
     type: switch
