@@ -4,11 +4,13 @@
         {{ if eq "side-blog-category" .template }}
         <div>
             <h2 class="uk-h4 uk-text-bold">Blog Categories</h2>
-            <ul class="uk-list">
-                {{ $items := first 5 $.Site.Taxonomies.categories }}
-                {{ range $name, $taxonomy := $items }}
-                <li class="align-center">
-                    <span uk-icon="triangle-right"></span><a href="/categories{{ $name | urlize | relURL }}" class="uk-margin-small-left primary-link">{{ $name | humanize }}</a>
+            <ul uk-accordion>
+                {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+                <li class="uk-open">
+                    <a class="uk-accordion-title" href="#">View all categories</a>
+                    <div class="uk-accordion-content">
+                        <span uk-icon="triangle-right"></span><a href="/categories{{ $name | urlize | relURL }}" class="uk-margin-small-left primary-link">{{ $name | humanize }}</a>
+                    </div>
                 </li>
                 {{else}}
                 <p>No blog categories just yet</p>
@@ -55,6 +57,8 @@
                 <ul class="uk-slideshow-items">
                     {{ range shuffle ( where $.Site.RegularPages "Type" "listings") }}
                     {{ if ne .Title  "" }}
+{{ $buttonColor := $.Site.Data.appearance.colors }}
+
                     <li>
                         <a href="{{ .Permalink }}">
                             <div class="uk-card uk-card-default property-card">
@@ -71,7 +75,7 @@
                                             <div class="uk-text-center uk-light" uk-grid>
                                                 <div class="uk-width-1-2">
                                                     <div class="uk-card uk-text-left">
-                                                        {{ if .Params.status }}<span class="status uk-badge">{{ .Params.status }}</span>{{ end }}
+                                                        {{ if .Params.status }}<span class="status uk-badge" {{ if in .Params.status "Sold" }}style="background: #d10000"{{ else }}style="background:{{ $buttonColor.button_background_color }};color:{{ $buttonColor.button_text_color }}"{{ end }}>{{ .Params.status }}</span>{{ end }}
                                                         {{ if .Params.featured }}<span class="featured uk-badge">{{ .Params.featured }}</span>{{ end }}
                                                     </div>
                                                 </div>

@@ -118,6 +118,8 @@ paths:
   # The default location for newly uploaded files, relative to source
   uploads: static/uploads/
 _inputs:
+  source:
+    label: Source Link
   zip-codes:
     label: Zip Code
   equal_housing_logo:
@@ -514,7 +516,7 @@ _structures:
           _type: custom-code
           template: custom-code
           textarea:
-      - label: "latest Posts"
+      - label: "Latest Posts"
         value:
           _type: latest-posts
           template: latest-posts
