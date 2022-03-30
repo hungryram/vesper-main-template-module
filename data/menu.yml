@@ -1,7 +1,19 @@
 menu:
   - name: Home
-    link: 
+    link:
     menu:
+  - name: Buyers
+    link:
+    menu:
+      - name: Search Homes
+        link: /
+        menu:
+  - name: Sellers
+    link:
+    menu:
+      - name: Home Valuation
+        link: /home-valuation/
+        menu:
   - name: Contact
     link: /contact
     menu:
