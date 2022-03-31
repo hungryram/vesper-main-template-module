@@ -2,6 +2,8 @@ baseURL = "https://vesper-main-module.netlify.app/"
 languageCode = "en-us"
 summaryLength = 25
 enableRobotsTXT = "true"
+[markup.goldmark.renderer]
+unsafe= true
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 [taxonomies]
