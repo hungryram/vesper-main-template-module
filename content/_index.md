@@ -33,5 +33,14 @@ home_sections:
     image:
     image_alt_tag:
     image_width: 400
+  - _type: text-and-image-section
+    template: text-and-image
+    heading: test2
+    body: lorem ipsum
+    button:
+    button_link:
+    image: /uploads/agent.jpg
+    image_alt_tag:
+    image_width: 400
 ---
 
